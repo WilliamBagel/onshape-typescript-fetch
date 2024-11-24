@@ -28,19 +28,12 @@ import {
 
 import {
      BTConeDescription860FromJSONTyped,
-    BTConeDescription860ToJSON,
      BTCylinderDescription686FromJSONTyped,
-    BTCylinderDescription686ToJSON,
      BTPlaneDescription692FromJSONTyped,
-    BTPlaneDescription692ToJSON,
      BTSphereDescription1263FromJSONTyped,
-    BTSphereDescription1263ToJSON,
      BTSpunDescription657FromJSONTyped,
-    BTSpunDescription657ToJSON,
      BTSweepDescription1473FromJSONTyped,
-    BTSweepDescription1473ToJSON,
-     BTTorusDescription1834FromJSONTyped,
-    BTTorusDescription1834ToJSON
+     BTTorusDescription1834FromJSONTyped
 } from './';
 
 /**
@@ -131,7 +124,7 @@ export function BTSurfaceDescription1564FromJSONTyped(json: any, ignoreDiscrimin
     };
 }
 
-export function BTSurfaceDescription1564SuperToJSON(value?: BTSurfaceDescription1564 | null): any {
+export function BTSurfaceDescription1564ToJSON(value?: BTSurfaceDescription1564 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -148,36 +141,3 @@ export function BTSurfaceDescription1564SuperToJSON(value?: BTSurfaceDescription
     };
 }
 
-
-
-export function BTSurfaceDescription1564ToJSON(value?: BTSurfaceDescription1564 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTConeDescription-860') {
-        return BTConeDescription860ToJSON(value);
-    }
-    if (value.btType === 'BTCylinderDescription-686') {
-        return BTCylinderDescription686ToJSON(value);
-    }
-    if (value.btType === 'BTPlaneDescription-692') {
-        return BTPlaneDescription692ToJSON(value);
-    }
-    if (value.btType === 'BTSphereDescription-1263') {
-        return BTSphereDescription1263ToJSON(value);
-    }
-    if (value.btType === 'BTSpunDescription-657') {
-        return BTSpunDescription657ToJSON(value);
-    }
-    if (value.btType === 'BTSweepDescription-1473') {
-        return BTSweepDescription1473ToJSON(value);
-    }
-    if (value.btType === 'BTTorusDescription-1834') {
-        return BTTorusDescription1834ToJSON(value);
-    }
-    return BTSurfaceDescription1564SuperToJSON(value);
-}

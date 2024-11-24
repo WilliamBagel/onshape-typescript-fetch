@@ -28,13 +28,9 @@ import {
 
 import {
      BTCircleDescription1145FromJSONTyped,
-    BTCircleDescription1145ToJSON,
      BTEllipseDescription866FromJSONTyped,
-    BTEllipseDescription866ToJSON,
      BTLineDescription1559FromJSONTyped,
-    BTLineDescription1559ToJSON,
-     BTSplineDescription2118FromJSONTyped,
-    BTSplineDescription2118ToJSON
+     BTSplineDescription2118FromJSONTyped
 } from './';
 
 /**
@@ -116,7 +112,7 @@ export function BTCurveDescription1583FromJSONTyped(json: any, ignoreDiscriminat
     };
 }
 
-export function BTCurveDescription1583SuperToJSON(value?: BTCurveDescription1583 | null): any {
+export function BTCurveDescription1583ToJSON(value?: BTCurveDescription1583 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -133,27 +129,3 @@ export function BTCurveDescription1583SuperToJSON(value?: BTCurveDescription1583
     };
 }
 
-
-
-export function BTCurveDescription1583ToJSON(value?: BTCurveDescription1583 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTCircleDescription-1145') {
-        return BTCircleDescription1145ToJSON(value);
-    }
-    if (value.btType === 'BTEllipseDescription-866') {
-        return BTEllipseDescription866ToJSON(value);
-    }
-    if (value.btType === 'BTLineDescription-1559') {
-        return BTLineDescription1559ToJSON(value);
-    }
-    if (value.btType === 'BTSplineDescription-2118') {
-        return BTSplineDescription2118ToJSON(value);
-    }
-    return BTCurveDescription1583SuperToJSON(value);
-}

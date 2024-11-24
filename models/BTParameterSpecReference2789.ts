@@ -30,7 +30,6 @@ import {
     BTParameterSpec6FromJSON,
     BTParameterSpec6FromJSONTyped,
     BTParameterSpec6ToJSON,
- BTParameterSpec6SuperToJSON,
 } from './BTParameterSpec6';
 import type { BTParameterVisibilityCondition177 } from './BTParameterVisibilityCondition177';
 import {
@@ -53,13 +52,9 @@ import {
 
 import {
      BTParameterSpecReferenceAssembly2821FromJSONTyped,
-    BTParameterSpecReferenceAssembly2821ToJSON,
      BTParameterSpecReferenceBlob1367FromJSONTyped,
-    BTParameterSpecReferenceBlob1367ToJSON,
      BTParameterSpecReferencePartStudio1256FromJSONTyped,
-    BTParameterSpecReferencePartStudio1256ToJSON,
-     BTParameterSpecReferenceWithConfiguration2950FromJSONTyped,
-    BTParameterSpecReferenceWithConfiguration2950ToJSON
+     BTParameterSpecReferenceWithConfiguration2950FromJSONTyped
 } from './';
 
 /**
@@ -127,23 +122,6 @@ export function BTParameterSpecReference2789FromJSONTyped(json: any, ignoreDiscr
     };
 }
 
-export function BTParameterSpecReference2789SuperToJSON(value?: BTParameterSpecReference2789 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTParameterSpec6SuperToJSON(value),
-        'btType': value.btType,
-        'defaultPurpose': BTElementLibraryPurpose3353ToJSON(value.defaultPurpose),
-        'libraryDefinitionId': value.libraryDefinitionId,
-    };
-}
-
-
-
 export function BTParameterSpecReference2789ToJSON(value?: BTParameterSpecReference2789 | null): any {
     if (value === undefined) {
         return undefined;
@@ -151,18 +129,11 @@ export function BTParameterSpecReference2789ToJSON(value?: BTParameterSpecRefere
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTParameterSpecReferenceAssembly-2821') {
-        return BTParameterSpecReferenceAssembly2821ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecReferenceBlob-1367') {
-        return BTParameterSpecReferenceBlob1367ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecReferencePartStudio-1256') {
-        return BTParameterSpecReferencePartStudio1256ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecReferenceWithConfiguration-2950') {
-        return BTParameterSpecReferenceWithConfiguration2950ToJSON(value);
-    }
-    return BTParameterSpecReference2789SuperToJSON(value);
+    return {
+        ...BTParameterSpec6ToJSON(value),
+        'btType': value.btType,
+        'defaultPurpose': BTElementLibraryPurpose3353ToJSON(value.defaultPurpose),
+        'libraryDefinitionId': value.libraryDefinitionId,
+    };
 }
+

@@ -30,7 +30,6 @@ import {
     BTParameterSpecReference2789FromJSON,
     BTParameterSpecReference2789FromJSONTyped,
     BTParameterSpecReference2789ToJSON,
- BTParameterSpecReference2789SuperToJSON,
 } from './BTParameterSpecReference2789';
 import type { BTParameterVisibilityCondition177 } from './BTParameterVisibilityCondition177';
 import {
@@ -53,13 +52,9 @@ import {
 
 import {
      BTParameterSpecReferenceCADImport1792FromJSONTyped,
-    BTParameterSpecReferenceCADImport1792ToJSON,
      BTParameterSpecReferenceImage1722FromJSONTyped,
-    BTParameterSpecReferenceImage1722ToJSON,
      BTParameterSpecReferenceJSON1816FromJSONTyped,
-    BTParameterSpecReferenceJSON1816ToJSON,
-     BTParameterSpecReferenceTable1520FromJSONTyped,
-    BTParameterSpecReferenceTable1520ToJSON
+     BTParameterSpecReferenceTable1520FromJSONTyped
 } from './';
 
 /**
@@ -113,21 +108,6 @@ export function BTParameterSpecReferenceBlob1367FromJSONTyped(json: any, ignoreD
     };
 }
 
-export function BTParameterSpecReferenceBlob1367SuperToJSON(value?: BTParameterSpecReferenceBlob1367 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTParameterSpecReference2789SuperToJSON(value),
-        'btType': value.btType,
-    };
-}
-
-
-
 export function BTParameterSpecReferenceBlob1367ToJSON(value?: BTParameterSpecReferenceBlob1367 | null): any {
     if (value === undefined) {
         return undefined;
@@ -135,18 +115,9 @@ export function BTParameterSpecReferenceBlob1367ToJSON(value?: BTParameterSpecRe
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTParameterSpecReferenceCADImport-1792') {
-        return BTParameterSpecReferenceCADImport1792ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecReferenceImage-1722') {
-        return BTParameterSpecReferenceImage1722ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecReferenceJSON-1816') {
-        return BTParameterSpecReferenceJSON1816ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecReferenceTable-1520') {
-        return BTParameterSpecReferenceTable1520ToJSON(value);
-    }
-    return BTParameterSpecReferenceBlob1367SuperToJSON(value);
+    return {
+        ...BTParameterSpecReference2789ToJSON(value),
+        'btType': value.btType,
+    };
 }
+

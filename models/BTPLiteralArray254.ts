@@ -18,7 +18,6 @@ import {
     BTPLiteral253FromJSON,
     BTPLiteral253FromJSONTyped,
     BTPLiteral253ToJSON,
- BTPLiteral253SuperToJSON,
 } from './BTPLiteral253';
 import type { BTPSpace10 } from './BTPSpace10';
 import {
@@ -92,7 +91,7 @@ export function BTPLiteralArray254ToJSON(value?: BTPLiteralArray254 | null): any
         return null;
     }
     return {
-        ...BTPLiteral253SuperToJSON(value),
+        ...BTPLiteral253ToJSON(value),
         'btType': value.btType,
         'spaceInEmptyList': BTPSpace10ToJSON(value.spaceInEmptyList),
         'trailingComma': value.trailingComma,

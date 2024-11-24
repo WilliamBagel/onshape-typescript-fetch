@@ -18,7 +18,6 @@ import {
     BTTableCell1114FromJSON,
     BTTableCell1114FromJSONTyped,
     BTTableCell1114ToJSON,
- BTTableCell1114SuperToJSON,
 } from './BTTableCell1114';
 
 /**
@@ -73,7 +72,7 @@ export function BTTableTestCellString2112ToJSON(value?: BTTableTestCellString211
         return null;
     }
     return {
-        ...BTTableCell1114SuperToJSON(value),
+        ...BTTableCell1114ToJSON(value),
         'btType': value.btType,
         'cellValue': value.cellValue,
     };

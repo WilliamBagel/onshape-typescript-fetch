@@ -18,7 +18,6 @@ import {
     BTCurveDescription1583FromJSON,
     BTCurveDescription1583FromJSONTyped,
     BTCurveDescription1583ToJSON,
- BTCurveDescription1583SuperToJSON,
 } from './BTCurveDescription1583';
 import type { BTVector3d389 } from './BTVector3d389';
 import {
@@ -78,7 +77,7 @@ export function BTLineDescription1559ToJSON(value?: BTLineDescription1559 | null
         return null;
     }
     return {
-        ...BTCurveDescription1583SuperToJSON(value),
+        ...BTCurveDescription1583ToJSON(value),
         'btType': value.btType,
     };
 }

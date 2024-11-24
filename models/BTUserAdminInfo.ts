@@ -78,7 +78,6 @@ import {
     BTUserInfoFromJSON,
     BTUserInfoFromJSONTyped,
     BTUserInfoToJSON,
- BTUserInfoSuperToJSON,
 } from './BTUserInfo';
 import type { BTUserMetricsInfo } from './BTUserMetricsInfo';
 import {
@@ -180,7 +179,7 @@ export function BTUserAdminInfoToJSON(value?: BTUserAdminInfo | null): any {
         return null;
     }
     return {
-        ...BTUserInfoSuperToJSON(value),
+        ...BTUserInfoToJSON(value),
         'discount': BTDiscountToJSON(value.discount),
         'invitationId': value.invitationId,
         'invitedByEmail': value.invitedByEmail,

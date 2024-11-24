@@ -36,7 +36,6 @@ import {
     BTPProcedureDeclarationBase266FromJSON,
     BTPProcedureDeclarationBase266FromJSONTyped,
     BTPProcedureDeclarationBase266ToJSON,
- BTPProcedureDeclarationBase266SuperToJSON,
 } from './BTPProcedureDeclarationBase266';
 import type { BTPSpace10 } from './BTPSpace10';
 import {
@@ -141,7 +140,7 @@ export function BTPOperatorDeclaration264ToJSON(value?: BTPOperatorDeclaration26
         return null;
     }
     return {
-        ...BTPProcedureDeclarationBase266SuperToJSON(value),
+        ...BTPProcedureDeclarationBase266ToJSON(value),
         'btType': value.btType,
         'operator': GBTPOperatorToJSON(value.operator),
         'spaceAfterOperator': BTPSpace10ToJSON(value.spaceAfterOperator),

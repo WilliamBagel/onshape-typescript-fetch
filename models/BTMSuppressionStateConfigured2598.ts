@@ -24,7 +24,6 @@ import {
     BTMSuppressionState1924FromJSON,
     BTMSuppressionState1924FromJSONTyped,
     BTMSuppressionState1924ToJSON,
- BTMSuppressionState1924SuperToJSON,
 } from './BTMSuppressionState1924';
 
 /**
@@ -100,7 +99,7 @@ export function BTMSuppressionStateConfigured2598ToJSON(value?: BTMSuppressionSt
         return null;
     }
     return {
-        ...BTMSuppressionState1924SuperToJSON(value),
+        ...BTMSuppressionState1924ToJSON(value),
         'btType': value.btType,
         'configurationParameterId': value.configurationParameterId,
         'configurationParameterIdFieldIndex': value.configurationParameterIdFieldIndex,

@@ -18,7 +18,6 @@ import {
     BTMParameter1FromJSON,
     BTMParameter1FromJSONTyped,
     BTMParameter1ToJSON,
- BTMParameter1SuperToJSON,
 } from './BTMParameter1';
 
 /**
@@ -87,7 +86,7 @@ export function BTMParameterMultiEnum3411ToJSON(value?: BTMParameterMultiEnum341
         return null;
     }
     return {
-        ...BTMParameter1SuperToJSON(value),
+        ...BTMParameter1ToJSON(value),
         'btType': value.btType,
         'enumName': value.enumName,
         'namespace': value.namespace,

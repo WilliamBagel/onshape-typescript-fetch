@@ -18,7 +18,6 @@ import {
     BTStringFormatCondition683FromJSON,
     BTStringFormatCondition683FromJSONTyped,
     BTStringFormatCondition683ToJSON,
- BTStringFormatCondition683SuperToJSON,
 } from './BTStringFormatCondition683';
 
 /**
@@ -73,7 +72,7 @@ export function BTStringFormatBlockPattern1755ToJSON(value?: BTStringFormatBlock
         return null;
     }
     return {
-        ...BTStringFormatCondition683SuperToJSON(value),
+        ...BTStringFormatCondition683ToJSON(value),
         'btType': value.btType,
         'regExpToBlock': value.regExpToBlock,
     };

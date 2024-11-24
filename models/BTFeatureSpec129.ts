@@ -46,9 +46,7 @@ import {
 
 import {
      BTComputedPartPropertySpec1746FromJSONTyped,
-    BTComputedPartPropertySpec1746ToJSON,
-     BTTableSpec915FromJSONTyped,
-    BTTableSpec915ToJSON
+     BTTableSpec915FromJSONTyped
 } from './';
 
 /**
@@ -313,7 +311,7 @@ export function BTFeatureSpec129FromJSONTyped(json: any, ignoreDiscriminator: bo
     };
 }
 
-export function BTFeatureSpec129SuperToJSON(value?: BTFeatureSpec129 | null): any {
+export function BTFeatureSpec129ToJSON(value?: BTFeatureSpec129 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -357,21 +355,3 @@ export function BTFeatureSpec129SuperToJSON(value?: BTFeatureSpec129 | null): an
     };
 }
 
-
-
-export function BTFeatureSpec129ToJSON(value?: BTFeatureSpec129 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTComputedPartPropertySpec-1746') {
-        return BTComputedPartPropertySpec1746ToJSON(value);
-    }
-    if (value.btType === 'BTTableSpec-915') {
-        return BTTableSpec915ToJSON(value);
-    }
-    return BTFeatureSpec129SuperToJSON(value);
-}

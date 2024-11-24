@@ -46,9 +46,7 @@ import {
 
 import {
      BTPartStudioDisplayData346FromJSONTyped,
-    BTPartStudioDisplayData346ToJSON,
-     BTPartStudioDisplayDataReference4360FromJSONTyped,
-    BTPartStudioDisplayDataReference4360ToJSON
+     BTPartStudioDisplayDataReference4360FromJSONTyped
 } from './';
 
 /**
@@ -180,7 +178,7 @@ export function BTPartStudioDisplayDataBase2751FromJSONTyped(json: any, ignoreDi
     };
 }
 
-export function BTPartStudioDisplayDataBase2751SuperToJSON(value?: BTPartStudioDisplayDataBase2751 | null): any {
+export function BTPartStudioDisplayDataBase2751ToJSON(value?: BTPartStudioDisplayDataBase2751 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -205,21 +203,3 @@ export function BTPartStudioDisplayDataBase2751SuperToJSON(value?: BTPartStudioD
     };
 }
 
-
-
-export function BTPartStudioDisplayDataBase2751ToJSON(value?: BTPartStudioDisplayDataBase2751 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTPartStudioDisplayData-346') {
-        return BTPartStudioDisplayData346ToJSON(value);
-    }
-    if (value.btType === 'BTPartStudioDisplayDataReference-4360') {
-        return BTPartStudioDisplayDataReference4360ToJSON(value);
-    }
-    return BTPartStudioDisplayDataBase2751SuperToJSON(value);
-}

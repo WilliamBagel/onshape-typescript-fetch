@@ -18,7 +18,6 @@ import {
     BTReferenceCustomData1551FromJSON,
     BTReferenceCustomData1551FromJSONTyped,
     BTReferenceCustomData1551ToJSON,
- BTReferenceCustomData1551SuperToJSON,
 } from './BTReferenceCustomData1551';
 
 /**
@@ -87,7 +86,7 @@ export function BTRevisionCustomData2090ToJSON(value?: BTRevisionCustomData2090 
         return null;
     }
     return {
-        ...BTReferenceCustomData1551SuperToJSON(value),
+        ...BTReferenceCustomData1551ToJSON(value),
         'btType': value.btType,
         'partNumber': value.partNumber,
         'revision': value.revision,

@@ -24,7 +24,6 @@ import {
     BTUserSummaryInfoFromJSON,
     BTUserSummaryInfoFromJSONTyped,
     BTUserSummaryInfoToJSON,
- BTUserSummaryInfoSuperToJSON,
 } from './BTUserSummaryInfo';
 import type { CompanyRole } from './CompanyRole';
 import {
@@ -126,7 +125,7 @@ export function BTUserAdminSummaryInfoToJSON(value?: BTUserAdminSummaryInfo | nu
         return null;
     }
     return {
-        ...BTUserSummaryInfoSuperToJSON(value),
+        ...BTUserSummaryInfoToJSON(value),
         'activePlanId': value.activePlanId,
         'billingUpdateRequired': value.billingUpdateRequired,
         'companyRoles': value.companyRoles === undefined ? undefined : ((value.companyRoles as Array<any>).map(CompanyRoleToJSON)),

@@ -15,11 +15,8 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTTableCellParameter2399FromJSONTyped,
-    BTTableCellParameter2399ToJSON,
      BTTableTestCellDouble2509FromJSONTyped,
-    BTTableTestCellDouble2509ToJSON,
-     BTTableTestCellString2112FromJSONTyped,
-    BTTableTestCellString2112ToJSON
+     BTTableTestCellString2112FromJSONTyped
 } from './';
 
 /**
@@ -84,7 +81,7 @@ export function BTTableCell1114FromJSONTyped(json: any, ignoreDiscriminator: boo
     };
 }
 
-export function BTTableCell1114SuperToJSON(value?: BTTableCell1114 | null): any {
+export function BTTableCell1114ToJSON(value?: BTTableCell1114 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -99,24 +96,3 @@ export function BTTableCell1114SuperToJSON(value?: BTTableCell1114 | null): any 
     };
 }
 
-
-
-export function BTTableCell1114ToJSON(value?: BTTableCell1114 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTTableCellParameter-2399') {
-        return BTTableCellParameter2399ToJSON(value);
-    }
-    if (value.btType === 'BTTableTestCellDouble-2509') {
-        return BTTableTestCellDouble2509ToJSON(value);
-    }
-    if (value.btType === 'BTTableTestCellString-2112') {
-        return BTTableTestCellString2112ToJSON(value);
-    }
-    return BTTableCell1114SuperToJSON(value);
-}

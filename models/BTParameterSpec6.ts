@@ -40,39 +40,22 @@ import {
 
 import {
      BTParameterSpecAppearance1740FromJSONTyped,
-    BTParameterSpecAppearance1740ToJSON,
      BTParameterSpecArray2600FromJSONTyped,
-    BTParameterSpecArray2600ToJSON,
      BTParameterSpecBoolean170FromJSONTyped,
-    BTParameterSpecBoolean170ToJSON,
      BTParameterSpecDatabase1071FromJSONTyped,
-    BTParameterSpecDatabase1071ToJSON,
      BTParameterSpecDerived736FromJSONTyped,
-    BTParameterSpecDerived736ToJSON,
      BTParameterSpecEnum171FromJSONTyped,
-    BTParameterSpecEnum171ToJSON,
      BTParameterSpecFeatureList703FromJSONTyped,
-    BTParameterSpecFeatureList703ToJSON,
      BTParameterSpecForeignId172FromJSONTyped,
-    BTParameterSpecForeignId172ToJSON,
      BTParameterSpecLookupTablePath761FromJSONTyped,
-    BTParameterSpecLookupTablePath761ToJSON,
      BTParameterSpecMaterial2700FromJSONTyped,
-    BTParameterSpecMaterial2700ToJSON,
      BTParameterSpecMultiEnum3118FromJSONTyped,
-    BTParameterSpecMultiEnum3118ToJSON,
      BTParameterSpecNullableQuantity715FromJSONTyped,
-    BTParameterSpecNullableQuantity715ToJSON,
      BTParameterSpecQuantity173FromJSONTyped,
-    BTParameterSpecQuantity173ToJSON,
      BTParameterSpecQuery174FromJSONTyped,
-    BTParameterSpecQuery174ToJSON,
      BTParameterSpecReference2789FromJSONTyped,
-    BTParameterSpecReference2789ToJSON,
      BTParameterSpecString175FromJSONTyped,
-    BTParameterSpecString175ToJSON,
-     BTReadOnlyParameterSpec1889FromJSONTyped,
-    BTReadOnlyParameterSpec1889ToJSON
+     BTReadOnlyParameterSpec1889FromJSONTyped
 } from './';
 
 /**
@@ -263,7 +246,7 @@ export function BTParameterSpec6FromJSONTyped(json: any, ignoreDiscriminator: bo
     };
 }
 
-export function BTParameterSpec6SuperToJSON(value?: BTParameterSpec6 | null): any {
+export function BTParameterSpec6ToJSON(value?: BTParameterSpec6 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -290,66 +273,3 @@ export function BTParameterSpec6SuperToJSON(value?: BTParameterSpec6 | null): an
     };
 }
 
-
-
-export function BTParameterSpec6ToJSON(value?: BTParameterSpec6 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTParameterSpecAppearance-1740') {
-        return BTParameterSpecAppearance1740ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecArray-2600') {
-        return BTParameterSpecArray2600ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecBoolean-170') {
-        return BTParameterSpecBoolean170ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecDatabase-1071') {
-        return BTParameterSpecDatabase1071ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecDerived-736') {
-        return BTParameterSpecDerived736ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecEnum-171') {
-        return BTParameterSpecEnum171ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecFeatureList-703') {
-        return BTParameterSpecFeatureList703ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecForeignId-172') {
-        return BTParameterSpecForeignId172ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecLookupTablePath-761') {
-        return BTParameterSpecLookupTablePath761ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecMaterial-2700') {
-        return BTParameterSpecMaterial2700ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecMultiEnum-3118') {
-        return BTParameterSpecMultiEnum3118ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecNullableQuantity-715') {
-        return BTParameterSpecNullableQuantity715ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecQuantity-173') {
-        return BTParameterSpecQuantity173ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecQuery-174') {
-        return BTParameterSpecQuery174ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecReference-2789') {
-        return BTParameterSpecReference2789ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecString-175') {
-        return BTParameterSpecString175ToJSON(value);
-    }
-    if (value.btType === 'BTReadOnlyParameterSpec-1889') {
-        return BTReadOnlyParameterSpec1889ToJSON(value);
-    }
-    return BTParameterSpec6SuperToJSON(value);
-}

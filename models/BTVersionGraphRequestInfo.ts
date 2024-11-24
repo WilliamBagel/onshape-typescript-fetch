@@ -13,58 +13,72 @@
  */
 
 import { exists, mapValues } from '../runtime';
-import type { BTTableCell1114 } from './BTTableCell1114';
-import {
-    BTTableCell1114FromJSON,
-    BTTableCell1114FromJSONTyped,
-    BTTableCell1114ToJSON,
-} from './BTTableCell1114';
-
 /**
  * 
  * @export
- * @interface BTTableTestCellDouble2509
+ * @interface BTVersionGraphRequestInfo
  */
-export interface BTTableTestCellDouble2509 extends BTTableCell1114 {
+export interface BTVersionGraphRequestInfo {
     /**
-     * Type of JSON object.
-     * @type {string}
-     * @memberof BTTableTestCellDouble2509
+     * 
+     * @type {boolean}
+     * @memberof BTVersionGraphRequestInfo
      */
-    btType?: string;
+    includeAutoVersions?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof BTVersionGraphRequestInfo
+     */
+    includeMerges?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof BTVersionGraphRequestInfo
+     */
+    includeNonWorkspaceBranches?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof BTVersionGraphRequestInfo
+     */
+    includeParentBranches?: boolean;
     /**
      * 
      * @type {number}
-     * @memberof BTTableTestCellDouble2509
+     * @memberof BTVersionGraphRequestInfo
      */
-    cellValue?: number;
+    limit?: number;
 }
 
 /**
- * Check if a given object implements the BTTableTestCellDouble2509 interface.
+ * Check if a given object implements the BTVersionGraphRequestInfo interface.
  */
-export function instanceOfBTTableTestCellDouble2509(value: object): boolean {
+export function instanceOfBTVersionGraphRequestInfo(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function BTTableTestCellDouble2509FromJSON(json: any): BTTableTestCellDouble2509 {
-    return BTTableTestCellDouble2509FromJSONTyped(json, false);
+export function BTVersionGraphRequestInfoFromJSON(json: any): BTVersionGraphRequestInfo {
+    return BTVersionGraphRequestInfoFromJSONTyped(json, false);
 }
 
-export function BTTableTestCellDouble2509FromJSONTyped(json: any, ignoreDiscriminator: boolean): BTTableTestCellDouble2509 {
+export function BTVersionGraphRequestInfoFromJSONTyped(json: any, ignoreDiscriminator: boolean): BTVersionGraphRequestInfo {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
-        ...BTTableCell1114FromJSONTyped(json, ignoreDiscriminator),
-        'btType': !exists(json, 'btType') ? undefined : json['btType'],
-        'cellValue': !exists(json, 'cellValue') ? undefined : json['cellValue'],
+        
+        'includeAutoVersions': !exists(json, 'includeAutoVersions') ? undefined : json['includeAutoVersions'],
+        'includeMerges': !exists(json, 'includeMerges') ? undefined : json['includeMerges'],
+        'includeNonWorkspaceBranches': !exists(json, 'includeNonWorkspaceBranches') ? undefined : json['includeNonWorkspaceBranches'],
+        'includeParentBranches': !exists(json, 'includeParentBranches') ? undefined : json['includeParentBranches'],
+        'limit': !exists(json, 'limit') ? undefined : json['limit'],
     };
 }
 
-export function BTTableTestCellDouble2509ToJSON(value?: BTTableTestCellDouble2509 | null): any {
+export function BTVersionGraphRequestInfoToJSON(value?: BTVersionGraphRequestInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -72,9 +86,12 @@ export function BTTableTestCellDouble2509ToJSON(value?: BTTableTestCellDouble250
         return null;
     }
     return {
-        ...BTTableCell1114ToJSON(value),
-        'btType': value.btType,
-        'cellValue': value.cellValue,
+        
+        'includeAutoVersions': value.includeAutoVersions,
+        'includeMerges': value.includeMerges,
+        'includeNonWorkspaceBranches': value.includeNonWorkspaceBranches,
+        'includeParentBranches': value.includeParentBranches,
+        'limit': value.limit,
     };
 }
 

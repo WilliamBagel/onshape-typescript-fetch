@@ -30,7 +30,6 @@ import {
     BTParameterSpecReference2789FromJSON,
     BTParameterSpecReference2789FromJSONTyped,
     BTParameterSpecReference2789ToJSON,
- BTParameterSpecReference2789SuperToJSON,
 } from './BTParameterSpecReference2789';
 import type { BTParameterVisibilityCondition177 } from './BTParameterVisibilityCondition177';
 import {
@@ -123,7 +122,7 @@ export function BTParameterSpecReferenceWithConfiguration2950ToJSON(value?: BTPa
         return null;
     }
     return {
-        ...BTParameterSpecReference2789SuperToJSON(value),
+        ...BTParameterSpecReference2789ToJSON(value),
         'btType': value.btType,
         'allowAssemblies': value.allowAssemblies,
         'allowedInsertableTypes': value.allowedInsertableTypes === undefined ? undefined : ((value.allowedInsertableTypes as Array<any>).map(GBTPartStudioItemTypeToJSON)),

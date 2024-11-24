@@ -21,8 +21,7 @@ import {
 } from './GBTAppearanceType';
 
 import {
-     BTGeneratedGraphicsAppearance4159FromJSONTyped,
-    BTGeneratedGraphicsAppearance4159ToJSON
+     BTGeneratedGraphicsAppearance4159FromJSONTyped
 } from './';
 
 /**
@@ -116,7 +115,7 @@ export function BTGraphicsAppearance1152FromJSONTyped(json: any, ignoreDiscrimin
     };
 }
 
-export function BTGraphicsAppearance1152SuperToJSON(value?: BTGraphicsAppearance1152 | null): any {
+export function BTGraphicsAppearance1152ToJSON(value?: BTGraphicsAppearance1152 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -136,18 +135,3 @@ export function BTGraphicsAppearance1152SuperToJSON(value?: BTGraphicsAppearance
     };
 }
 
-
-
-export function BTGraphicsAppearance1152ToJSON(value?: BTGraphicsAppearance1152 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTGeneratedGraphicsAppearance-4159') {
-        return BTGeneratedGraphicsAppearance4159ToJSON(value);
-    }
-    return BTGraphicsAppearance1152SuperToJSON(value);
-}

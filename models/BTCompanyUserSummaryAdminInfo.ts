@@ -24,7 +24,6 @@ import {
     BTCompanyUserSummaryInfoFromJSON,
     BTCompanyUserSummaryInfoFromJSONTyped,
     BTCompanyUserSummaryInfoToJSON,
- BTCompanyUserSummaryInfoSuperToJSON,
 } from './BTCompanyUserSummaryInfo';
 import type { GlobalPermissionInfo } from './GlobalPermissionInfo';
 import {
@@ -78,7 +77,7 @@ export function BTCompanyUserSummaryAdminInfoToJSON(value?: BTCompanyUserSummary
         return null;
     }
     return {
-        ...BTCompanyUserSummaryInfoSuperToJSON(value),
+        ...BTCompanyUserSummaryInfoToJSON(value),
         'totpEnabled': value.totpEnabled,
     };
 }

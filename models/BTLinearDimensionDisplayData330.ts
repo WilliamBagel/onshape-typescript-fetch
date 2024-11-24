@@ -24,7 +24,6 @@ import {
     BTDimensionDisplayData323FromJSON,
     BTDimensionDisplayData323FromJSONTyped,
     BTDimensionDisplayData323ToJSON,
- BTDimensionDisplayData323SuperToJSON,
 } from './BTDimensionDisplayData323';
 import type { BTMatrix3x3340 } from './BTMatrix3x3340';
 import {
@@ -35,9 +34,7 @@ import {
 
 import {
      BTCenterlineDimensionDisplayData1798FromJSONTyped,
-    BTCenterlineDimensionDisplayData1798ToJSON,
-     BTEllipseDiameterDimensionDisplayData1301FromJSONTyped,
-    BTEllipseDiameterDimensionDisplayData1301ToJSON
+     BTEllipseDiameterDimensionDisplayData1301FromJSONTyped
 } from './';
 
 /**
@@ -127,7 +124,7 @@ export function BTLinearDimensionDisplayData330FromJSONTyped(json: any, ignoreDi
     };
 }
 
-export function BTLinearDimensionDisplayData330SuperToJSON(value?: BTLinearDimensionDisplayData330 | null): any {
+export function BTLinearDimensionDisplayData330ToJSON(value?: BTLinearDimensionDisplayData330 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -135,7 +132,7 @@ export function BTLinearDimensionDisplayData330SuperToJSON(value?: BTLinearDimen
         return null;
     }
     return {
-        ...BTDimensionDisplayData323SuperToJSON(value),
+        ...BTDimensionDisplayData323ToJSON(value),
         'btType': value.btType,
         'positionX': value.positionX,
         'positionY': value.positionY,
@@ -146,21 +143,3 @@ export function BTLinearDimensionDisplayData330SuperToJSON(value?: BTLinearDimen
     };
 }
 
-
-
-export function BTLinearDimensionDisplayData330ToJSON(value?: BTLinearDimensionDisplayData330 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTCenterlineDimensionDisplayData-1798') {
-        return BTCenterlineDimensionDisplayData1798ToJSON(value);
-    }
-    if (value.btType === 'BTEllipseDiameterDimensionDisplayData-1301') {
-        return BTEllipseDiameterDimensionDisplayData1301ToJSON(value);
-    }
-    return BTLinearDimensionDisplayData330SuperToJSON(value);
-}

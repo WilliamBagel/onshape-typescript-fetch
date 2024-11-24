@@ -18,7 +18,6 @@ import {
     BTPPropertyAccessor23FromJSON,
     BTPPropertyAccessor23FromJSONTyped,
     BTPPropertyAccessor23ToJSON,
- BTPPropertyAccessor23SuperToJSON,
 } from './BTPPropertyAccessor23';
 import type { BTPSpace10 } from './BTPSpace10';
 import {
@@ -92,7 +91,7 @@ export function BTPIdentifier8ToJSON(value?: BTPIdentifier8 | null): any {
         return null;
     }
     return {
-        ...BTPPropertyAccessor23SuperToJSON(value),
+        ...BTPPropertyAccessor23ToJSON(value),
         'btType': value.btType,
         'identifier': value.identifier,
         'invalidIdentifierForTest': value.invalidIdentifierForTest,

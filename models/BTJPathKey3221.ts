@@ -18,7 +18,6 @@ import {
     BTJPathElement2297FromJSON,
     BTJPathElement2297FromJSONTyped,
     BTJPathElement2297ToJSON,
- BTJPathElement2297SuperToJSON,
 } from './BTJPathElement2297';
 
 /**
@@ -73,7 +72,7 @@ export function BTJPathKey3221ToJSON(value?: BTJPathKey3221 | null): any {
         return null;
     }
     return {
-        ...BTJPathElement2297SuperToJSON(value),
+        ...BTJPathElement2297ToJSON(value),
         'btType': value.btType,
         'key': value.key,
     };

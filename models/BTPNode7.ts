@@ -28,29 +28,17 @@ import {
 
 import {
      BTPAnnotation231FromJSONTyped,
-    BTPAnnotation231ToJSON,
      BTPArgumentDeclaration232FromJSONTyped,
-    BTPArgumentDeclaration232ToJSON,
      BTPBuiltinIdentifier233FromJSONTyped,
-    BTPBuiltinIdentifier233ToJSON,
      BTPLValue249FromJSONTyped,
-    BTPLValue249ToJSON,
      BTPLiteralMapEntry257FromJSONTyped,
-    BTPLiteralMapEntry257ToJSON,
      BTPModule234FromJSONTyped,
-    BTPModule234ToJSON,
      BTPModuleId235FromJSONTyped,
-    BTPModuleId235ToJSON,
      BTPName261FromJSONTyped,
-    BTPName261ToJSON,
      BTPPropertyAccessor23FromJSONTyped,
-    BTPPropertyAccessor23ToJSON,
      BTPStatement269FromJSONTyped,
-    BTPStatement269ToJSON,
      BTPTopLevelNode286FromJSONTyped,
-    BTPTopLevelNode286ToJSON,
-     BTPTypeName290FromJSONTyped,
-    BTPTypeName290ToJSON
+     BTPTypeName290FromJSONTyped
 } from './';
 
 /**
@@ -191,7 +179,7 @@ export function BTPNode7FromJSONTyped(json: any, ignoreDiscriminator: boolean): 
     };
 }
 
-export function BTPNode7SuperToJSON(value?: BTPNode7 | null): any {
+export function BTPNode7ToJSON(value?: BTPNode7 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -213,51 +201,3 @@ export function BTPNode7SuperToJSON(value?: BTPNode7 | null): any {
     };
 }
 
-
-
-export function BTPNode7ToJSON(value?: BTPNode7 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTPAnnotation-231') {
-        return BTPAnnotation231ToJSON(value);
-    }
-    if (value.btType === 'BTPArgumentDeclaration-232') {
-        return BTPArgumentDeclaration232ToJSON(value);
-    }
-    if (value.btType === 'BTPBuiltinIdentifier-233') {
-        return BTPBuiltinIdentifier233ToJSON(value);
-    }
-    if (value.btType === 'BTPLValue-249') {
-        return BTPLValue249ToJSON(value);
-    }
-    if (value.btType === 'BTPLiteralMapEntry-257') {
-        return BTPLiteralMapEntry257ToJSON(value);
-    }
-    if (value.btType === 'BTPModule-234') {
-        return BTPModule234ToJSON(value);
-    }
-    if (value.btType === 'BTPModuleId-235') {
-        return BTPModuleId235ToJSON(value);
-    }
-    if (value.btType === 'BTPName-261') {
-        return BTPName261ToJSON(value);
-    }
-    if (value.btType === 'BTPPropertyAccessor-23') {
-        return BTPPropertyAccessor23ToJSON(value);
-    }
-    if (value.btType === 'BTPStatement-269') {
-        return BTPStatement269ToJSON(value);
-    }
-    if (value.btType === 'BTPTopLevelNode-286') {
-        return BTPTopLevelNode286ToJSON(value);
-    }
-    if (value.btType === 'BTPTypeName-290') {
-        return BTPTypeName290ToJSON(value);
-    }
-    return BTPNode7SuperToJSON(value);
-}

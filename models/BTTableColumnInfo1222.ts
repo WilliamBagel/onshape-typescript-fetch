@@ -22,15 +22,10 @@ import {
 
 import {
      BTConfiguredValuesColumnInfo1025FromJSONTyped,
-    BTConfiguredValuesColumnInfo1025ToJSON,
      BTFSTableColumnInfo623FromJSONTyped,
-    BTFSTableColumnInfo623ToJSON,
      BTNamedPositionValuesColumnInfo816FromJSONTyped,
-    BTNamedPositionValuesColumnInfo816ToJSON,
      BTPropertyTableColumnInfo2161FromJSONTyped,
-    BTPropertyTableColumnInfo2161ToJSON,
-     BTSimulationTableColumnInfo1785FromJSONTyped,
-    BTSimulationTableColumnInfo1785ToJSON
+     BTSimulationTableColumnInfo1785FromJSONTyped
 } from './';
 
 /**
@@ -108,7 +103,7 @@ export function BTTableColumnInfo1222FromJSONTyped(json: any, ignoreDiscriminato
     };
 }
 
-export function BTTableColumnInfo1222SuperToJSON(value?: BTTableColumnInfo1222 | null): any {
+export function BTTableColumnInfo1222ToJSON(value?: BTTableColumnInfo1222 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -124,30 +119,3 @@ export function BTTableColumnInfo1222SuperToJSON(value?: BTTableColumnInfo1222 |
     };
 }
 
-
-
-export function BTTableColumnInfo1222ToJSON(value?: BTTableColumnInfo1222 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTConfiguredValuesColumnInfo-1025') {
-        return BTConfiguredValuesColumnInfo1025ToJSON(value);
-    }
-    if (value.btType === 'BTFSTableColumnInfo-623') {
-        return BTFSTableColumnInfo623ToJSON(value);
-    }
-    if (value.btType === 'BTNamedPositionValuesColumnInfo-816') {
-        return BTNamedPositionValuesColumnInfo816ToJSON(value);
-    }
-    if (value.btType === 'BTPropertyTableColumnInfo-2161') {
-        return BTPropertyTableColumnInfo2161ToJSON(value);
-    }
-    if (value.btType === 'BTSimulationTableColumnInfo-1785') {
-        return BTSimulationTableColumnInfo1785ToJSON(value);
-    }
-    return BTTableColumnInfo1222SuperToJSON(value);
-}

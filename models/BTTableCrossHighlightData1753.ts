@@ -18,7 +18,6 @@ import {
     BTTableBaseCrossHighlightData2609FromJSON,
     BTTableBaseCrossHighlightData2609FromJSONTyped,
     BTTableBaseCrossHighlightData2609ToJSON,
- BTTableBaseCrossHighlightData2609SuperToJSON,
 } from './BTTableBaseCrossHighlightData2609';
 
 /**
@@ -80,7 +79,7 @@ export function BTTableCrossHighlightData1753ToJSON(value?: BTTableCrossHighligh
         return null;
     }
     return {
-        ...BTTableBaseCrossHighlightData2609SuperToJSON(value),
+        ...BTTableBaseCrossHighlightData2609ToJSON(value),
         'btType': value.btType,
         'deterministicIdList': value.deterministicIdList,
         'featureIdList': value.featureIdList,

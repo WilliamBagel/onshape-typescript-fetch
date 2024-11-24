@@ -21,8 +21,7 @@ import {
 } from './BTVector3d389';
 
 import {
-     BTExportModelArcEdgeGeometry1257FromJSONTyped,
-    BTExportModelArcEdgeGeometry1257ToJSON
+     BTExportModelArcEdgeGeometry1257FromJSONTyped
 } from './';
 
 /**
@@ -116,7 +115,7 @@ export function BTExportModelEdgeGeometry1125FromJSONTyped(json: any, ignoreDisc
     };
 }
 
-export function BTExportModelEdgeGeometry1125SuperToJSON(value?: BTExportModelEdgeGeometry1125 | null): any {
+export function BTExportModelEdgeGeometry1125ToJSON(value?: BTExportModelEdgeGeometry1125 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -136,18 +135,3 @@ export function BTExportModelEdgeGeometry1125SuperToJSON(value?: BTExportModelEd
     };
 }
 
-
-
-export function BTExportModelEdgeGeometry1125ToJSON(value?: BTExportModelEdgeGeometry1125 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTExportModelArcEdgeGeometry-1257') {
-        return BTExportModelArcEdgeGeometry1257ToJSON(value);
-    }
-    return BTExportModelEdgeGeometry1125SuperToJSON(value);
-}

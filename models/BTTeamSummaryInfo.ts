@@ -27,8 +27,7 @@ import {
 } from './BTUserBasicSummaryInfo';
 
 import {
-     BTTeamInfoFromJSONTyped,
-    BTTeamInfoToJSON
+     BTTeamInfoFromJSONTyped
 } from './';
 
 /**
@@ -221,7 +220,7 @@ export function BTTeamSummaryInfoFromJSONTyped(json: any, ignoreDiscriminator: b
     };
 }
 
-export function BTTeamSummaryInfoSuperToJSON(value?: BTTeamSummaryInfo | null): any {
+export function BTTeamSummaryInfoToJSON(value?: BTTeamSummaryInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -255,18 +254,3 @@ export function BTTeamSummaryInfoSuperToJSON(value?: BTTeamSummaryInfo | null): 
     };
 }
 
-
-
-export function BTTeamSummaryInfoToJSON(value?: BTTeamSummaryInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'team') {
-        return BTTeamInfoToJSON(value);
-    }
-    return BTTeamSummaryInfoSuperToJSON(value);
-}

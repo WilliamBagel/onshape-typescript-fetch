@@ -28,11 +28,8 @@ import {
 
 import {
      BTPLValueAccess250FromJSONTyped,
-    BTPLValueAccess250ToJSON,
      BTPLValueBoxDereference251FromJSONTyped,
-    BTPLValueBoxDereference251ToJSON,
-     BTPLValueVarReference252FromJSONTyped,
-    BTPLValueVarReference252ToJSON
+     BTPLValueVarReference252FromJSONTyped
 } from './';
 
 /**
@@ -146,7 +143,7 @@ export function BTPLValue249FromJSONTyped(json: any, ignoreDiscriminator: boolea
     };
 }
 
-export function BTPLValue249SuperToJSON(value?: BTPLValue249 | null): any {
+export function BTPLValue249ToJSON(value?: BTPLValue249 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -168,24 +165,3 @@ export function BTPLValue249SuperToJSON(value?: BTPLValue249 | null): any {
     };
 }
 
-
-
-export function BTPLValue249ToJSON(value?: BTPLValue249 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTPLValueAccess-250') {
-        return BTPLValueAccess250ToJSON(value);
-    }
-    if (value.btType === 'BTPLValueBoxDereference-251') {
-        return BTPLValueBoxDereference251ToJSON(value);
-    }
-    if (value.btType === 'BTPLValueVarReference-252') {
-        return BTPLValueVarReference252ToJSON(value);
-    }
-    return BTPLValue249SuperToJSON(value);
-}

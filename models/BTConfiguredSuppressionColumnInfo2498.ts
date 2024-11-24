@@ -18,7 +18,6 @@ import {
     BTConfiguredValuesColumnInfo1025FromJSON,
     BTConfiguredValuesColumnInfo1025FromJSONTyped,
     BTConfiguredValuesColumnInfo1025ToJSON,
- BTConfiguredValuesColumnInfo1025SuperToJSON,
 } from './BTConfiguredValuesColumnInfo1025';
 import type { BTTableColumnSpec1967 } from './BTTableColumnSpec1967';
 import {
@@ -78,7 +77,7 @@ export function BTConfiguredSuppressionColumnInfo2498ToJSON(value?: BTConfigured
         return null;
     }
     return {
-        ...BTConfiguredValuesColumnInfo1025SuperToJSON(value),
+        ...BTConfiguredValuesColumnInfo1025ToJSON(value),
         'btType': value.btType,
     };
 }

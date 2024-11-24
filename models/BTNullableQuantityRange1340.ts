@@ -24,7 +24,6 @@ import {
     BTQuantityRange181FromJSON,
     BTQuantityRange181FromJSONTyped,
     BTQuantityRange181ToJSON,
- BTQuantityRange181SuperToJSON,
 } from './BTQuantityRange181';
 
 /**
@@ -93,7 +92,7 @@ export function BTNullableQuantityRange1340ToJSON(value?: BTNullableQuantityRang
         return null;
     }
     return {
-        ...BTQuantityRange181SuperToJSON(value),
+        ...BTQuantityRange181ToJSON(value),
         'btType': value.btType,
         'hasDefaultValue': value.hasDefaultValue,
         'hasMaxValue': value.hasMaxValue,

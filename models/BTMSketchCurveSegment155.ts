@@ -30,7 +30,6 @@ import {
     BTMSketchCurve4FromJSON,
     BTMSketchCurve4FromJSONTyped,
     BTMSketchCurve4ToJSON,
- BTMSketchCurve4SuperToJSON,
 } from './BTMSketchCurve4';
 
 /**
@@ -113,7 +112,7 @@ export function BTMSketchCurveSegment155ToJSON(value?: BTMSketchCurveSegment155 
         return null;
     }
     return {
-        ...BTMSketchCurve4SuperToJSON(value),
+        ...BTMSketchCurve4ToJSON(value),
         'btType': value.btType,
         'endParam': value.endParam,
         'endPointId': value.endPointId,

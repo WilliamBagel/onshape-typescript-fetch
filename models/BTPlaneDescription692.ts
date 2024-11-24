@@ -18,7 +18,6 @@ import {
     BTSurfaceDescription1564FromJSON,
     BTSurfaceDescription1564FromJSONTyped,
     BTSurfaceDescription1564ToJSON,
- BTSurfaceDescription1564SuperToJSON,
 } from './BTSurfaceDescription1564';
 import type { BTVector3d389 } from './BTVector3d389';
 import {
@@ -92,7 +91,7 @@ export function BTPlaneDescription692ToJSON(value?: BTPlaneDescription692 | null
         return null;
     }
     return {
-        ...BTSurfaceDescription1564SuperToJSON(value),
+        ...BTSurfaceDescription1564ToJSON(value),
         'btType': value.btType,
         'isOrientedWithFace': value.isOrientedWithFace,
         'normal': BTVector3d389ToJSON(value.normal),

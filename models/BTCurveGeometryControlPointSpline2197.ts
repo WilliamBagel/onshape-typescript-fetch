@@ -18,7 +18,6 @@ import {
     BTCurveGeometrySpline118FromJSON,
     BTCurveGeometrySpline118FromJSONTyped,
     BTCurveGeometrySpline118ToJSON,
- BTCurveGeometrySpline118SuperToJSON,
 } from './BTCurveGeometrySpline118';
 
 /**
@@ -73,7 +72,7 @@ export function BTCurveGeometryControlPointSpline2197ToJSON(value?: BTCurveGeome
         return null;
     }
     return {
-        ...BTCurveGeometrySpline118SuperToJSON(value),
+        ...BTCurveGeometrySpline118ToJSON(value),
         'btType': value.btType,
         'isBezier': value.isBezier,
     };

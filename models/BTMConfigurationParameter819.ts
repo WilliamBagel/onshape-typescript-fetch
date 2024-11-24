@@ -28,13 +28,9 @@ import {
 
 import {
      BTMConfigurationParameterBoolean2550FromJSONTyped,
-    BTMConfigurationParameterBoolean2550ToJSON,
      BTMConfigurationParameterEnum105FromJSONTyped,
-    BTMConfigurationParameterEnum105ToJSON,
      BTMConfigurationParameterQuantity1826FromJSONTyped,
-    BTMConfigurationParameterQuantity1826ToJSON,
-     BTMConfigurationParameterString872FromJSONTyped,
-    BTMConfigurationParameterString872ToJSON
+     BTMConfigurationParameterString872FromJSONTyped
 } from './';
 
 /**
@@ -144,7 +140,7 @@ export function BTMConfigurationParameter819FromJSONTyped(json: any, ignoreDiscr
     };
 }
 
-export function BTMConfigurationParameter819SuperToJSON(value?: BTMConfigurationParameter819 | null): any {
+export function BTMConfigurationParameter819ToJSON(value?: BTMConfigurationParameter819 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -165,27 +161,3 @@ export function BTMConfigurationParameter819SuperToJSON(value?: BTMConfiguration
     };
 }
 
-
-
-export function BTMConfigurationParameter819ToJSON(value?: BTMConfigurationParameter819 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMConfigurationParameterBoolean-2550') {
-        return BTMConfigurationParameterBoolean2550ToJSON(value);
-    }
-    if (value.btType === 'BTMConfigurationParameterEnum-105') {
-        return BTMConfigurationParameterEnum105ToJSON(value);
-    }
-    if (value.btType === 'BTMConfigurationParameterQuantity-1826') {
-        return BTMConfigurationParameterQuantity1826ToJSON(value);
-    }
-    if (value.btType === 'BTMConfigurationParameterString-872') {
-        return BTMConfigurationParameterString872ToJSON(value);
-    }
-    return BTMConfigurationParameter819SuperToJSON(value);
-}

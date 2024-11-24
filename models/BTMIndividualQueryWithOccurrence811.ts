@@ -24,7 +24,6 @@ import {
     BTMIndividualQueryWithOccurrenceBase904FromJSON,
     BTMIndividualQueryWithOccurrenceBase904FromJSONTyped,
     BTMIndividualQueryWithOccurrenceBase904ToJSON,
- BTMIndividualQueryWithOccurrenceBase904SuperToJSON,
 } from './BTMIndividualQueryWithOccurrenceBase904';
 import type { BTOccurrence74 } from './BTOccurrence74';
 import {
@@ -34,8 +33,7 @@ import {
 } from './BTOccurrence74';
 
 import {
-     BTMInferenceQueryWithOccurrence1083FromJSONTyped,
-    BTMInferenceQueryWithOccurrence1083ToJSON
+     BTMInferenceQueryWithOccurrence1083FromJSONTyped
 } from './';
 
 /**
@@ -87,22 +85,6 @@ export function BTMIndividualQueryWithOccurrence811FromJSONTyped(json: any, igno
     };
 }
 
-export function BTMIndividualQueryWithOccurrence811SuperToJSON(value?: BTMIndividualQueryWithOccurrence811 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTMIndividualQueryWithOccurrenceBase904SuperToJSON(value),
-        'btType': value.btType,
-        'entityQuery': value.entityQuery,
-    };
-}
-
-
-
 export function BTMIndividualQueryWithOccurrence811ToJSON(value?: BTMIndividualQueryWithOccurrence811 | null): any {
     if (value === undefined) {
         return undefined;
@@ -110,9 +92,10 @@ export function BTMIndividualQueryWithOccurrence811ToJSON(value?: BTMIndividualQ
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTMInferenceQueryWithOccurrence-1083') {
-        return BTMInferenceQueryWithOccurrence1083ToJSON(value);
-    }
-    return BTMIndividualQueryWithOccurrence811SuperToJSON(value);
+    return {
+        ...BTMIndividualQueryWithOccurrenceBase904ToJSON(value),
+        'btType': value.btType,
+        'entityQuery': value.entityQuery,
+    };
 }
+

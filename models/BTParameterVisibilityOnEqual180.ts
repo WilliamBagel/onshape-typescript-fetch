@@ -18,12 +18,10 @@ import {
     BTParameterVisibilityCondition177FromJSON,
     BTParameterVisibilityCondition177FromJSONTyped,
     BTParameterVisibilityCondition177ToJSON,
- BTParameterVisibilityCondition177SuperToJSON,
 } from './BTParameterVisibilityCondition177';
 
 import {
-     BTParameterVisibilityOnMateDOFType2114FromJSONTyped,
-    BTParameterVisibilityOnMateDOFType2114ToJSON
+     BTParameterVisibilityOnMateDOFType2114FromJSONTyped
 } from './';
 
 /**
@@ -90,24 +88,6 @@ export function BTParameterVisibilityOnEqual180FromJSONTyped(json: any, ignoreDi
     };
 }
 
-export function BTParameterVisibilityOnEqual180SuperToJSON(value?: BTParameterVisibilityOnEqual180 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTParameterVisibilityCondition177SuperToJSON(value),
-        'btType': value.btType,
-        'inArray': value.inArray,
-        'parameterId': value.parameterId,
-        'value': value.value,
-    };
-}
-
-
-
 export function BTParameterVisibilityOnEqual180ToJSON(value?: BTParameterVisibilityOnEqual180 | null): any {
     if (value === undefined) {
         return undefined;
@@ -115,9 +95,12 @@ export function BTParameterVisibilityOnEqual180ToJSON(value?: BTParameterVisibil
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTParameterVisibilityOnMateDOFType-2114') {
-        return BTParameterVisibilityOnMateDOFType2114ToJSON(value);
-    }
-    return BTParameterVisibilityOnEqual180SuperToJSON(value);
+    return {
+        ...BTParameterVisibilityCondition177ToJSON(value),
+        'btType': value.btType,
+        'inArray': value.inArray,
+        'parameterId': value.parameterId,
+        'value': value.value,
+    };
 }
+

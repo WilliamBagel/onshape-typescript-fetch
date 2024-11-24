@@ -30,7 +30,6 @@ import {
     BTMParameterReferenceWithConfiguration3028FromJSON,
     BTMParameterReferenceWithConfiguration3028FromJSONTyped,
     BTMParameterReferenceWithConfiguration3028ToJSON,
- BTMParameterReferenceWithConfiguration3028SuperToJSON,
 } from './BTMParameterReferenceWithConfiguration3028';
 
 /**
@@ -78,7 +77,7 @@ export function BTMParameterReferenceAssembly938ToJSON(value?: BTMParameterRefer
         return null;
     }
     return {
-        ...BTMParameterReferenceWithConfiguration3028SuperToJSON(value),
+        ...BTMParameterReferenceWithConfiguration3028ToJSON(value),
         'btType': value.btType,
     };
 }

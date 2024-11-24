@@ -36,7 +36,6 @@ import {
     BTPStatement269FromJSON,
     BTPStatement269FromJSONTyped,
     BTPStatement269ToJSON,
- BTPStatement269SuperToJSON,
 } from './BTPStatement269';
 import type { BTPStatementBlock271 } from './BTPStatementBlock271';
 import {
@@ -165,7 +164,7 @@ export function BTPStatementTry1523ToJSON(value?: BTPStatementTry1523 | null): a
         return null;
     }
     return {
-        ...BTPStatement269SuperToJSON(value),
+        ...BTPStatement269ToJSON(value),
         'btType': value.btType,
         'body': BTPStatementBlock271ToJSON(value.body),
         'catchBlock': BTPStatementBlock271ToJSON(value.catchBlock),

@@ -15,9 +15,7 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTDebugGeometry2059FromJSONTyped,
-    BTDebugGeometry2059ToJSON,
-     BTTessellatedGeometry2576FromJSONTyped,
-    BTTessellatedGeometry2576ToJSON
+     BTTessellatedGeometry2576FromJSONTyped
 } from './';
 
 /**
@@ -114,7 +112,7 @@ export function BTEntityGeometry35FromJSONTyped(json: any, ignoreDiscriminator: 
     };
 }
 
-export function BTEntityGeometry35SuperToJSON(value?: BTEntityGeometry35 | null): any {
+export function BTEntityGeometry35ToJSON(value?: BTEntityGeometry35 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -134,21 +132,3 @@ export function BTEntityGeometry35SuperToJSON(value?: BTEntityGeometry35 | null)
     };
 }
 
-
-
-export function BTEntityGeometry35ToJSON(value?: BTEntityGeometry35 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTDebugGeometry-2059') {
-        return BTDebugGeometry2059ToJSON(value);
-    }
-    if (value.btType === 'BTTessellatedGeometry-2576') {
-        return BTTessellatedGeometry2576ToJSON(value);
-    }
-    return BTEntityGeometry35SuperToJSON(value);
-}

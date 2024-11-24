@@ -15,45 +15,25 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTMDatabaseParameter2229FromJSONTyped,
-    BTMDatabaseParameter2229ToJSON,
      BTMParameterAppearance627FromJSONTyped,
-    BTMParameterAppearance627ToJSON,
      BTMParameterArray2025FromJSONTyped,
-    BTMParameterArray2025ToJSON,
      BTMParameterBlobReference1679FromJSONTyped,
-    BTMParameterBlobReference1679ToJSON,
      BTMParameterBoolean144FromJSONTyped,
-    BTMParameterBoolean144ToJSON,
      BTMParameterConfigured2222FromJSONTyped,
-    BTMParameterConfigured2222ToJSON,
      BTMParameterDerived864FromJSONTyped,
-    BTMParameterDerived864ToJSON,
      BTMParameterEnum145FromJSONTyped,
-    BTMParameterEnum145ToJSON,
      BTMParameterFeatureList1749FromJSONTyped,
-    BTMParameterFeatureList1749ToJSON,
      BTMParameterForeignId146FromJSONTyped,
-    BTMParameterForeignId146ToJSON,
      BTMParameterInvalid1664FromJSONTyped,
-    BTMParameterInvalid1664ToJSON,
      BTMParameterLookupTablePath1419FromJSONTyped,
-    BTMParameterLookupTablePath1419ToJSON,
      BTMParameterMaterial1388FromJSONTyped,
-    BTMParameterMaterial1388ToJSON,
      BTMParameterMultiEnum3411FromJSONTyped,
-    BTMParameterMultiEnum3411ToJSON,
      BTMParameterQuantity147FromJSONTyped,
-    BTMParameterQuantity147ToJSON,
      BTMParameterQueryList148FromJSONTyped,
-    BTMParameterQueryList148ToJSON,
      BTMParameterQueryWithOccurrenceList67FromJSONTyped,
-    BTMParameterQueryWithOccurrenceList67ToJSON,
      BTMParameterReference2434FromJSONTyped,
-    BTMParameterReference2434ToJSON,
      BTMParameterString149FromJSONTyped,
-    BTMParameterString149ToJSON,
-     BTMReadOnlyParameter3800FromJSONTyped,
-    BTMReadOnlyParameter3800ToJSON
+     BTMReadOnlyParameter3800FromJSONTyped
 } from './';
 
 /**
@@ -176,7 +156,7 @@ export function BTMParameter1FromJSONTyped(json: any, ignoreDiscriminator: boole
     };
 }
 
-export function BTMParameter1SuperToJSON(value?: BTMParameter1 | null): any {
+export function BTMParameter1ToJSON(value?: BTMParameter1 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -192,75 +172,3 @@ export function BTMParameter1SuperToJSON(value?: BTMParameter1 | null): any {
     };
 }
 
-
-
-export function BTMParameter1ToJSON(value?: BTMParameter1 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMDatabaseParameter-2229') {
-        return BTMDatabaseParameter2229ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterAppearance-627') {
-        return BTMParameterAppearance627ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterArray-2025') {
-        return BTMParameterArray2025ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterBlobReference-1679') {
-        return BTMParameterBlobReference1679ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterBoolean-144') {
-        return BTMParameterBoolean144ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterConfigured-2222') {
-        return BTMParameterConfigured2222ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterDerived-864') {
-        return BTMParameterDerived864ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterEnum-145') {
-        return BTMParameterEnum145ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterFeatureList-1749') {
-        return BTMParameterFeatureList1749ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterForeignId-146') {
-        return BTMParameterForeignId146ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterInvalid-1664') {
-        return BTMParameterInvalid1664ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterLookupTablePath-1419') {
-        return BTMParameterLookupTablePath1419ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterMaterial-1388') {
-        return BTMParameterMaterial1388ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterMultiEnum-3411') {
-        return BTMParameterMultiEnum3411ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterQuantity-147') {
-        return BTMParameterQuantity147ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterQueryList-148') {
-        return BTMParameterQueryList148ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterQueryWithOccurrenceList-67') {
-        return BTMParameterQueryWithOccurrenceList67ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterReference-2434') {
-        return BTMParameterReference2434ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterString-149') {
-        return BTMParameterString149ToJSON(value);
-    }
-    if (value.btType === 'BTMReadOnlyParameter-3800') {
-        return BTMReadOnlyParameter3800ToJSON(value);
-    }
-    return BTMParameter1SuperToJSON(value);
-}

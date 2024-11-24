@@ -18,7 +18,6 @@ import {
     BTMAssemblyFeature887FromJSON,
     BTMAssemblyFeature887FromJSONTyped,
     BTMAssemblyFeature887ToJSON,
- BTMAssemblyFeature887SuperToJSON,
 } from './BTMAssemblyFeature887';
 import type { BTMFeature134 } from './BTMFeature134';
 import {
@@ -84,7 +83,7 @@ export function BTMGeometryMate1260ToJSON(value?: BTMGeometryMate1260 | null): a
         return null;
     }
     return {
-        ...BTMAssemblyFeature887SuperToJSON(value),
+        ...BTMAssemblyFeature887ToJSON(value),
         'btType': value.btType,
     };
 }

@@ -18,7 +18,6 @@ import {
     BTMConfiguredValue1341FromJSON,
     BTMConfiguredValue1341FromJSONTyped,
     BTMConfiguredValue1341ToJSON,
- BTMConfiguredValue1341SuperToJSON,
 } from './BTMConfiguredValue1341';
 import type { BTMParameter1 } from './BTMParameter1';
 import {
@@ -79,7 +78,7 @@ export function BTMConfiguredValueByBoolean1501ToJSON(value?: BTMConfiguredValue
         return null;
     }
     return {
-        ...BTMConfiguredValue1341SuperToJSON(value),
+        ...BTMConfiguredValue1341ToJSON(value),
         'btType': value.btType,
         'booleanValue': value.booleanValue,
     };

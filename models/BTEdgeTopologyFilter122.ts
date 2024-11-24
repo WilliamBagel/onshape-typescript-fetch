@@ -18,7 +18,6 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 import type { GBTEdgeTopology } from './GBTEdgeTopology';
 import {
@@ -86,7 +85,7 @@ export function BTEdgeTopologyFilter122ToJSON(value?: BTEdgeTopologyFilter122 | 
         return null;
     }
     return {
-        ...BTQueryFilter183SuperToJSON(value),
+        ...BTQueryFilter183ToJSON(value),
         'btType': value.btType,
         'edgeTopology': GBTEdgeTopologyToJSON(value.edgeTopology),
         'isInternalEdge': value.isInternalEdge,

@@ -30,7 +30,6 @@ import {
     BTTableCellParameter2399FromJSON,
     BTTableCellParameter2399FromJSONTyped,
     BTTableCellParameter2399ToJSON,
- BTTableCellParameter2399SuperToJSON,
 } from './BTTableCellParameter2399';
 import type { GBTMetadataOverrideStatusType } from './GBTMetadataOverrideStatusType';
 import {
@@ -111,7 +110,7 @@ export function BTTableCellPropertyParameter2983ToJSON(value?: BTTableCellProper
         return null;
     }
     return {
-        ...BTTableCellParameter2399SuperToJSON(value),
+        ...BTTableCellParameter2399ToJSON(value),
         'btType': value.btType,
         'isUnchanged': value.isUnchanged,
         'overrideStatusType': GBTMetadataOverrideStatusTypeToJSON(value.overrideStatusType),

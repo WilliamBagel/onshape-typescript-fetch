@@ -15,11 +15,8 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTParameterVisibilityAlwaysHidden176FromJSONTyped,
-    BTParameterVisibilityAlwaysHidden176ToJSON,
      BTParameterVisibilityLogical178FromJSONTyped,
-    BTParameterVisibilityLogical178ToJSON,
-     BTParameterVisibilityOnEqual180FromJSONTyped,
-    BTParameterVisibilityOnEqual180ToJSON
+     BTParameterVisibilityOnEqual180FromJSONTyped
 } from './';
 
 /**
@@ -71,7 +68,7 @@ export function BTParameterVisibilityCondition177FromJSONTyped(json: any, ignore
     };
 }
 
-export function BTParameterVisibilityCondition177SuperToJSON(value?: BTParameterVisibilityCondition177 | null): any {
+export function BTParameterVisibilityCondition177ToJSON(value?: BTParameterVisibilityCondition177 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -84,24 +81,3 @@ export function BTParameterVisibilityCondition177SuperToJSON(value?: BTParameter
     };
 }
 
-
-
-export function BTParameterVisibilityCondition177ToJSON(value?: BTParameterVisibilityCondition177 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTParameterVisibilityAlwaysHidden-176') {
-        return BTParameterVisibilityAlwaysHidden176ToJSON(value);
-    }
-    if (value.btType === 'BTParameterVisibilityLogical-178') {
-        return BTParameterVisibilityLogical178ToJSON(value);
-    }
-    if (value.btType === 'BTParameterVisibilityOnEqual-180') {
-        return BTParameterVisibilityOnEqual180ToJSON(value);
-    }
-    return BTParameterVisibilityCondition177SuperToJSON(value);
-}

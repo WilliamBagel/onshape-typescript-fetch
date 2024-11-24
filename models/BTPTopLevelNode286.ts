@@ -36,7 +36,6 @@ import {
     BTPNode7FromJSON,
     BTPNode7FromJSONTyped,
     BTPNode7ToJSON,
- BTPNode7SuperToJSON,
 } from './BTPNode7';
 import type { BTPSpace10 } from './BTPSpace10';
 import {
@@ -53,13 +52,9 @@ import {
 
 import {
      BTPProcedureDeclarationBase266FromJSONTyped,
-    BTPProcedureDeclarationBase266ToJSON,
      BTPTopLevelConstantDeclaration283FromJSONTyped,
-    BTPTopLevelConstantDeclaration283ToJSON,
      BTPTopLevelImport285FromJSONTyped,
-    BTPTopLevelImport285ToJSON,
-     BTPTopLevelTypeDeclaration287FromJSONTyped,
-    BTPTopLevelTypeDeclaration287ToJSON
+     BTPTopLevelTypeDeclaration287FromJSONTyped
 } from './';
 
 /**
@@ -162,7 +157,7 @@ export function BTPTopLevelNode286FromJSONTyped(json: any, ignoreDiscriminator: 
     };
 }
 
-export function BTPTopLevelNode286SuperToJSON(value?: BTPTopLevelNode286 | null): any {
+export function BTPTopLevelNode286ToJSON(value?: BTPTopLevelNode286 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -170,7 +165,7 @@ export function BTPTopLevelNode286SuperToJSON(value?: BTPTopLevelNode286 | null)
         return null;
     }
     return {
-        ...BTPNode7SuperToJSON(value),
+        ...BTPNode7ToJSON(value),
         'btType': value.btType,
         'annotation': BTPAnnotation231ToJSON(value.annotation),
         'argumentsToDocument': value.argumentsToDocument === undefined ? undefined : ((value.argumentsToDocument as Array<any>).map(BTPArgumentDeclaration232ToJSON)),
@@ -182,27 +177,3 @@ export function BTPTopLevelNode286SuperToJSON(value?: BTPTopLevelNode286 | null)
     };
 }
 
-
-
-export function BTPTopLevelNode286ToJSON(value?: BTPTopLevelNode286 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTPProcedureDeclarationBase-266') {
-        return BTPProcedureDeclarationBase266ToJSON(value);
-    }
-    if (value.btType === 'BTPTopLevelConstantDeclaration-283') {
-        return BTPTopLevelConstantDeclaration283ToJSON(value);
-    }
-    if (value.btType === 'BTPTopLevelImport-285') {
-        return BTPTopLevelImport285ToJSON(value);
-    }
-    if (value.btType === 'BTPTopLevelTypeDeclaration-287') {
-        return BTPTopLevelTypeDeclaration287ToJSON(value);
-    }
-    return BTPTopLevelNode286SuperToJSON(value);
-}

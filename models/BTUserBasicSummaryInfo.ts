@@ -15,9 +15,7 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTUserDetailSummaryInfoFromJSONTyped,
-    BTUserDetailSummaryInfoToJSON,
-     BTUserBasicSummaryInfoFromJSONTyped,
-    BTUserBasicSummaryInfoToJSON
+     BTUserBasicSummaryInfoFromJSONTyped
 } from './';
 
 /**
@@ -108,7 +106,7 @@ export function BTUserBasicSummaryInfoFromJSONTyped(json: any, ignoreDiscriminat
     };
 }
 
-export function BTUserBasicSummaryInfoSuperToJSON(value?: BTUserBasicSummaryInfo | null): any {
+export function BTUserBasicSummaryInfoToJSON(value?: BTUserBasicSummaryInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -127,21 +125,3 @@ export function BTUserBasicSummaryInfoSuperToJSON(value?: BTUserBasicSummaryInfo
     };
 }
 
-
-
-export function BTUserBasicSummaryInfoToJSON(value?: BTUserBasicSummaryInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'user-detail-summary') {
-        return BTUserDetailSummaryInfoToJSON(value);
-    }
-    if (value.jsonType === 'user-summary') {
-        return BTUserBasicSummaryInfoToJSON(value);
-    }
-    return BTUserBasicSummaryInfoSuperToJSON(value);
-}

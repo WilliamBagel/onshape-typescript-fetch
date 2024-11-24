@@ -24,7 +24,6 @@ import {
     BTEntityFace31FromJSON,
     BTEntityFace31FromJSONTyped,
     BTEntityFace31ToJSON,
- BTEntityFace31SuperToJSON,
 } from './BTEntityFace31';
 import type { BTEntityGeometry35 } from './BTEntityGeometry35';
 import {
@@ -136,7 +135,7 @@ export function BTSimulationFace2147ToJSON(value?: BTSimulationFace2147 | null):
         return null;
     }
     return {
-        ...BTEntityFace31SuperToJSON(value),
+        ...BTEntityFace31ToJSON(value),
         'btType': value.btType,
         'bounds': BTBoundingBox1052ToJSON(value.bounds),
         'sampleTrianglePointIndices': BTImmutableIntArrayToJSON(value.sampleTrianglePointIndices),

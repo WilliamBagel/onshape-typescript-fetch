@@ -18,7 +18,6 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 
 /**
@@ -73,7 +72,7 @@ export function BTMUnitsDefault160ToJSON(value?: BTMUnitsDefault160 | null): any
         return null;
     }
     return {
-        ...BTMNode19SuperToJSON(value),
+        ...BTMNode19ToJSON(value),
         'btType': value.btType,
         'units': value.units,
     };

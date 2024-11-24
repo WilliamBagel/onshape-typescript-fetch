@@ -48,7 +48,6 @@ import {
     BTPTopLevelTypeDeclaration287FromJSON,
     BTPTopLevelTypeDeclaration287FromJSONTyped,
     BTPTopLevelTypeDeclaration287ToJSON,
- BTPTopLevelTypeDeclaration287SuperToJSON,
 } from './BTPTopLevelTypeDeclaration287';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -130,7 +129,7 @@ export function BTPTopLevelEnumDeclaration284ToJSON(value?: BTPTopLevelEnumDecla
         return null;
     }
     return {
-        ...BTPTopLevelTypeDeclaration287SuperToJSON(value),
+        ...BTPTopLevelTypeDeclaration287ToJSON(value),
         'btType': value.btType,
         'annotations': value.annotations === undefined ? undefined : ((value.annotations as Array<any>).map(BTPAnnotation231ToJSON)),
         'spaceInEmptyList': BTPSpace10ToJSON(value.spaceInEmptyList),

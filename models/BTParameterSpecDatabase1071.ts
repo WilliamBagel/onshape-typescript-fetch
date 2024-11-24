@@ -24,7 +24,6 @@ import {
     BTParameterSpec6FromJSON,
     BTParameterSpec6FromJSONTyped,
     BTParameterSpec6ToJSON,
- BTParameterSpec6SuperToJSON,
 } from './BTParameterSpec6';
 import type { BTParameterVisibilityCondition177 } from './BTParameterVisibilityCondition177';
 import {
@@ -90,7 +89,7 @@ export function BTParameterSpecDatabase1071ToJSON(value?: BTParameterSpecDatabas
         return null;
     }
     return {
-        ...BTParameterSpec6SuperToJSON(value),
+        ...BTParameterSpec6ToJSON(value),
         'btType': value.btType,
     };
 }

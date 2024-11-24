@@ -18,7 +18,6 @@ import {
     BTFeatureApiBase1430FromJSON,
     BTFeatureApiBase1430FromJSONTyped,
     BTFeatureApiBase1430ToJSON,
- BTFeatureApiBase1430SuperToJSON,
 } from './BTFeatureApiBase1430';
 import type { BTFeatureState1688 } from './BTFeatureState1688';
 import {
@@ -99,7 +98,7 @@ export function BTAssemblyFeatureListResponse1174ToJSON(value?: BTAssemblyFeatur
         return null;
     }
     return {
-        ...BTFeatureApiBase1430SuperToJSON(value),
+        ...BTFeatureApiBase1430ToJSON(value),
         'btType': value.btType,
         'featureStates': value.featureStates === undefined ? undefined : (mapValues(value.featureStates, BTFeatureState1688ToJSON)),
         'features': value.features === undefined ? undefined : ((value.features as Array<any>).map(BTMAssemblyFeature887ToJSON)),

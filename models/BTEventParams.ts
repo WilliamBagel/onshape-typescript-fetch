@@ -14,8 +14,7 @@
 
 import { exists, mapValues } from '../runtime';
 import {
-     BTDocumentOpenEventParamsFromJSONTyped,
-    BTDocumentOpenEventParamsToJSON
+     BTDocumentOpenEventParamsFromJSONTyped
 } from './';
 
 /**
@@ -60,7 +59,7 @@ export function BTEventParamsFromJSONTyped(json: any, ignoreDiscriminator: boole
     };
 }
 
-export function BTEventParamsSuperToJSON(value?: BTEventParams | null): any {
+export function BTEventParamsToJSON(value?: BTEventParams | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -73,18 +72,3 @@ export function BTEventParamsSuperToJSON(value?: BTEventParams | null): any {
     };
 }
 
-
-
-export function BTEventParamsToJSON(value?: BTEventParams | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'DocumentOpenEventInfo') {
-        return BTDocumentOpenEventParamsToJSON(value);
-    }
-    return BTEventParamsSuperToJSON(value);
-}

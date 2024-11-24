@@ -36,7 +36,6 @@ import {
     BTFeatureEntity34FromJSON,
     BTFeatureEntity34FromJSONTyped,
     BTFeatureEntity34ToJSON,
- BTFeatureEntity34SuperToJSON,
 } from './BTFeatureEntity34';
 
 /**
@@ -84,7 +83,7 @@ export function BTOriginEntity935ToJSON(value?: BTOriginEntity935 | null): any {
         return null;
     }
     return {
-        ...BTFeatureEntity34SuperToJSON(value),
+        ...BTFeatureEntity34ToJSON(value),
         'btType': value.btType,
     };
 }

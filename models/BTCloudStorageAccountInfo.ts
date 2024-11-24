@@ -24,7 +24,6 @@ import {
     BTGlobalTreeNodeInfoFromJSON,
     BTGlobalTreeNodeInfoFromJSONTyped,
     BTGlobalTreeNodeInfoToJSON,
- BTGlobalTreeNodeInfoSuperToJSON,
 } from './BTGlobalTreeNodeInfo';
 import type { BTOwnerInfo } from './BTOwnerInfo';
 import {
@@ -112,7 +111,7 @@ export function BTCloudStorageAccountInfoToJSON(value?: BTCloudStorageAccountInf
         return null;
     }
     return {
-        ...BTGlobalTreeNodeInfoSuperToJSON(value),
+        ...BTGlobalTreeNodeInfoToJSON(value),
         'cloudStorageAccountId': value.cloudStorageAccountId,
         'cloudStorageProvider': value.cloudStorageProvider,
         'enabled': value.enabled,

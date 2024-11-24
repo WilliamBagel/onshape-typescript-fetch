@@ -18,7 +18,6 @@ import {
     BTMReadOnlyParameter3800FromJSON,
     BTMReadOnlyParameter3800FromJSONTyped,
     BTMReadOnlyParameter3800ToJSON,
- BTMReadOnlyParameter3800SuperToJSON,
 } from './BTMReadOnlyParameter3800';
 import type { GBTComputeStatus } from './GBTComputeStatus';
 import {
@@ -93,7 +92,7 @@ export function BTMParameterProgress3232ToJSON(value?: BTMParameterProgress3232 
         return null;
     }
     return {
-        ...BTMReadOnlyParameter3800SuperToJSON(value),
+        ...BTMReadOnlyParameter3800ToJSON(value),
         'btType': value.btType,
         'percentDone': value.percentDone,
         'status': GBTComputeStatusToJSON(value.status),

@@ -18,7 +18,6 @@ import {
     BTBaseEntityData33FromJSON,
     BTBaseEntityData33FromJSONTyped,
     BTBaseEntityData33ToJSON,
- BTBaseEntityData33SuperToJSON,
 } from './BTBaseEntityData33';
 import type { BTDomainSpecificMetadata961 } from './BTDomainSpecificMetadata961';
 import {
@@ -35,17 +34,11 @@ import {
 
 import {
      BTBodyEntity26FromJSONTyped,
-    BTBodyEntity26ToJSON,
      BTConstructionPlaneEntity27FromJSONTyped,
-    BTConstructionPlaneEntity27ToJSON,
      BTMateConnectorEntity28FromJSONTyped,
-    BTMateConnectorEntity28ToJSON,
      BTOriginEntity935FromJSONTyped,
-    BTOriginEntity935ToJSON,
      BTPointEntity1439FromJSONTyped,
-    BTPointEntity1439ToJSON,
-     BTSketchEntity25FromJSONTyped,
-    BTSketchEntity25ToJSON
+     BTSketchEntity25FromJSONTyped
 } from './';
 
 /**
@@ -119,23 +112,6 @@ export function BTFeatureEntity34FromJSONTyped(json: any, ignoreDiscriminator: b
     };
 }
 
-export function BTFeatureEntity34SuperToJSON(value?: BTFeatureEntity34 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTBaseEntityData33SuperToJSON(value),
-        'btType': value.btType,
-        'domainSpecificMetadata': value.domainSpecificMetadata === undefined ? undefined : ((value.domainSpecificMetadata as Array<any>).map(BTDomainSpecificMetadata961ToJSON)),
-        'firstGeometry': BTEntityGeometry35ToJSON(value.firstGeometry),
-    };
-}
-
-
-
 export function BTFeatureEntity34ToJSON(value?: BTFeatureEntity34 | null): any {
     if (value === undefined) {
         return undefined;
@@ -143,24 +119,11 @@ export function BTFeatureEntity34ToJSON(value?: BTFeatureEntity34 | null): any {
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTBodyEntity-26') {
-        return BTBodyEntity26ToJSON(value);
-    }
-    if (value.btType === 'BTConstructionPlaneEntity-27') {
-        return BTConstructionPlaneEntity27ToJSON(value);
-    }
-    if (value.btType === 'BTMateConnectorEntity-28') {
-        return BTMateConnectorEntity28ToJSON(value);
-    }
-    if (value.btType === 'BTOriginEntity-935') {
-        return BTOriginEntity935ToJSON(value);
-    }
-    if (value.btType === 'BTPointEntity-1439') {
-        return BTPointEntity1439ToJSON(value);
-    }
-    if (value.btType === 'BTSketchEntity-25') {
-        return BTSketchEntity25ToJSON(value);
-    }
-    return BTFeatureEntity34SuperToJSON(value);
+    return {
+        ...BTBaseEntityData33ToJSON(value),
+        'btType': value.btType,
+        'domainSpecificMetadata': value.domainSpecificMetadata === undefined ? undefined : ((value.domainSpecificMetadata as Array<any>).map(BTDomainSpecificMetadata961ToJSON)),
+        'firstGeometry': BTEntityGeometry35ToJSON(value.firstGeometry),
+    };
 }
+

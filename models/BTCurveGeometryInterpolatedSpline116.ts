@@ -18,7 +18,6 @@ import {
     BTCurveGeometry114FromJSON,
     BTCurveGeometry114FromJSONTyped,
     BTCurveGeometry114ToJSON,
- BTCurveGeometry114SuperToJSON,
 } from './BTCurveGeometry114';
 
 /**
@@ -143,7 +142,7 @@ export function BTCurveGeometryInterpolatedSpline116ToJSON(value?: BTCurveGeomet
         return null;
     }
     return {
-        ...BTCurveGeometry114SuperToJSON(value),
+        ...BTCurveGeometry114ToJSON(value),
         'btType': value.btType,
         'derivatives': value.derivatives,
         'endDerivativeX': value.endDerivativeX,

@@ -34,15 +34,10 @@ import {
 
 import {
      BTAssemblySimulationStructuralLoadsTable3867FromJSONTyped,
-    BTAssemblySimulationStructuralLoadsTable3867ToJSON,
      BTAssemblySimulationTable3236FromJSONTyped,
-    BTAssemblySimulationTable3236ToJSON,
      BTBillOfMaterialsTable1073FromJSONTyped,
-    BTBillOfMaterialsTable1073ToJSON,
      BTConfiguredPartPropertiesTable2740FromJSONTyped,
-    BTConfiguredPartPropertiesTable2740ToJSON,
-     BTFSTable953FromJSONTyped,
-    BTFSTable953ToJSON
+     BTFSTable953FromJSONTyped
 } from './';
 
 /**
@@ -183,7 +178,7 @@ export function BTTable1825FromJSONTyped(json: any, ignoreDiscriminator: boolean
     };
 }
 
-export function BTTable1825SuperToJSON(value?: BTTable1825 | null): any {
+export function BTTable1825ToJSON(value?: BTTable1825 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -208,30 +203,3 @@ export function BTTable1825SuperToJSON(value?: BTTable1825 | null): any {
     };
 }
 
-
-
-export function BTTable1825ToJSON(value?: BTTable1825 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTAssemblySimulationStructuralLoadsTable-3867') {
-        return BTAssemblySimulationStructuralLoadsTable3867ToJSON(value);
-    }
-    if (value.btType === 'BTAssemblySimulationTable-3236') {
-        return BTAssemblySimulationTable3236ToJSON(value);
-    }
-    if (value.btType === 'BTBillOfMaterialsTable-1073') {
-        return BTBillOfMaterialsTable1073ToJSON(value);
-    }
-    if (value.btType === 'BTConfiguredPartPropertiesTable-2740') {
-        return BTConfiguredPartPropertiesTable2740ToJSON(value);
-    }
-    if (value.btType === 'BTFSTable-953') {
-        return BTFSTable953ToJSON(value);
-    }
-    return BTTable1825SuperToJSON(value);
-}

@@ -18,7 +18,6 @@ import {
     BTMIndividualQueryBase139FromJSON,
     BTMIndividualQueryBase139FromJSONTyped,
     BTMIndividualQueryBase139ToJSON,
- BTMIndividualQueryBase139SuperToJSON,
 } from './BTMIndividualQueryBase139';
 import type { BTPStatement269 } from './BTPStatement269';
 import {
@@ -29,13 +28,9 @@ import {
 
 import {
      BTMIndividualCoEdgeQuery1332FromJSONTyped,
-    BTMIndividualCoEdgeQuery1332ToJSON,
      BTMIndividualCreatedByQuery137FromJSONTyped,
-    BTMIndividualCreatedByQuery137ToJSON,
      BTMIndividualSketchRegionQuery140FromJSONTyped,
-    BTMIndividualSketchRegionQuery140ToJSON,
-     BTMIndividualSketchUniqueVerticesQuery1472FromJSONTyped,
-    BTMIndividualSketchUniqueVerticesQuery1472ToJSON
+     BTMIndividualSketchUniqueVerticesQuery1472FromJSONTyped
 } from './';
 
 /**
@@ -110,24 +105,6 @@ export function BTMIndividualQuery138FromJSONTyped(json: any, ignoreDiscriminato
     };
 }
 
-export function BTMIndividualQuery138SuperToJSON(value?: BTMIndividualQuery138 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTMIndividualQueryBase139SuperToJSON(value),
-        'btType': value.btType,
-        'persistentQuery': BTPStatement269ToJSON(value.persistentQuery),
-        'queryStatement': BTPStatement269ToJSON(value.queryStatement),
-        'variableName': BTMIndividualQuery138ToJSON(value.variableName),
-    };
-}
-
-
-
 export function BTMIndividualQuery138ToJSON(value?: BTMIndividualQuery138 | null): any {
     if (value === undefined) {
         return undefined;
@@ -135,18 +112,12 @@ export function BTMIndividualQuery138ToJSON(value?: BTMIndividualQuery138 | null
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTMIndividualCoEdgeQuery-1332') {
-        return BTMIndividualCoEdgeQuery1332ToJSON(value);
-    }
-    if (value.btType === 'BTMIndividualCreatedByQuery-137') {
-        return BTMIndividualCreatedByQuery137ToJSON(value);
-    }
-    if (value.btType === 'BTMIndividualSketchRegionQuery-140') {
-        return BTMIndividualSketchRegionQuery140ToJSON(value);
-    }
-    if (value.btType === 'BTMIndividualSketchUniqueVerticesQuery-1472') {
-        return BTMIndividualSketchUniqueVerticesQuery1472ToJSON(value);
-    }
-    return BTMIndividualQuery138SuperToJSON(value);
+    return {
+        ...BTMIndividualQueryBase139ToJSON(value),
+        'btType': value.btType,
+        'persistentQuery': BTPStatement269ToJSON(value.persistentQuery),
+        'queryStatement': BTPStatement269ToJSON(value.queryStatement),
+        'variableName': BTMIndividualQuery138ToJSON(value.variableName),
+    };
 }
+

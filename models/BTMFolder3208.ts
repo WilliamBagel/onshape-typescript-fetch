@@ -18,7 +18,6 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 
 /**
@@ -87,7 +86,7 @@ export function BTMFolder3208ToJSON(value?: BTMFolder3208 | null): any {
         return null;
     }
     return {
-        ...BTMNode19SuperToJSON(value),
+        ...BTMNode19ToJSON(value),
         'btType': value.btType,
         'folderId': value.folderId,
         'isStartFolder': value.isStartFolder,

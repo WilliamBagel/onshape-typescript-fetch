@@ -18,7 +18,6 @@ import {
     BTSurfaceDescription1564FromJSON,
     BTSurfaceDescription1564FromJSONTyped,
     BTSurfaceDescription1564ToJSON,
- BTSurfaceDescription1564SuperToJSON,
 } from './BTSurfaceDescription1564';
 import type { BTVector3d389 } from './BTVector3d389';
 import {
@@ -85,7 +84,7 @@ export function BTSpunDescription657ToJSON(value?: BTSpunDescription657 | null):
         return null;
     }
     return {
-        ...BTSurfaceDescription1564SuperToJSON(value),
+        ...BTSurfaceDescription1564ToJSON(value),
         'btType': value.btType,
         'axis': BTVector3d389ToJSON(value.axis),
     };

@@ -18,7 +18,6 @@ import {
     BTParameterVisibilityCondition177FromJSON,
     BTParameterVisibilityCondition177FromJSONTyped,
     BTParameterVisibilityCondition177ToJSON,
- BTParameterVisibilityCondition177SuperToJSON,
 } from './BTParameterVisibilityCondition177';
 
 /**
@@ -67,7 +66,7 @@ export function BTParameterVisibilityAlwaysHidden176ToJSON(value?: BTParameterVi
         return null;
     }
     return {
-        ...BTParameterVisibilityCondition177SuperToJSON(value),
+        ...BTParameterVisibilityCondition177ToJSON(value),
         'btType': value.btType,
     };
 }

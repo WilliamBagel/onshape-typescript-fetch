@@ -30,7 +30,6 @@ import {
     BTPStatement269FromJSON,
     BTPStatement269FromJSONTyped,
     BTPStatement269ToJSON,
- BTPStatement269SuperToJSON,
 } from './BTPStatement269';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -41,11 +40,8 @@ import {
 
 import {
      BTPStatementLoopFor3278FromJSONTyped,
-    BTPStatementLoopFor3278ToJSON,
      BTPStatementLoopForIn279FromJSONTyped,
-    BTPStatementLoopForIn279ToJSON,
-     BTPStatementLoopWhile280FromJSONTyped,
-    BTPStatementLoopWhile280ToJSON
+     BTPStatementLoopWhile280FromJSONTyped
 } from './';
 
 /**
@@ -110,23 +106,6 @@ export function BTPStatementLoop277FromJSONTyped(json: any, ignoreDiscriminator:
     };
 }
 
-export function BTPStatementLoop277SuperToJSON(value?: BTPStatementLoop277 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTPStatement269SuperToJSON(value),
-        'btType': value.btType,
-        'body': BTPStatement269ToJSON(value.body),
-        'spaceAfterLoopType': BTPSpace10ToJSON(value.spaceAfterLoopType),
-    };
-}
-
-
-
 export function BTPStatementLoop277ToJSON(value?: BTPStatementLoop277 | null): any {
     if (value === undefined) {
         return undefined;
@@ -134,15 +113,11 @@ export function BTPStatementLoop277ToJSON(value?: BTPStatementLoop277 | null): a
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTPStatementLoopFor3-278') {
-        return BTPStatementLoopFor3278ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementLoopForIn-279') {
-        return BTPStatementLoopForIn279ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementLoopWhile-280') {
-        return BTPStatementLoopWhile280ToJSON(value);
-    }
-    return BTPStatementLoop277SuperToJSON(value);
+    return {
+        ...BTPStatement269ToJSON(value),
+        'btType': value.btType,
+        'body': BTPStatement269ToJSON(value.body),
+        'spaceAfterLoopType': BTPSpace10ToJSON(value.spaceAfterLoopType),
+    };
 }
+

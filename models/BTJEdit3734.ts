@@ -15,15 +15,10 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTJEditChange2636FromJSONTyped,
-    BTJEditChange2636ToJSON,
      BTJEditDelete1992FromJSONTyped,
-    BTJEditDelete1992ToJSON,
      BTJEditInsert2523FromJSONTyped,
-    BTJEditInsert2523ToJSON,
      BTJEditList2707FromJSONTyped,
-    BTJEditList2707ToJSON,
-     BTJEditMove3245FromJSONTyped,
-    BTJEditMove3245ToJSON
+     BTJEditMove3245FromJSONTyped
 } from './';
 
 /**
@@ -81,7 +76,7 @@ export function BTJEdit3734FromJSONTyped(json: any, ignoreDiscriminator: boolean
     };
 }
 
-export function BTJEdit3734SuperToJSON(value?: BTJEdit3734 | null): any {
+export function BTJEdit3734ToJSON(value?: BTJEdit3734 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -94,30 +89,3 @@ export function BTJEdit3734SuperToJSON(value?: BTJEdit3734 | null): any {
     };
 }
 
-
-
-export function BTJEdit3734ToJSON(value?: BTJEdit3734 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTJEditChange-2636') {
-        return BTJEditChange2636ToJSON(value);
-    }
-    if (value.btType === 'BTJEditDelete-1992') {
-        return BTJEditDelete1992ToJSON(value);
-    }
-    if (value.btType === 'BTJEditInsert-2523') {
-        return BTJEditInsert2523ToJSON(value);
-    }
-    if (value.btType === 'BTJEditList-2707') {
-        return BTJEditList2707ToJSON(value);
-    }
-    if (value.btType === 'BTJEditMove-3245') {
-        return BTJEditMove3245ToJSON(value);
-    }
-    return BTJEdit3734SuperToJSON(value);
-}

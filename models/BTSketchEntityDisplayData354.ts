@@ -15,23 +15,14 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTSketchArcDisplayData349FromJSONTyped,
-    BTSketchArcDisplayData349ToJSON,
      BTSketchCircleDisplayData350FromJSONTyped,
-    BTSketchCircleDisplayData350ToJSON,
      BTSketchCompositeEntityDisplayData1093FromJSONTyped,
-    BTSketchCompositeEntityDisplayData1093ToJSON,
      BTSketchConicDisplayData1085FromJSONTyped,
-    BTSketchConicDisplayData1085ToJSON,
      BTSketchEllipseDisplayData712FromJSONTyped,
-    BTSketchEllipseDisplayData712ToJSON,
      BTSketchEllipticalArcDisplayData892FromJSONTyped,
-    BTSketchEllipticalArcDisplayData892ToJSON,
      BTSketchLineDisplayData357FromJSONTyped,
-    BTSketchLineDisplayData357ToJSON,
      BTSketchPointDisplayData358FromJSONTyped,
-    BTSketchPointDisplayData358ToJSON,
-     BTSketchSplineDisplayData359FromJSONTyped,
-    BTSketchSplineDisplayData359ToJSON
+     BTSketchSplineDisplayData359FromJSONTyped
 } from './';
 
 /**
@@ -107,7 +98,7 @@ export function BTSketchEntityDisplayData354FromJSONTyped(json: any, ignoreDiscr
     };
 }
 
-export function BTSketchEntityDisplayData354SuperToJSON(value?: BTSketchEntityDisplayData354 | null): any {
+export function BTSketchEntityDisplayData354ToJSON(value?: BTSketchEntityDisplayData354 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -121,42 +112,3 @@ export function BTSketchEntityDisplayData354SuperToJSON(value?: BTSketchEntityDi
     };
 }
 
-
-
-export function BTSketchEntityDisplayData354ToJSON(value?: BTSketchEntityDisplayData354 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTSketchArcDisplayData-349') {
-        return BTSketchArcDisplayData349ToJSON(value);
-    }
-    if (value.btType === 'BTSketchCircleDisplayData-350') {
-        return BTSketchCircleDisplayData350ToJSON(value);
-    }
-    if (value.btType === 'BTSketchCompositeEntityDisplayData-1093') {
-        return BTSketchCompositeEntityDisplayData1093ToJSON(value);
-    }
-    if (value.btType === 'BTSketchConicDisplayData-1085') {
-        return BTSketchConicDisplayData1085ToJSON(value);
-    }
-    if (value.btType === 'BTSketchEllipseDisplayData-712') {
-        return BTSketchEllipseDisplayData712ToJSON(value);
-    }
-    if (value.btType === 'BTSketchEllipticalArcDisplayData-892') {
-        return BTSketchEllipticalArcDisplayData892ToJSON(value);
-    }
-    if (value.btType === 'BTSketchLineDisplayData-357') {
-        return BTSketchLineDisplayData357ToJSON(value);
-    }
-    if (value.btType === 'BTSketchPointDisplayData-358') {
-        return BTSketchPointDisplayData358ToJSON(value);
-    }
-    if (value.btType === 'BTSketchSplineDisplayData-359') {
-        return BTSketchSplineDisplayData359ToJSON(value);
-    }
-    return BTSketchEntityDisplayData354SuperToJSON(value);
-}

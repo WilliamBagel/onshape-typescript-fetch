@@ -48,7 +48,6 @@ import {
     BTPTopLevelNode286FromJSON,
     BTPTopLevelNode286FromJSONTyped,
     BTPTopLevelNode286ToJSON,
- BTPTopLevelNode286SuperToJSON,
 } from './BTPTopLevelNode286';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -144,7 +143,7 @@ export function BTPTopLevelImport285ToJSON(value?: BTPTopLevelImport285 | null):
         return null;
     }
     return {
-        ...BTPTopLevelNode286SuperToJSON(value),
+        ...BTPTopLevelNode286ToJSON(value),
         'btType': value.btType,
         'combinedNamespacePathAndVersion': value.combinedNamespacePathAndVersion,
         'importMicroversion': value.importMicroversion,

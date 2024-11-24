@@ -18,7 +18,6 @@ import {
     BTInstanceBase2263FromJSON,
     BTInstanceBase2263FromJSONTyped,
     BTInstanceBase2263ToJSON,
- BTInstanceBase2263SuperToJSON,
 } from './BTInstanceBase2263';
 import type { BTInstanceControlNode750 } from './BTInstanceControlNode750';
 import {
@@ -53,13 +52,9 @@ import {
 
 import {
      BTAssemblyMirror2996FromJSONTyped,
-    BTAssemblyMirror2996ToJSON,
      BTAssemblyPattern1974FromJSONTyped,
-    BTAssemblyPattern1974ToJSON,
      BTAssemblyReplicate2774FromJSONTyped,
-    BTAssemblyReplicate2774ToJSON,
-     BTParametricPartStudioInstance4374FromJSONTyped,
-    BTParametricPartStudioInstance4374ToJSON
+     BTParametricPartStudioInstance4374FromJSONTyped
 } from './';
 
 /**
@@ -134,24 +129,6 @@ export function BTParametricInstance2641FromJSONTyped(json: any, ignoreDiscrimin
     };
 }
 
-export function BTParametricInstance2641SuperToJSON(value?: BTParametricInstance2641 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTInstanceBase2263SuperToJSON(value),
-        'btType': value.btType,
-        'feature': BTMAssemblyFeature887ToJSON(value.feature),
-        'featureId': value.featureId,
-        'instanceControlNodes': value.instanceControlNodes === undefined ? undefined : ((value.instanceControlNodes as Array<any>).map(BTInstanceControlNode750ToJSON)),
-    };
-}
-
-
-
 export function BTParametricInstance2641ToJSON(value?: BTParametricInstance2641 | null): any {
     if (value === undefined) {
         return undefined;
@@ -159,18 +136,12 @@ export function BTParametricInstance2641ToJSON(value?: BTParametricInstance2641 
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTAssemblyMirror-2996') {
-        return BTAssemblyMirror2996ToJSON(value);
-    }
-    if (value.btType === 'BTAssemblyPattern-1974') {
-        return BTAssemblyPattern1974ToJSON(value);
-    }
-    if (value.btType === 'BTAssemblyReplicate-2774') {
-        return BTAssemblyReplicate2774ToJSON(value);
-    }
-    if (value.btType === 'BTParametricPartStudioInstance-4374') {
-        return BTParametricPartStudioInstance4374ToJSON(value);
-    }
-    return BTParametricInstance2641SuperToJSON(value);
+    return {
+        ...BTInstanceBase2263ToJSON(value),
+        'btType': value.btType,
+        'feature': BTMAssemblyFeature887ToJSON(value.feature),
+        'featureId': value.featureId,
+        'instanceControlNodes': value.instanceControlNodes === undefined ? undefined : ((value.instanceControlNodes as Array<any>).map(BTInstanceControlNode750ToJSON)),
+    };
 }
+

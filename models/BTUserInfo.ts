@@ -66,7 +66,6 @@ import {
     BTUserSummaryInfoFromJSON,
     BTUserSummaryInfoFromJSONTyped,
     BTUserSummaryInfoToJSON,
- BTUserSummaryInfoSuperToJSON,
 } from './BTUserSummaryInfo';
 import type { GlobalPermissionInfo } from './GlobalPermissionInfo';
 import {
@@ -77,9 +76,7 @@ import {
 
 import {
      BTUserAdminInfoFromJSONTyped,
-    BTUserAdminInfoToJSON,
-     BTUserInfoFromJSONTyped,
-    BTUserInfoToJSON
+     BTUserInfoFromJSONTyped
 } from './';
 
 /**
@@ -372,7 +369,7 @@ export function BTUserInfoFromJSONTyped(json: any, ignoreDiscriminator: boolean)
     };
 }
 
-export function BTUserInfoSuperToJSON(value?: BTUserInfo | null): any {
+export function BTUserInfoToJSON(value?: BTUserInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -380,7 +377,7 @@ export function BTUserInfoSuperToJSON(value?: BTUserInfo | null): any {
         return null;
     }
     return {
-        ...BTUserSummaryInfoSuperToJSON(value),
+        ...BTUserSummaryInfoToJSON(value),
         'activePlan': BTBillingPlanInfoToJSON(value.activePlan),
         'activePlanId': value.activePlanId,
         'activePurchases': value.activePurchases === undefined ? undefined : ((value.activePurchases as Array<any>).map(BTPurchaseInfoToJSON)),
@@ -420,21 +417,3 @@ export function BTUserInfoSuperToJSON(value?: BTUserInfo | null): any {
     };
 }
 
-
-
-export function BTUserInfoToJSON(value?: BTUserInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'BTUserAdminInfo') {
-        return BTUserAdminInfoToJSON(value);
-    }
-    if (value.jsonType === 'userinfo') {
-        return BTUserInfoToJSON(value);
-    }
-    return BTUserInfoSuperToJSON(value);
-}

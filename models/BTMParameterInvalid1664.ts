@@ -18,7 +18,6 @@ import {
     BTMParameter1FromJSON,
     BTMParameter1FromJSONTyped,
     BTMParameter1ToJSON,
- BTMParameter1SuperToJSON,
 } from './BTMParameter1';
 
 /**
@@ -66,7 +65,7 @@ export function BTMParameterInvalid1664ToJSON(value?: BTMParameterInvalid1664 | 
         return null;
     }
     return {
-        ...BTMParameter1SuperToJSON(value),
+        ...BTMParameter1ToJSON(value),
         'btType': value.btType,
     };
 }

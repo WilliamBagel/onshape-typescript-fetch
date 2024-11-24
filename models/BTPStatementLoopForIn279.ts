@@ -48,7 +48,6 @@ import {
     BTPStatementLoop277FromJSON,
     BTPStatementLoop277FromJSONTyped,
     BTPStatementLoop277ToJSON,
- BTPStatementLoop277SuperToJSON,
 } from './BTPStatementLoop277';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -164,7 +163,7 @@ export function BTPStatementLoopForIn279ToJSON(value?: BTPStatementLoopForIn279 
         return null;
     }
     return {
-        ...BTPStatementLoop277SuperToJSON(value),
+        ...BTPStatementLoop277ToJSON(value),
         'btType': value.btType,
         'container': BTPExpression9ToJSON(value.container),
         'identifiers': value.identifiers === undefined ? undefined : ((value.identifiers as Array<any>).map(BTPIdentifier8ToJSON)),

@@ -39,8 +39,7 @@ import {
 } from './BTMicroversionIdAndConfiguration2338';
 
 import {
-     BTExternalReference1936FromJSONTyped,
-    BTExternalReference1936ToJSON
+     BTExternalReference1936FromJSONTyped
 } from './';
 
 /**
@@ -141,7 +140,7 @@ export function BTElementReference725FromJSONTyped(json: any, ignoreDiscriminato
     };
 }
 
-export function BTElementReference725SuperToJSON(value?: BTElementReference725 | null): any {
+export function BTElementReference725ToJSON(value?: BTElementReference725 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -162,18 +161,3 @@ export function BTElementReference725SuperToJSON(value?: BTElementReference725 |
     };
 }
 
-
-
-export function BTElementReference725ToJSON(value?: BTElementReference725 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTExternalReference-1936') {
-        return BTExternalReference1936ToJSON(value);
-    }
-    return BTElementReference725SuperToJSON(value);
-}

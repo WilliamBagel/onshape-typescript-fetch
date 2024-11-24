@@ -18,7 +18,6 @@ import {
     BTPExpression9FromJSON,
     BTPExpression9FromJSONTyped,
     BTPExpression9ToJSON,
- BTPExpression9SuperToJSON,
 } from './BTPExpression9';
 import type { BTPSpace10 } from './BTPSpace10';
 import {
@@ -85,7 +84,7 @@ export function BTPExpressionGroup241ToJSON(value?: BTPExpressionGroup241 | null
         return null;
     }
     return {
-        ...BTPExpression9SuperToJSON(value),
+        ...BTPExpression9ToJSON(value),
         'btType': value.btType,
         'content': BTPExpression9ToJSON(value.content),
     };

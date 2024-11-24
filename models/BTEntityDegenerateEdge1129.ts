@@ -24,7 +24,6 @@ import {
     BTTessellatedGeometry2576FromJSON,
     BTTessellatedGeometry2576FromJSONTyped,
     BTTessellatedGeometry2576ToJSON,
- BTTessellatedGeometry2576SuperToJSON,
 } from './BTTessellatedGeometry2576';
 
 /**
@@ -79,7 +78,7 @@ export function BTEntityDegenerateEdge1129ToJSON(value?: BTEntityDegenerateEdge1
         return null;
     }
     return {
-        ...BTTessellatedGeometry2576SuperToJSON(value),
+        ...BTTessellatedGeometry2576ToJSON(value),
         'btType': value.btType,
         'point': value.point,
     };

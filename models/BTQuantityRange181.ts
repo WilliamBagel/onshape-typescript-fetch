@@ -21,8 +21,7 @@ import {
 } from './BTLocationInfo226';
 
 import {
-     BTNullableQuantityRange1340FromJSONTyped,
-    BTNullableQuantityRange1340ToJSON
+     BTNullableQuantityRange1340FromJSONTyped
 } from './';
 
 /**
@@ -102,7 +101,7 @@ export function BTQuantityRange181FromJSONTyped(json: any, ignoreDiscriminator: 
     };
 }
 
-export function BTQuantityRange181SuperToJSON(value?: BTQuantityRange181 | null): any {
+export function BTQuantityRange181ToJSON(value?: BTQuantityRange181 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -120,18 +119,3 @@ export function BTQuantityRange181SuperToJSON(value?: BTQuantityRange181 | null)
     };
 }
 
-
-
-export function BTQuantityRange181ToJSON(value?: BTQuantityRange181 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTNullableQuantityRange-1340') {
-        return BTNullableQuantityRange1340ToJSON(value);
-    }
-    return BTQuantityRange181SuperToJSON(value);
-}

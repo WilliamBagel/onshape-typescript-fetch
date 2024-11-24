@@ -48,7 +48,6 @@ import {
     BTTessellatedGeometry2576FromJSON,
     BTTessellatedGeometry2576FromJSONTyped,
     BTTessellatedGeometry2576ToJSON,
- BTTessellatedGeometry2576SuperToJSON,
 } from './BTTessellatedGeometry2576';
 import type { GBTSurfaceType } from './GBTSurfaceType';
 import {
@@ -58,8 +57,7 @@ import {
 } from './GBTSurfaceType';
 
 import {
-     BTSimulationFace2147FromJSONTyped,
-    BTSimulationFace2147ToJSON
+     BTSimulationFace2147FromJSONTyped
 } from './';
 
 /**
@@ -195,7 +193,7 @@ export function BTEntityFace31FromJSONTyped(json: any, ignoreDiscriminator: bool
     };
 }
 
-export function BTEntityFace31SuperToJSON(value?: BTEntityFace31 | null): any {
+export function BTEntityFace31ToJSON(value?: BTEntityFace31 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -203,7 +201,7 @@ export function BTEntityFace31SuperToJSON(value?: BTEntityFace31 | null): any {
         return null;
     }
     return {
-        ...BTTessellatedGeometry2576SuperToJSON(value),
+        ...BTTessellatedGeometry2576ToJSON(value),
         'btType': value.btType,
         'compressedUvs': BTImmutableByteArrayToJSON(value.compressedUvs),
         'flipComputedNormals': value.flipComputedNormals,
@@ -221,18 +219,3 @@ export function BTEntityFace31SuperToJSON(value?: BTEntityFace31 | null): any {
     };
 }
 
-
-
-export function BTEntityFace31ToJSON(value?: BTEntityFace31 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTSimulationFace-2147') {
-        return BTSimulationFace2147ToJSON(value);
-    }
-    return BTEntityFace31SuperToJSON(value);
-}

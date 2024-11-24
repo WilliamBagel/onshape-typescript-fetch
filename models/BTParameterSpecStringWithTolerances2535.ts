@@ -30,7 +30,6 @@ import {
     BTReadOnlyParameterSpec1889FromJSON,
     BTReadOnlyParameterSpec1889FromJSONTyped,
     BTReadOnlyParameterSpec1889ToJSON,
- BTReadOnlyParameterSpec1889SuperToJSON,
 } from './BTReadOnlyParameterSpec1889';
 import type { GBTQuantityType } from './GBTQuantityType';
 import {
@@ -90,7 +89,7 @@ export function BTParameterSpecStringWithTolerances2535ToJSON(value?: BTParamete
         return null;
     }
     return {
-        ...BTReadOnlyParameterSpec1889SuperToJSON(value),
+        ...BTReadOnlyParameterSpec1889ToJSON(value),
         'btType': value.btType,
     };
 }

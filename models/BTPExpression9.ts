@@ -28,31 +28,18 @@ import {
 
 import {
      BTPExpressionAccess237FromJSONTyped,
-    BTPExpressionAccess237ToJSON,
      BTPExpressionAs238FromJSONTyped,
-    BTPExpressionAs238ToJSON,
      BTPExpressionBuiltinCall239FromJSONTyped,
-    BTPExpressionBuiltinCall239ToJSON,
      BTPExpressionCall240FromJSONTyped,
-    BTPExpressionCall240ToJSON,
      BTPExpressionFunction1325FromJSONTyped,
-    BTPExpressionFunction1325ToJSON,
      BTPExpressionGroup241FromJSONTyped,
-    BTPExpressionGroup241ToJSON,
      BTPExpressionIs242FromJSONTyped,
-    BTPExpressionIs242ToJSON,
      BTPExpressionNew243FromJSONTyped,
-    BTPExpressionNew243ToJSON,
      BTPExpressionOperator244FromJSONTyped,
-    BTPExpressionOperator244ToJSON,
      BTPExpressionSwitch2632FromJSONTyped,
-    BTPExpressionSwitch2632ToJSON,
      BTPExpressionTry1271FromJSONTyped,
-    BTPExpressionTry1271ToJSON,
      BTPExpressionVarReference245FromJSONTyped,
-    BTPExpressionVarReference245ToJSON,
-     BTPLiteral253FromJSONTyped,
-    BTPLiteral253ToJSON
+     BTPLiteral253FromJSONTyped
 } from './';
 
 /**
@@ -196,7 +183,7 @@ export function BTPExpression9FromJSONTyped(json: any, ignoreDiscriminator: bool
     };
 }
 
-export function BTPExpression9SuperToJSON(value?: BTPExpression9 | null): any {
+export function BTPExpression9ToJSON(value?: BTPExpression9 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -218,54 +205,3 @@ export function BTPExpression9SuperToJSON(value?: BTPExpression9 | null): any {
     };
 }
 
-
-
-export function BTPExpression9ToJSON(value?: BTPExpression9 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTPExpressionAccess-237') {
-        return BTPExpressionAccess237ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionAs-238') {
-        return BTPExpressionAs238ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionBuiltinCall-239') {
-        return BTPExpressionBuiltinCall239ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionCall-240') {
-        return BTPExpressionCall240ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionFunction-1325') {
-        return BTPExpressionFunction1325ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionGroup-241') {
-        return BTPExpressionGroup241ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionIs-242') {
-        return BTPExpressionIs242ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionNew-243') {
-        return BTPExpressionNew243ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionOperator-244') {
-        return BTPExpressionOperator244ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionSwitch-2632') {
-        return BTPExpressionSwitch2632ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionTry-1271') {
-        return BTPExpressionTry1271ToJSON(value);
-    }
-    if (value.btType === 'BTPExpressionVarReference-245') {
-        return BTPExpressionVarReference245ToJSON(value);
-    }
-    if (value.btType === 'BTPLiteral-253') {
-        return BTPLiteral253ToJSON(value);
-    }
-    return BTPExpression9SuperToJSON(value);
-}

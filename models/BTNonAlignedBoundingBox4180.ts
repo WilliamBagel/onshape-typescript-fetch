@@ -18,7 +18,6 @@ import {
     BTBoundingBox1052FromJSON,
     BTBoundingBox1052FromJSONTyped,
     BTBoundingBox1052ToJSON,
- BTBoundingBox1052SuperToJSON,
 } from './BTBoundingBox1052';
 import type { BTCoordinateSystem387 } from './BTCoordinateSystem387';
 import {
@@ -85,7 +84,7 @@ export function BTNonAlignedBoundingBox4180ToJSON(value?: BTNonAlignedBoundingBo
         return null;
     }
     return {
-        ...BTBoundingBox1052SuperToJSON(value),
+        ...BTBoundingBox1052ToJSON(value),
         'btType': value.btType,
         'coordinateSystem': BTCoordinateSystem387ToJSON(value.coordinateSystem),
     };

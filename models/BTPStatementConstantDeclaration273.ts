@@ -42,7 +42,6 @@ import {
     BTPStatement269FromJSON,
     BTPStatement269FromJSONTyped,
     BTPStatement269ToJSON,
- BTPStatement269SuperToJSON,
 } from './BTPStatement269';
 import type { BTPTypeName290 } from './BTPTypeName290';
 import {
@@ -150,7 +149,7 @@ export function BTPStatementConstantDeclaration273ToJSON(value?: BTPStatementCon
         return null;
     }
     return {
-        ...BTPStatement269SuperToJSON(value),
+        ...BTPStatement269ToJSON(value),
         'btType': value.btType,
         'identifier': BTPIdentifier8ToJSON(value.identifier),
         'name': BTPIdentifier8ToJSON(value.name),

@@ -18,7 +18,6 @@ import {
     BTJEdit3734FromJSON,
     BTJEdit3734FromJSONTyped,
     BTJEdit3734ToJSON,
- BTJEdit3734SuperToJSON,
 } from './BTJEdit3734';
 
 /**
@@ -74,7 +73,7 @@ export function BTJEditList2707ToJSON(value?: BTJEditList2707 | null): any {
         return null;
     }
     return {
-        ...BTJEdit3734SuperToJSON(value),
+        ...BTJEdit3734ToJSON(value),
         'btType': value.btType,
         'edits': value.edits === undefined ? undefined : ((value.edits as Array<any>).map(BTJEdit3734ToJSON)),
     };

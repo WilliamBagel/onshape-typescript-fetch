@@ -36,7 +36,6 @@ import {
     BTPStatement269FromJSON,
     BTPStatement269FromJSONTyped,
     BTPStatement269ToJSON,
- BTPStatement269SuperToJSON,
 } from './BTPStatement269';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -118,7 +117,7 @@ export function BTPStatementIf276ToJSON(value?: BTPStatementIf276 | null): any {
         return null;
     }
     return {
-        ...BTPStatement269SuperToJSON(value),
+        ...BTPStatement269ToJSON(value),
         'btType': value.btType,
         'condition': BTPExpression9ToJSON(value.condition),
         'elseBody': BTPStatement269ToJSON(value.elseBody),

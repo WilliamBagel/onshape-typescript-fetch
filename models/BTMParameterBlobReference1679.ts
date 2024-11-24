@@ -24,7 +24,6 @@ import {
     BTMParameter1FromJSON,
     BTMParameter1FromJSONTyped,
     BTMParameter1ToJSON,
- BTMParameter1SuperToJSON,
 } from './BTMParameter1';
 
 /**
@@ -93,7 +92,7 @@ export function BTMParameterBlobReference1679ToJSON(value?: BTMParameterBlobRefe
         return null;
     }
     return {
-        ...BTMParameter1SuperToJSON(value),
+        ...BTMParameter1ToJSON(value),
         'btType': value.btType,
         'blobImport': BTMImport136ToJSON(value.blobImport),
         'importMicroversion': value.importMicroversion,

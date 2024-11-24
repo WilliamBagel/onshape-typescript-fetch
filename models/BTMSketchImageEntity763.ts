@@ -24,7 +24,6 @@ import {
     BTMSketchGeomEntity5FromJSON,
     BTMSketchGeomEntity5FromJSONTyped,
     BTMSketchGeomEntity5ToJSON,
- BTMSketchGeomEntity5SuperToJSON,
 } from './BTMSketchGeomEntity5';
 
 /**
@@ -107,7 +106,7 @@ export function BTMSketchImageEntity763ToJSON(value?: BTMSketchImageEntity763 | 
         return null;
     }
     return {
-        ...BTMSketchGeomEntity5SuperToJSON(value),
+        ...BTMSketchGeomEntity5ToJSON(value),
         'btType': value.btType,
         'aspectRatio': value.aspectRatio,
         'originX': value.originX,

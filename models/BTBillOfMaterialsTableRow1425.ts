@@ -36,7 +36,6 @@ import {
     BTTableRow1054FromJSON,
     BTTableRow1054FromJSONTyped,
     BTTableRow1054ToJSON,
- BTTableRow1054SuperToJSON,
 } from './BTTableRow1054';
 import type { BTTreeNode20 } from './BTTreeNode20';
 import {
@@ -172,7 +171,7 @@ export function BTBillOfMaterialsTableRow1425ToJSON(value?: BTBillOfMaterialsTab
         return null;
     }
     return {
-        ...BTTableRow1054SuperToJSON(value),
+        ...BTTableRow1054ToJSON(value),
         'btType': value.btType,
         'excludeIsEditable': value.excludeIsEditable,
         'excludeIsOverridden': value.excludeIsOverridden,

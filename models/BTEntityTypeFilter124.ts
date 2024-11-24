@@ -18,7 +18,6 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 import type { GBTEntityType } from './GBTEntityType';
 import {
@@ -79,7 +78,7 @@ export function BTEntityTypeFilter124ToJSON(value?: BTEntityTypeFilter124 | null
         return null;
     }
     return {
-        ...BTQueryFilter183SuperToJSON(value),
+        ...BTQueryFilter183ToJSON(value),
         'btType': value.btType,
         'entityType': GBTEntityTypeToJSON(value.entityType),
     };

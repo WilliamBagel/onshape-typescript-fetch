@@ -24,7 +24,6 @@ import {
     BTMSketchEntity3FromJSON,
     BTMSketchEntity3FromJSONTyped,
     BTMSketchEntity3ToJSON,
- BTMSketchEntity3SuperToJSON,
 } from './BTMSketchEntity3';
 
 /**
@@ -79,7 +78,7 @@ export function BTMSketchCompositeEntity893ToJSON(value?: BTMSketchCompositeEnti
         return null;
     }
     return {
-        ...BTMSketchEntity3SuperToJSON(value),
+        ...BTMSketchEntity3ToJSON(value),
         'btType': value.btType,
         'subEntities': value.subEntities === undefined ? undefined : ((value.subEntities as Array<any>).map(BTMSketchEntity3ToJSON)),
     };

@@ -24,7 +24,6 @@ import {
     BTMParameter1FromJSON,
     BTMParameter1FromJSONTyped,
     BTMParameter1ToJSON,
- BTMParameter1SuperToJSON,
 } from './BTMParameter1';
 
 /**
@@ -79,7 +78,7 @@ export function BTMParameterArray2025ToJSON(value?: BTMParameterArray2025 | null
         return null;
     }
     return {
-        ...BTMParameter1SuperToJSON(value),
+        ...BTMParameter1ToJSON(value),
         'btType': value.btType,
         'items': value.items === undefined ? undefined : ((value.items as Array<any>).map(BTMArrayParameterItem1843ToJSON)),
     };

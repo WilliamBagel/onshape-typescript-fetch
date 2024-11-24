@@ -24,7 +24,6 @@ import {
     BTUserSummaryInfoFromJSON,
     BTUserSummaryInfoFromJSONTyped,
     BTUserSummaryInfoToJSON,
- BTUserSummaryInfoSuperToJSON,
 } from './BTUserSummaryInfo';
 import type { GlobalPermissionInfo } from './GlobalPermissionInfo';
 import {
@@ -35,9 +34,7 @@ import {
 
 import {
      BTCompanyUserSummaryInfoFromJSONTyped,
-    BTCompanyUserSummaryInfoToJSON,
-     BTCompanyUserSummaryAdminInfoFromJSONTyped,
-    BTCompanyUserSummaryAdminInfoToJSON
+     BTCompanyUserSummaryAdminInfoFromJSONTyped
 } from './';
 
 /**
@@ -92,22 +89,6 @@ export function BTCompanyUserSummaryInfoFromJSONTyped(json: any, ignoreDiscrimin
     };
 }
 
-export function BTCompanyUserSummaryInfoSuperToJSON(value?: BTCompanyUserSummaryInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTUserSummaryInfoSuperToJSON(value),
-        'admin': value.admin,
-        'cls': value.cls,
-    };
-}
-
-
-
 export function BTCompanyUserSummaryInfoToJSON(value?: BTCompanyUserSummaryInfo | null): any {
     if (value === undefined) {
         return undefined;
@@ -115,12 +96,10 @@ export function BTCompanyUserSummaryInfoToJSON(value?: BTCompanyUserSummaryInfo 
     if (value === null) {
         return null;
     }
-
-    if (value.jsonType === 'companyuser') {
-        return BTCompanyUserSummaryInfoToJSON(value);
-    }
-    if (value.jsonType === 'companyuseradmin') {
-        return BTCompanyUserSummaryAdminInfoToJSON(value);
-    }
-    return BTCompanyUserSummaryInfoSuperToJSON(value);
+    return {
+        ...BTUserSummaryInfoToJSON(value),
+        'admin': value.admin,
+        'cls': value.cls,
+    };
 }
+

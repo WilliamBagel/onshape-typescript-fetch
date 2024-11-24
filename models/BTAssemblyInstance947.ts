@@ -36,7 +36,6 @@ import {
     BTInstance642FromJSON,
     BTInstance642FromJSONTyped,
     BTInstance642ToJSON,
- BTInstance642SuperToJSON,
 } from './BTInstance642';
 import type { BTMParameter1 } from './BTMParameter1';
 import {
@@ -120,7 +119,7 @@ export function BTAssemblyInstance947ToJSON(value?: BTAssemblyInstance947 | null
         return null;
     }
     return {
-        ...BTInstance642SuperToJSON(value),
+        ...BTInstance642ToJSON(value),
         'btType': value.btType,
     };
 }

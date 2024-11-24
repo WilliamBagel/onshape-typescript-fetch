@@ -24,7 +24,6 @@ import {
     BTMParameterReferenceBlob3281FromJSON,
     BTMParameterReferenceBlob3281FromJSONTyped,
     BTMParameterReferenceBlob3281ToJSON,
- BTMParameterReferenceBlob3281SuperToJSON,
 } from './BTMParameterReferenceBlob3281';
 
 /**
@@ -72,7 +71,7 @@ export function BTMParameterReferenceCADImport2016ToJSON(value?: BTMParameterRef
         return null;
     }
     return {
-        ...BTMParameterReferenceBlob3281SuperToJSON(value),
+        ...BTMParameterReferenceBlob3281ToJSON(value),
         'btType': value.btType,
     };
 }

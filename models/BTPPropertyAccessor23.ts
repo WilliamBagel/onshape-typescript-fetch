@@ -28,9 +28,7 @@ import {
 
 import {
      BTPExpression9FromJSONTyped,
-    BTPExpression9ToJSON,
-     BTPIdentifier8FromJSONTyped,
-    BTPIdentifier8ToJSON
+     BTPIdentifier8FromJSONTyped
 } from './';
 
 /**
@@ -141,7 +139,7 @@ export function BTPPropertyAccessor23FromJSONTyped(json: any, ignoreDiscriminato
     };
 }
 
-export function BTPPropertyAccessor23SuperToJSON(value?: BTPPropertyAccessor23 | null): any {
+export function BTPPropertyAccessor23ToJSON(value?: BTPPropertyAccessor23 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -163,21 +161,3 @@ export function BTPPropertyAccessor23SuperToJSON(value?: BTPPropertyAccessor23 |
     };
 }
 
-
-
-export function BTPPropertyAccessor23ToJSON(value?: BTPPropertyAccessor23 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTPExpression-9') {
-        return BTPExpression9ToJSON(value);
-    }
-    if (value.btType === 'BTPIdentifier-8') {
-        return BTPIdentifier8ToJSON(value);
-    }
-    return BTPPropertyAccessor23SuperToJSON(value);
-}

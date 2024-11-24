@@ -54,7 +54,6 @@ import {
     BTPartStudioDisplayDataBase2751FromJSON,
     BTPartStudioDisplayDataBase2751FromJSONTyped,
     BTPartStudioDisplayDataBase2751ToJSON,
- BTPartStudioDisplayDataBase2751SuperToJSON,
 } from './BTPartStudioDisplayDataBase2751';
 
 /**
@@ -116,7 +115,7 @@ export function BTPartStudioDisplayDataReference4360ToJSON(value?: BTPartStudioD
         return null;
     }
     return {
-        ...BTPartStudioDisplayDataBase2751SuperToJSON(value),
+        ...BTPartStudioDisplayDataBase2751ToJSON(value),
         'btType': value.btType,
         'cacheDataPath': BTCacheDataPath191ToJSON(value.cacheDataPath),
         'tessellationSettings': value.tessellationSettings,

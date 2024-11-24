@@ -40,6 +40,8 @@ import type {
   BTSyncAppElementParams,
   BTUnchangedElementInfo,
   BTUnitInfo,
+  BTVersionGraphInfo,
+  BTVersionGraphRequestInfo,
   BTVersionInfo,
   BTVersionOrWorkspaceMergeInfo,
   BTVersionOrWorkspaceParams,
@@ -96,6 +98,10 @@ import {
     BTUnchangedElementInfoToJSON,
     BTUnitInfoFromJSON,
     BTUnitInfoToJSON,
+    BTVersionGraphInfoFromJSON,
+    BTVersionGraphInfoToJSON,
+    BTVersionGraphRequestInfoFromJSON,
+    BTVersionGraphRequestInfoToJSON,
     BTVersionInfoFromJSON,
     BTVersionInfoToJSON,
     BTVersionOrWorkspaceMergeInfoFromJSON,
@@ -280,6 +286,11 @@ export interface GetVersionRequest {
     vid: string;
     parents?: boolean;
     linkDocumentId?: string;
+}
+
+export interface GetVersionGraphRequest {
+    did: string;
+    bTVersionGraphRequestInfo: BTVersionGraphRequestInfo;
 }
 
 export interface MakeDocumentPublicRequest {
@@ -1536,6 +1547,51 @@ export class DocumentApi extends runtime.BaseAPI {
      */
     async getVersion(requestParameters: GetVersionRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BTVersionInfo> {
         const response = await this.getVersionRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Get VersionGraph of document
+     */
+    async getVersionGraphRaw(requestParameters: GetVersionGraphRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BTVersionGraphInfo>> {
+        if (requestParameters.did === null || requestParameters.did === undefined) {
+            throw new runtime.RequiredError('did','Required parameter requestParameters.did was null or undefined when calling getVersionGraph.');
+        }
+
+        if (requestParameters.bTVersionGraphRequestInfo === null || requestParameters.bTVersionGraphRequestInfo === undefined) {
+            throw new runtime.RequiredError('bTVersionGraphRequestInfo','Required parameter requestParameters.bTVersionGraphRequestInfo was null or undefined when calling getVersionGraph.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json;charset=UTF-8; qs=0.09';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            headerParameters["Authorization"] = await this.configuration.accessToken("OAuth2", ["OAuth2Read"]);
+        }
+
+        if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
+            headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
+        }
+        const response = await this.request({
+            path: `/documents/d/{did}/versiongraph`.replace(`{${"did"}}`, encodeURIComponent(String(requestParameters.did))),
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: BTVersionGraphRequestInfoToJSON(requestParameters.bTVersionGraphRequestInfo),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => BTVersionGraphInfoFromJSON(jsonValue));
+    }
+
+    /**
+     * Get VersionGraph of document
+     */
+    async getVersionGraph(requestParameters: GetVersionGraphRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BTVersionGraphInfo> {
+        const response = await this.getVersionGraphRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

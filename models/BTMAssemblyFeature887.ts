@@ -18,7 +18,6 @@ import {
     BTMFeature134FromJSON,
     BTMFeature134FromJSONTyped,
     BTMFeature134ToJSON,
- BTMFeature134SuperToJSON,
 } from './BTMFeature134';
 import type { BTMIndividualQueryWithOccurrenceBase904 } from './BTMIndividualQueryWithOccurrenceBase904';
 import {
@@ -35,41 +34,23 @@ import {
 
 import {
      BTAssemblySimulation2246FromJSONTyped,
-    BTAssemblySimulation2246ToJSON,
      BTExplosion2754FromJSONTyped,
-    BTExplosion2754ToJSON,
      BTExplosionStepFeature3008FromJSONTyped,
-    BTExplosionStepFeature3008ToJSON,
      BTMAssemblyFeature12218FromJSONTyped,
-    BTMAssemblyFeature12218ToJSON,
      BTMAssemblyFeature21022FromJSONTyped,
-    BTMAssemblyFeature21022ToJSON,
      BTMAssemblyFeatureFolder2543FromJSONTyped,
-    BTMAssemblyFeatureFolder2543ToJSON,
      BTMAssemblyMirrorFeature3037FromJSONTyped,
-    BTMAssemblyMirrorFeature3037ToJSON,
      BTMAssemblyPatternFeature2241FromJSONTyped,
-    BTMAssemblyPatternFeature2241ToJSON,
      BTMAssemblyReplicateFeature1351FromJSONTyped,
-    BTMAssemblyReplicateFeature1351ToJSON,
      BTMGenerativeDesignFeature3195FromJSONTyped,
-    BTMGenerativeDesignFeature3195ToJSON,
      BTMGeometryMate1260FromJSONTyped,
-    BTMGeometryMate1260ToJSON,
      BTMLoad3538FromJSONTyped,
-    BTMLoad3538ToJSON,
      BTMMate64FromJSONTyped,
-    BTMMate64ToJSON,
      BTMMateConnector66FromJSONTyped,
-    BTMMateConnector66ToJSON,
      BTMMateGroup65FromJSONTyped,
-    BTMMateGroup65ToJSON,
      BTMMateRelation1412FromJSONTyped,
-    BTMMateRelation1412ToJSON,
      BTMNonGeometricItem1864FromJSONTyped,
-    BTMNonGeometricItem1864ToJSON,
-     BTMParametricPartStudioFeature3883FromJSONTyped,
-    BTMParametricPartStudioFeature3883ToJSON
+     BTMParametricPartStudioFeature3883FromJSONTyped
 } from './';
 
 /**
@@ -214,7 +195,7 @@ export function BTMAssemblyFeature887FromJSONTyped(json: any, ignoreDiscriminato
     };
 }
 
-export function BTMAssemblyFeature887SuperToJSON(value?: BTMAssemblyFeature887 | null): any {
+export function BTMAssemblyFeature887ToJSON(value?: BTMAssemblyFeature887 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -222,7 +203,7 @@ export function BTMAssemblyFeature887SuperToJSON(value?: BTMAssemblyFeature887 |
         return null;
     }
     return {
-        ...BTMFeature134SuperToJSON(value),
+        ...BTMFeature134ToJSON(value),
         'btType': value.btType,
         'auxiliaryTreeFeature': value.auxiliaryTreeFeature,
         'featureFolder': value.featureFolder,
@@ -234,69 +215,3 @@ export function BTMAssemblyFeature887SuperToJSON(value?: BTMAssemblyFeature887 |
     };
 }
 
-
-
-export function BTMAssemblyFeature887ToJSON(value?: BTMAssemblyFeature887 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTAssemblySimulation-2246') {
-        return BTAssemblySimulation2246ToJSON(value);
-    }
-    if (value.btType === 'BTExplosion-2754') {
-        return BTExplosion2754ToJSON(value);
-    }
-    if (value.btType === 'BTExplosionStepFeature-3008') {
-        return BTExplosionStepFeature3008ToJSON(value);
-    }
-    if (value.btType === 'BTMAssemblyFeature1-2218') {
-        return BTMAssemblyFeature12218ToJSON(value);
-    }
-    if (value.btType === 'BTMAssemblyFeature2-1022') {
-        return BTMAssemblyFeature21022ToJSON(value);
-    }
-    if (value.btType === 'BTMAssemblyFeatureFolder-2543') {
-        return BTMAssemblyFeatureFolder2543ToJSON(value);
-    }
-    if (value.btType === 'BTMAssemblyMirrorFeature-3037') {
-        return BTMAssemblyMirrorFeature3037ToJSON(value);
-    }
-    if (value.btType === 'BTMAssemblyPatternFeature-2241') {
-        return BTMAssemblyPatternFeature2241ToJSON(value);
-    }
-    if (value.btType === 'BTMAssemblyReplicateFeature-1351') {
-        return BTMAssemblyReplicateFeature1351ToJSON(value);
-    }
-    if (value.btType === 'BTMGenerativeDesignFeature-3195') {
-        return BTMGenerativeDesignFeature3195ToJSON(value);
-    }
-    if (value.btType === 'BTMGeometryMate-1260') {
-        return BTMGeometryMate1260ToJSON(value);
-    }
-    if (value.btType === 'BTMLoad-3538') {
-        return BTMLoad3538ToJSON(value);
-    }
-    if (value.btType === 'BTMMate-64') {
-        return BTMMate64ToJSON(value);
-    }
-    if (value.btType === 'BTMMateConnector-66') {
-        return BTMMateConnector66ToJSON(value);
-    }
-    if (value.btType === 'BTMMateGroup-65') {
-        return BTMMateGroup65ToJSON(value);
-    }
-    if (value.btType === 'BTMMateRelation-1412') {
-        return BTMMateRelation1412ToJSON(value);
-    }
-    if (value.btType === 'BTMNonGeometricItem-1864') {
-        return BTMNonGeometricItem1864ToJSON(value);
-    }
-    if (value.btType === 'BTMParametricPartStudioFeature-3883') {
-        return BTMParametricPartStudioFeature3883ToJSON(value);
-    }
-    return BTMAssemblyFeature887SuperToJSON(value);
-}

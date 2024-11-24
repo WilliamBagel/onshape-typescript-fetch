@@ -30,7 +30,6 @@ import {
     BTDocumentSummaryInfoFromJSON,
     BTDocumentSummaryInfoFromJSONTyped,
     BTDocumentSummaryInfoToJSON,
- BTDocumentSummaryInfoSuperToJSON,
 } from './BTDocumentSummaryInfo';
 import type { BTOldPermission } from './BTOldPermission';
 import {
@@ -71,9 +70,7 @@ import {
 
 import {
      BTDocumentInfoFromJSONTyped,
-    BTDocumentInfoToJSON,
-     BTDocumentProcessingInfoFromJSONTyped,
-    BTDocumentProcessingInfoToJSON
+     BTDocumentProcessingInfoFromJSONTyped
 } from './';
 
 /**
@@ -513,7 +510,7 @@ export function BTDocumentInfoFromJSONTyped(json: any, ignoreDiscriminator: bool
     };
 }
 
-export function BTDocumentInfoSuperToJSON(value?: BTDocumentInfo | null): any {
+export function BTDocumentInfoToJSON(value?: BTDocumentInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -521,7 +518,7 @@ export function BTDocumentInfoSuperToJSON(value?: BTDocumentInfo | null): any {
         return null;
     }
     return {
-        ...BTDocumentSummaryInfoSuperToJSON(value),
+        ...BTDocumentSummaryInfoToJSON(value),
         'anonymousAccessAllowed': value.anonymousAccessAllowed,
         'anonymousAllowsExport': value.anonymousAllowsExport,
         'canMove': value.canMove,
@@ -582,21 +579,3 @@ export function BTDocumentInfoSuperToJSON(value?: BTDocumentInfo | null): any {
     };
 }
 
-
-
-export function BTDocumentInfoToJSON(value?: BTDocumentInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'document') {
-        return BTDocumentInfoToJSON(value);
-    }
-    if (value.jsonType === 'document-processing') {
-        return BTDocumentProcessingInfoToJSON(value);
-    }
-    return BTDocumentInfoSuperToJSON(value);
-}

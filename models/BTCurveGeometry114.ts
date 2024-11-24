@@ -15,15 +15,10 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTCurveGeometryCircle115FromJSONTyped,
-    BTCurveGeometryCircle115ToJSON,
      BTCurveGeometryConic2284FromJSONTyped,
-    BTCurveGeometryConic2284ToJSON,
      BTCurveGeometryInterpolatedSpline116FromJSONTyped,
-    BTCurveGeometryInterpolatedSpline116ToJSON,
      BTCurveGeometryLine117FromJSONTyped,
-    BTCurveGeometryLine117ToJSON,
-     BTCurveGeometrySpline118FromJSONTyped,
-    BTCurveGeometrySpline118ToJSON
+     BTCurveGeometrySpline118FromJSONTyped
 } from './';
 
 /**
@@ -80,7 +75,7 @@ export function BTCurveGeometry114FromJSONTyped(json: any, ignoreDiscriminator: 
     };
 }
 
-export function BTCurveGeometry114SuperToJSON(value?: BTCurveGeometry114 | null): any {
+export function BTCurveGeometry114ToJSON(value?: BTCurveGeometry114 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -93,30 +88,3 @@ export function BTCurveGeometry114SuperToJSON(value?: BTCurveGeometry114 | null)
     };
 }
 
-
-
-export function BTCurveGeometry114ToJSON(value?: BTCurveGeometry114 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTCurveGeometryCircle-115') {
-        return BTCurveGeometryCircle115ToJSON(value);
-    }
-    if (value.btType === 'BTCurveGeometryConic-2284') {
-        return BTCurveGeometryConic2284ToJSON(value);
-    }
-    if (value.btType === 'BTCurveGeometryInterpolatedSpline-116') {
-        return BTCurveGeometryInterpolatedSpline116ToJSON(value);
-    }
-    if (value.btType === 'BTCurveGeometryLine-117') {
-        return BTCurveGeometryLine117ToJSON(value);
-    }
-    if (value.btType === 'BTCurveGeometrySpline-118') {
-        return BTCurveGeometrySpline118ToJSON(value);
-    }
-    return BTCurveGeometry114SuperToJSON(value);
-}

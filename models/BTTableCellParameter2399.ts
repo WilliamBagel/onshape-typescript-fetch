@@ -30,14 +30,11 @@ import {
     BTTableCell1114FromJSON,
     BTTableCell1114FromJSONTyped,
     BTTableCell1114ToJSON,
- BTTableCell1114SuperToJSON,
 } from './BTTableCell1114';
 
 import {
      BTTableCellParameterWithValue2122FromJSONTyped,
-    BTTableCellParameterWithValue2122ToJSON,
-     BTTableCellPropertyParameter2983FromJSONTyped,
-    BTTableCellPropertyParameter2983ToJSON
+     BTTableCellPropertyParameter2983FromJSONTyped
 } from './';
 
 /**
@@ -106,24 +103,6 @@ export function BTTableCellParameter2399FromJSONTyped(json: any, ignoreDiscrimin
     };
 }
 
-export function BTTableCellParameter2399SuperToJSON(value?: BTTableCellParameter2399 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTTableCell1114SuperToJSON(value),
-        'btType': value.btType,
-        'error': value.error,
-        'overrideSpec': BTParameterSpec6ToJSON(value.overrideSpec),
-        'parameter': BTMParameter1ToJSON(value.parameter),
-    };
-}
-
-
-
 export function BTTableCellParameter2399ToJSON(value?: BTTableCellParameter2399 | null): any {
     if (value === undefined) {
         return undefined;
@@ -131,12 +110,12 @@ export function BTTableCellParameter2399ToJSON(value?: BTTableCellParameter2399 
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTTableCellParameterWithValue-2122') {
-        return BTTableCellParameterWithValue2122ToJSON(value);
-    }
-    if (value.btType === 'BTTableCellPropertyParameter-2983') {
-        return BTTableCellPropertyParameter2983ToJSON(value);
-    }
-    return BTTableCellParameter2399SuperToJSON(value);
+    return {
+        ...BTTableCell1114ToJSON(value),
+        'btType': value.btType,
+        'error': value.error,
+        'overrideSpec': BTParameterSpec6ToJSON(value.overrideSpec),
+        'parameter': BTMParameter1ToJSON(value.parameter),
+    };
 }
+

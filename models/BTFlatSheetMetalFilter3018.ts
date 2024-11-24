@@ -18,7 +18,6 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 import type { GBTFilterFlattenedGeometryOptions } from './GBTFilterFlattenedGeometryOptions';
 import {
@@ -79,7 +78,7 @@ export function BTFlatSheetMetalFilter3018ToJSON(value?: BTFlatSheetMetalFilter3
         return null;
     }
     return {
-        ...BTQueryFilter183SuperToJSON(value),
+        ...BTQueryFilter183ToJSON(value),
         'btType': value.btType,
         'allows': GBTFilterFlattenedGeometryOptionsToJSON(value.allows),
     };

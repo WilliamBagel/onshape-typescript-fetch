@@ -13,84 +13,78 @@
  */
 
 import { exists, mapValues } from '../runtime';
-import type { BTSurfaceDescription1564 } from './BTSurfaceDescription1564';
+import type { BTCompanyUserInfo } from './BTCompanyUserInfo';
 import {
-    BTSurfaceDescription1564FromJSON,
-    BTSurfaceDescription1564FromJSONTyped,
-    BTSurfaceDescription1564ToJSON,
-} from './BTSurfaceDescription1564';
-import type { BTVector3d389 } from './BTVector3d389';
+    BTCompanyUserInfoFromJSON,
+    BTCompanyUserInfoFromJSONTyped,
+    BTCompanyUserInfoToJSON,
+} from './BTCompanyUserInfo';
+import type { BTVersionInfo } from './BTVersionInfo';
 import {
-    BTVector3d389FromJSON,
-    BTVector3d389FromJSONTyped,
-    BTVector3d389ToJSON,
-} from './BTVector3d389';
-import type { GBTSurfaceTypeEnum } from './GBTSurfaceTypeEnum';
-import {
-    GBTSurfaceTypeEnumFromJSON,
-    GBTSurfaceTypeEnumFromJSONTyped,
-    GBTSurfaceTypeEnumToJSON,
-} from './GBTSurfaceTypeEnum';
+    BTVersionInfoFromJSON,
+    BTVersionInfoFromJSONTyped,
+    BTVersionInfoToJSON,
+} from './BTVersionInfo';
 
 /**
  * 
  * @export
- * @interface BTConeDescription860
+ * @interface BTVersionGraphInfo
  */
-export interface BTConeDescription860 extends BTSurfaceDescription1564 {
-    /**
-     * Type of JSON object.
-     * @type {string}
-     * @memberof BTConeDescription860
-     */
-    btType?: string;
+export interface BTVersionGraphInfo {
     /**
      * 
-     * @type {BTVector3d389}
-     * @memberof BTConeDescription860
+     * @type {Array<object>}
+     * @memberof BTVersionGraphInfo
      */
-    axis?: BTVector3d389;
+    mergeLines?: Array<object>;
+    /**
+     * 
+     * @type {Array<BTVersionInfo>}
+     * @memberof BTVersionGraphInfo
+     */
+    nodes?: Array<BTVersionInfo>;
+    /**
+     * 
+     * @type {{ [key: string]: BTCompanyUserInfo; }}
+     * @memberof BTVersionGraphInfo
+     */
+    userIdToUserId?: { [key: string]: BTCompanyUserInfo; };
     /**
      * 
      * @type {number}
-     * @memberof BTConeDescription860
+     * @memberof BTVersionGraphInfo
      */
-    halfAngle?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof BTConeDescription860
-     */
-    radius?: number;
+    versionGraphVersion?: number;
 }
 
 /**
- * Check if a given object implements the BTConeDescription860 interface.
+ * Check if a given object implements the BTVersionGraphInfo interface.
  */
-export function instanceOfBTConeDescription860(value: object): boolean {
+export function instanceOfBTVersionGraphInfo(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function BTConeDescription860FromJSON(json: any): BTConeDescription860 {
-    return BTConeDescription860FromJSONTyped(json, false);
+export function BTVersionGraphInfoFromJSON(json: any): BTVersionGraphInfo {
+    return BTVersionGraphInfoFromJSONTyped(json, false);
 }
 
-export function BTConeDescription860FromJSONTyped(json: any, ignoreDiscriminator: boolean): BTConeDescription860 {
+export function BTVersionGraphInfoFromJSONTyped(json: any, ignoreDiscriminator: boolean): BTVersionGraphInfo {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
-        ...BTSurfaceDescription1564FromJSONTyped(json, ignoreDiscriminator),
-        'btType': !exists(json, 'btType') ? undefined : json['btType'],
-        'axis': !exists(json, 'axis') ? undefined : BTVector3d389FromJSON(json['axis']),
-        'halfAngle': !exists(json, 'halfAngle') ? undefined : json['halfAngle'],
-        'radius': !exists(json, 'radius') ? undefined : json['radius'],
+        
+        'mergeLines': !exists(json, 'mergeLines') ? undefined : json['mergeLines'],
+        'nodes': !exists(json, 'nodes') ? undefined : ((json['nodes'] as Array<any>).map(BTVersionInfoFromJSON)),
+        'userIdToUserId': !exists(json, 'userIdToUserId') ? undefined : (mapValues(json['userIdToUserId'], BTCompanyUserInfoFromJSON)),
+        'versionGraphVersion': !exists(json, 'versionGraphVersion') ? undefined : json['versionGraphVersion'],
     };
 }
 
-export function BTConeDescription860ToJSON(value?: BTConeDescription860 | null): any {
+export function BTVersionGraphInfoToJSON(value?: BTVersionGraphInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -98,11 +92,11 @@ export function BTConeDescription860ToJSON(value?: BTConeDescription860 | null):
         return null;
     }
     return {
-        ...BTSurfaceDescription1564ToJSON(value),
-        'btType': value.btType,
-        'axis': BTVector3d389ToJSON(value.axis),
-        'halfAngle': value.halfAngle,
-        'radius': value.radius,
+        
+        'mergeLines': value.mergeLines,
+        'nodes': value.nodes === undefined ? undefined : ((value.nodes as Array<any>).map(BTVersionInfoToJSON)),
+        'userIdToUserId': value.userIdToUserId === undefined ? undefined : (mapValues(value.userIdToUserId, BTCompanyUserInfoToJSON)),
+        'versionGraphVersion': value.versionGraphVersion,
     };
 }
 

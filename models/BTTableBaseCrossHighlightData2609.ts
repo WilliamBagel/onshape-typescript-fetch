@@ -15,9 +15,7 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTTableAssemblyCrossHighlightData2675FromJSONTyped,
-    BTTableAssemblyCrossHighlightData2675ToJSON,
-     BTTableCrossHighlightData1753FromJSONTyped,
-    BTTableCrossHighlightData1753ToJSON
+     BTTableCrossHighlightData1753FromJSONTyped
 } from './';
 
 /**
@@ -65,7 +63,7 @@ export function BTTableBaseCrossHighlightData2609FromJSONTyped(json: any, ignore
     };
 }
 
-export function BTTableBaseCrossHighlightData2609SuperToJSON(value?: BTTableBaseCrossHighlightData2609 | null): any {
+export function BTTableBaseCrossHighlightData2609ToJSON(value?: BTTableBaseCrossHighlightData2609 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -78,21 +76,3 @@ export function BTTableBaseCrossHighlightData2609SuperToJSON(value?: BTTableBase
     };
 }
 
-
-
-export function BTTableBaseCrossHighlightData2609ToJSON(value?: BTTableBaseCrossHighlightData2609 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTTableAssemblyCrossHighlightData-2675') {
-        return BTTableAssemblyCrossHighlightData2675ToJSON(value);
-    }
-    if (value.btType === 'BTTableCrossHighlightData-1753') {
-        return BTTableCrossHighlightData1753ToJSON(value);
-    }
-    return BTTableBaseCrossHighlightData2609SuperToJSON(value);
-}

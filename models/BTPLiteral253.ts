@@ -18,7 +18,6 @@ import {
     BTPExpression9FromJSON,
     BTPExpression9FromJSONTyped,
     BTPExpression9ToJSON,
- BTPExpression9SuperToJSON,
 } from './BTPExpression9';
 import type { BTPSpace10 } from './BTPSpace10';
 import {
@@ -35,17 +34,11 @@ import {
 
 import {
      BTPLiteralArray254FromJSONTyped,
-    BTPLiteralArray254ToJSON,
      BTPLiteralBoolean255FromJSONTyped,
-    BTPLiteralBoolean255ToJSON,
      BTPLiteralMap256FromJSONTyped,
-    BTPLiteralMap256ToJSON,
      BTPLiteralNumber258FromJSONTyped,
-    BTPLiteralNumber258ToJSON,
      BTPLiteralString259FromJSONTyped,
-    BTPLiteralString259ToJSON,
-     BTPLiteralUndefined260FromJSONTyped,
-    BTPLiteralUndefined260ToJSON
+     BTPLiteralUndefined260FromJSONTyped
 } from './';
 
 /**
@@ -105,21 +98,6 @@ export function BTPLiteral253FromJSONTyped(json: any, ignoreDiscriminator: boole
     };
 }
 
-export function BTPLiteral253SuperToJSON(value?: BTPLiteral253 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTPExpression9SuperToJSON(value),
-        'btType': value.btType,
-    };
-}
-
-
-
 export function BTPLiteral253ToJSON(value?: BTPLiteral253 | null): any {
     if (value === undefined) {
         return undefined;
@@ -127,24 +105,9 @@ export function BTPLiteral253ToJSON(value?: BTPLiteral253 | null): any {
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTPLiteralArray-254') {
-        return BTPLiteralArray254ToJSON(value);
-    }
-    if (value.btType === 'BTPLiteralBoolean-255') {
-        return BTPLiteralBoolean255ToJSON(value);
-    }
-    if (value.btType === 'BTPLiteralMap-256') {
-        return BTPLiteralMap256ToJSON(value);
-    }
-    if (value.btType === 'BTPLiteralNumber-258') {
-        return BTPLiteralNumber258ToJSON(value);
-    }
-    if (value.btType === 'BTPLiteralString-259') {
-        return BTPLiteralString259ToJSON(value);
-    }
-    if (value.btType === 'BTPLiteralUndefined-260') {
-        return BTPLiteralUndefined260ToJSON(value);
-    }
-    return BTPLiteral253SuperToJSON(value);
+    return {
+        ...BTPExpression9ToJSON(value),
+        'btType': value.btType,
+    };
 }
+

@@ -18,7 +18,6 @@ import {
     BTInstanceBase2263FromJSON,
     BTInstanceBase2263FromJSONTyped,
     BTInstanceBase2263ToJSON,
- BTInstanceBase2263SuperToJSON,
 } from './BTInstanceBase2263';
 import type { BTMParameter1 } from './BTMParameter1';
 import {
@@ -145,7 +144,7 @@ export function BTInstanceFolder3627ToJSON(value?: BTInstanceFolder3627 | null):
         return null;
     }
     return {
-        ...BTInstanceBase2263SuperToJSON(value),
+        ...BTInstanceBase2263ToJSON(value),
         'btType': value.btType,
         'featureFolder': value.featureFolder,
         'folderEnd': value.folderEnd,

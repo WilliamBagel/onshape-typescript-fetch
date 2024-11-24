@@ -27,8 +27,7 @@ import {
 } from './BTMicroversionIdAndConfiguration2338';
 
 import {
-     BTFullElementIdAndPartId643FromJSONTyped,
-    BTFullElementIdAndPartId643ToJSON
+     BTFullElementIdAndPartId643FromJSONTyped
 } from './';
 
 /**
@@ -115,7 +114,7 @@ export function BTFullElementIdWithDocument1729FromJSONTyped(json: any, ignoreDi
     };
 }
 
-export function BTFullElementIdWithDocument1729SuperToJSON(value?: BTFullElementIdWithDocument1729 | null): any {
+export function BTFullElementIdWithDocument1729ToJSON(value?: BTFullElementIdWithDocument1729 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -134,18 +133,3 @@ export function BTFullElementIdWithDocument1729SuperToJSON(value?: BTFullElement
     };
 }
 
-
-
-export function BTFullElementIdWithDocument1729ToJSON(value?: BTFullElementIdWithDocument1729 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTFullElementIdAndPartId-643') {
-        return BTFullElementIdAndPartId643ToJSON(value);
-    }
-    return BTFullElementIdWithDocument1729SuperToJSON(value);
-}

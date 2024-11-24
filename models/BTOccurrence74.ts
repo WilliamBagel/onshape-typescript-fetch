@@ -14,8 +14,7 @@
 
 import { exists, mapValues } from '../runtime';
 import {
-     BTOccurrenceWithFullPartIds1464FromJSONTyped,
-    BTOccurrenceWithFullPartIds1464ToJSON
+     BTOccurrenceWithFullPartIds1464FromJSONTyped
 } from './';
 
 /**
@@ -116,7 +115,7 @@ export function BTOccurrence74FromJSONTyped(json: any, ignoreDiscriminator: bool
     };
 }
 
-export function BTOccurrence74SuperToJSON(value?: BTOccurrence74 | null): any {
+export function BTOccurrence74ToJSON(value?: BTOccurrence74 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -137,18 +136,3 @@ export function BTOccurrence74SuperToJSON(value?: BTOccurrence74 | null): any {
     };
 }
 
-
-
-export function BTOccurrence74ToJSON(value?: BTOccurrence74 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTOccurrenceWithFullPartIds-1464') {
-        return BTOccurrenceWithFullPartIds1464ToJSON(value);
-    }
-    return BTOccurrence74SuperToJSON(value);
-}

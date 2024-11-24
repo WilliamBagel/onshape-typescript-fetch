@@ -18,12 +18,10 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 
 import {
-     BTMSuppressionStateConfigured2598FromJSONTyped,
-    BTMSuppressionStateConfigured2598ToJSON
+     BTMSuppressionStateConfigured2598FromJSONTyped
 } from './';
 
 /**
@@ -68,21 +66,6 @@ export function BTMSuppressionState1924FromJSONTyped(json: any, ignoreDiscrimina
     };
 }
 
-export function BTMSuppressionState1924SuperToJSON(value?: BTMSuppressionState1924 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTMNode19SuperToJSON(value),
-        'btType': value.btType,
-    };
-}
-
-
-
 export function BTMSuppressionState1924ToJSON(value?: BTMSuppressionState1924 | null): any {
     if (value === undefined) {
         return undefined;
@@ -90,9 +73,9 @@ export function BTMSuppressionState1924ToJSON(value?: BTMSuppressionState1924 | 
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTMSuppressionStateConfigured-2598') {
-        return BTMSuppressionStateConfigured2598ToJSON(value);
-    }
-    return BTMSuppressionState1924SuperToJSON(value);
+    return {
+        ...BTMNode19ToJSON(value),
+        'btType': value.btType,
+    };
 }
+

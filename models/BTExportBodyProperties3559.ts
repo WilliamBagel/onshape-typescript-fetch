@@ -18,7 +18,6 @@ import {
     BTExportModelProperties3216FromJSON,
     BTExportModelProperties3216FromJSONTyped,
     BTExportModelProperties3216ToJSON,
- BTExportModelProperties3216SuperToJSON,
 } from './BTExportModelProperties3216';
 import type { BTGraphicsAppearance1152 } from './BTGraphicsAppearance1152';
 import {
@@ -98,7 +97,7 @@ export function BTExportBodyProperties3559ToJSON(value?: BTExportBodyProperties3
         return null;
     }
     return {
-        ...BTExportModelProperties3216SuperToJSON(value),
+        ...BTExportModelProperties3216ToJSON(value),
         'btType': value.btType,
         'material': BTPartMaterial1445ToJSON(value.material),
         'visibility': GBTPartVisibilityToJSON(value.visibility),

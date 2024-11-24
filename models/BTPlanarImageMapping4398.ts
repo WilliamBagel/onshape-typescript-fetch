@@ -24,7 +24,6 @@ import {
     BTImageMapping3821FromJSON,
     BTImageMapping3821FromJSONTyped,
     BTImageMapping3821ToJSON,
- BTImageMapping3821SuperToJSON,
 } from './BTImageMapping3821';
 import type { BTMatrix3x3340 } from './BTMatrix3x3340';
 import {
@@ -85,7 +84,7 @@ export function BTPlanarImageMapping4398ToJSON(value?: BTPlanarImageMapping4398 
         return null;
     }
     return {
-        ...BTImageMapping3821SuperToJSON(value),
+        ...BTImageMapping3821ToJSON(value),
         'btType': value.btType,
         'planeSystem': BTCoordinateSystem387ToJSON(value.planeSystem),
     };

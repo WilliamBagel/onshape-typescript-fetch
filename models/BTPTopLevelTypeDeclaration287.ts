@@ -48,7 +48,6 @@ import {
     BTPTopLevelNode286FromJSON,
     BTPTopLevelNode286FromJSONTyped,
     BTPTopLevelNode286ToJSON,
- BTPTopLevelNode286SuperToJSON,
 } from './BTPTopLevelNode286';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -59,9 +58,7 @@ import {
 
 import {
      BTPTopLevelEnumDeclaration284FromJSONTyped,
-    BTPTopLevelEnumDeclaration284ToJSON,
-     BTPTopLevelUserTypeDeclaration288FromJSONTyped,
-    BTPTopLevelUserTypeDeclaration288ToJSON
+     BTPTopLevelUserTypeDeclaration288FromJSONTyped
 } from './';
 
 /**
@@ -130,24 +127,6 @@ export function BTPTopLevelTypeDeclaration287FromJSONTyped(json: any, ignoreDisc
     };
 }
 
-export function BTPTopLevelTypeDeclaration287SuperToJSON(value?: BTPTopLevelTypeDeclaration287 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTPTopLevelNode286SuperToJSON(value),
-        'btType': value.btType,
-        'name': BTPIdentifier8ToJSON(value.name),
-        'spaceAfterVersion': BTPSpace10ToJSON(value.spaceAfterVersion),
-        'version': BTPLiteralNumber258ToJSON(value.version),
-    };
-}
-
-
-
 export function BTPTopLevelTypeDeclaration287ToJSON(value?: BTPTopLevelTypeDeclaration287 | null): any {
     if (value === undefined) {
         return undefined;
@@ -155,12 +134,12 @@ export function BTPTopLevelTypeDeclaration287ToJSON(value?: BTPTopLevelTypeDecla
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTPTopLevelEnumDeclaration-284') {
-        return BTPTopLevelEnumDeclaration284ToJSON(value);
-    }
-    if (value.btType === 'BTPTopLevelUserTypeDeclaration-288') {
-        return BTPTopLevelUserTypeDeclaration288ToJSON(value);
-    }
-    return BTPTopLevelTypeDeclaration287SuperToJSON(value);
+    return {
+        ...BTPTopLevelNode286ToJSON(value),
+        'btType': value.btType,
+        'name': BTPIdentifier8ToJSON(value.name),
+        'spaceAfterVersion': BTPSpace10ToJSON(value.spaceAfterVersion),
+        'version': BTPLiteralNumber258ToJSON(value.version),
+    };
 }
+

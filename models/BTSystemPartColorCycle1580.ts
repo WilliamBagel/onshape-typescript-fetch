@@ -18,7 +18,6 @@ import {
     BTBasePartColorCycle2614FromJSON,
     BTBasePartColorCycle2614FromJSONTyped,
     BTBasePartColorCycle2614ToJSON,
- BTBasePartColorCycle2614SuperToJSON,
 } from './BTBasePartColorCycle2614';
 import type { GBTPartColorCycleVersion } from './GBTPartColorCycleVersion';
 import {
@@ -79,7 +78,7 @@ export function BTSystemPartColorCycle1580ToJSON(value?: BTSystemPartColorCycle1
         return null;
     }
     return {
-        ...BTBasePartColorCycle2614SuperToJSON(value),
+        ...BTBasePartColorCycle2614ToJSON(value),
         'btType': value.btType,
         'version': GBTPartColorCycleVersionToJSON(value.version),
     };

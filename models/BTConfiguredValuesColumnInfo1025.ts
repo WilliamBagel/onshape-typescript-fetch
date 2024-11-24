@@ -18,7 +18,6 @@ import {
     BTTableColumnInfo1222FromJSON,
     BTTableColumnInfo1222FromJSONTyped,
     BTTableColumnInfo1222ToJSON,
- BTTableColumnInfo1222SuperToJSON,
 } from './BTTableColumnInfo1222';
 import type { BTTableColumnSpec1967 } from './BTTableColumnSpec1967';
 import {
@@ -35,13 +34,9 @@ import {
 
 import {
      BTConfiguredDimensionColumnInfo2168FromJSONTyped,
-    BTConfiguredDimensionColumnInfo2168ToJSON,
      BTConfiguredFeatureColumnInfo1014FromJSONTyped,
-    BTConfiguredFeatureColumnInfo1014ToJSON,
      BTConfiguredParameterColumnInfo2900FromJSONTyped,
-    BTConfiguredParameterColumnInfo2900ToJSON,
-     BTConfiguredSuppressionColumnInfo2498FromJSONTyped,
-    BTConfiguredSuppressionColumnInfo2498ToJSON
+     BTConfiguredSuppressionColumnInfo2498FromJSONTyped
 } from './';
 
 /**
@@ -116,24 +111,6 @@ export function BTConfiguredValuesColumnInfo1025FromJSONTyped(json: any, ignoreD
     };
 }
 
-export function BTConfiguredValuesColumnInfo1025SuperToJSON(value?: BTConfiguredValuesColumnInfo1025 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTTableColumnInfo1222SuperToJSON(value),
-        'btType': value.btType,
-        'parentId': value.parentId,
-        'parentName': value.parentName,
-        'parentType': GBTConfiguredParentTypeToJSON(value.parentType),
-    };
-}
-
-
-
 export function BTConfiguredValuesColumnInfo1025ToJSON(value?: BTConfiguredValuesColumnInfo1025 | null): any {
     if (value === undefined) {
         return undefined;
@@ -141,18 +118,12 @@ export function BTConfiguredValuesColumnInfo1025ToJSON(value?: BTConfiguredValue
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTConfiguredDimensionColumnInfo-2168') {
-        return BTConfiguredDimensionColumnInfo2168ToJSON(value);
-    }
-    if (value.btType === 'BTConfiguredFeatureColumnInfo-1014') {
-        return BTConfiguredFeatureColumnInfo1014ToJSON(value);
-    }
-    if (value.btType === 'BTConfiguredParameterColumnInfo-2900') {
-        return BTConfiguredParameterColumnInfo2900ToJSON(value);
-    }
-    if (value.btType === 'BTConfiguredSuppressionColumnInfo-2498') {
-        return BTConfiguredSuppressionColumnInfo2498ToJSON(value);
-    }
-    return BTConfiguredValuesColumnInfo1025SuperToJSON(value);
+    return {
+        ...BTTableColumnInfo1222ToJSON(value),
+        'btType': value.btType,
+        'parentId': value.parentId,
+        'parentName': value.parentName,
+        'parentType': GBTConfiguredParentTypeToJSON(value.parentType),
+    };
 }
+

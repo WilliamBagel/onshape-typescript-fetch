@@ -28,13 +28,9 @@ import {
 
 import {
      BTMFeatureQueryWithOccurrence157FromJSONTyped,
-    BTMFeatureQueryWithOccurrence157ToJSON,
      BTMIndividualOccurrenceQuery626FromJSONTyped,
-    BTMIndividualOccurrenceQuery626ToJSON,
      BTMIndividualQueryWithOccurrence811FromJSONTyped,
-    BTMIndividualQueryWithOccurrence811ToJSON,
-     BTMMeshPointQuery1183FromJSONTyped,
-    BTMMeshPointQuery1183ToJSON
+     BTMMeshPointQuery1183FromJSONTyped
 } from './';
 
 /**
@@ -165,7 +161,7 @@ export function BTMIndividualQueryWithOccurrenceBase904FromJSONTyped(json: any, 
     };
 }
 
-export function BTMIndividualQueryWithOccurrenceBase904SuperToJSON(value?: BTMIndividualQueryWithOccurrenceBase904 | null): any {
+export function BTMIndividualQueryWithOccurrenceBase904ToJSON(value?: BTMIndividualQueryWithOccurrenceBase904 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -189,27 +185,3 @@ export function BTMIndividualQueryWithOccurrenceBase904SuperToJSON(value?: BTMIn
     };
 }
 
-
-
-export function BTMIndividualQueryWithOccurrenceBase904ToJSON(value?: BTMIndividualQueryWithOccurrenceBase904 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMFeatureQueryWithOccurrence-157') {
-        return BTMFeatureQueryWithOccurrence157ToJSON(value);
-    }
-    if (value.btType === 'BTMIndividualOccurrenceQuery-626') {
-        return BTMIndividualOccurrenceQuery626ToJSON(value);
-    }
-    if (value.btType === 'BTMIndividualQueryWithOccurrence-811') {
-        return BTMIndividualQueryWithOccurrence811ToJSON(value);
-    }
-    if (value.btType === 'BTMMeshPointQuery-1183') {
-        return BTMMeshPointQuery1183ToJSON(value);
-    }
-    return BTMIndividualQueryWithOccurrenceBase904SuperToJSON(value);
-}

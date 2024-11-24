@@ -15,9 +15,7 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTInnerArrayParameterLocation2368FromJSONTyped,
-    BTInnerArrayParameterLocation2368ToJSON,
-     BTInnerDerivedParameterLocation591FromJSONTyped,
-    BTInnerDerivedParameterLocation591ToJSON
+     BTInnerDerivedParameterLocation591FromJSONTyped
 } from './';
 
 /**
@@ -65,7 +63,7 @@ export function BTInnerParameterLocation1715FromJSONTyped(json: any, ignoreDiscr
     };
 }
 
-export function BTInnerParameterLocation1715SuperToJSON(value?: BTInnerParameterLocation1715 | null): any {
+export function BTInnerParameterLocation1715ToJSON(value?: BTInnerParameterLocation1715 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -78,21 +76,3 @@ export function BTInnerParameterLocation1715SuperToJSON(value?: BTInnerParameter
     };
 }
 
-
-
-export function BTInnerParameterLocation1715ToJSON(value?: BTInnerParameterLocation1715 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTInnerArrayParameterLocation-2368') {
-        return BTInnerArrayParameterLocation2368ToJSON(value);
-    }
-    if (value.btType === 'BTInnerDerivedParameterLocation-591') {
-        return BTInnerDerivedParameterLocation591ToJSON(value);
-    }
-    return BTInnerParameterLocation1715SuperToJSON(value);
-}

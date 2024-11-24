@@ -15,51 +15,28 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTAssemblySimulationData978FromJSONTyped,
-    BTAssemblySimulationData978ToJSON,
      BTInstanceBase2263FromJSONTyped,
-    BTInstanceBase2263ToJSON,
      BTInstanceControlNode750FromJSONTyped,
-    BTInstanceControlNode750ToJSON,
      BTMArrayParameterItem1843FromJSONTyped,
-    BTMArrayParameterItem1843ToJSON,
      BTMConfigurationData1560FromJSONTyped,
-    BTMConfigurationData1560ToJSON,
      BTMConfigurationParameter819FromJSONTyped,
-    BTMConfigurationParameter819ToJSON,
      BTMConfiguredValue1341FromJSONTyped,
-    BTMConfiguredValue1341ToJSON,
      BTMEnumOption592FromJSONTyped,
-    BTMEnumOption592ToJSON,
      BTMFeature134FromJSONTyped,
-    BTMFeature134ToJSON,
      BTMFolder3208FromJSONTyped,
-    BTMFolder3208ToJSON,
      BTMImport136FromJSONTyped,
-    BTMImport136ToJSON,
      BTMIndividualQueryBase139FromJSONTyped,
-    BTMIndividualQueryBase139ToJSON,
      BTMModel141FromJSONTyped,
-    BTMModel141ToJSON,
      BTMNodeInvalid1772FromJSONTyped,
-    BTMNodeInvalid1772ToJSON,
      BTMParameter1FromJSONTyped,
-    BTMParameter1ToJSON,
      BTMRecordMetrics1169FromJSONTyped,
-    BTMRecordMetrics1169ToJSON,
      BTMRollback150FromJSONTyped,
-    BTMRollback150ToJSON,
      BTMSketchEntity3FromJSONTyped,
-    BTMSketchEntity3ToJSON,
      BTMSuppressionState1924FromJSONTyped,
-    BTMSuppressionState1924ToJSON,
      BTMUnitsDefault160FromJSONTyped,
-    BTMUnitsDefault160ToJSON,
      BTMUserCode161FromJSONTyped,
-    BTMUserCode161ToJSON,
      BTSimulationInstance3093FromJSONTyped,
-    BTSimulationInstance3093ToJSON,
-     BTToleranceString3274FromJSONTyped,
-    BTToleranceString3274ToJSON
+     BTToleranceString3274FromJSONTyped
 } from './';
 
 /**
@@ -184,7 +161,7 @@ export function BTMNode19FromJSONTyped(json: any, ignoreDiscriminator: boolean):
     };
 }
 
-export function BTMNode19SuperToJSON(value?: BTMNode19 | null): any {
+export function BTMNode19ToJSON(value?: BTMNode19 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -199,84 +176,3 @@ export function BTMNode19SuperToJSON(value?: BTMNode19 | null): any {
     };
 }
 
-
-
-export function BTMNode19ToJSON(value?: BTMNode19 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTAssemblySimulationData-978') {
-        return BTAssemblySimulationData978ToJSON(value);
-    }
-    if (value.btType === 'BTInstanceBase-2263') {
-        return BTInstanceBase2263ToJSON(value);
-    }
-    if (value.btType === 'BTInstanceControlNode-750') {
-        return BTInstanceControlNode750ToJSON(value);
-    }
-    if (value.btType === 'BTMArrayParameterItem-1843') {
-        return BTMArrayParameterItem1843ToJSON(value);
-    }
-    if (value.btType === 'BTMConfigurationData-1560') {
-        return BTMConfigurationData1560ToJSON(value);
-    }
-    if (value.btType === 'BTMConfigurationParameter-819') {
-        return BTMConfigurationParameter819ToJSON(value);
-    }
-    if (value.btType === 'BTMConfiguredValue-1341') {
-        return BTMConfiguredValue1341ToJSON(value);
-    }
-    if (value.btType === 'BTMEnumOption-592') {
-        return BTMEnumOption592ToJSON(value);
-    }
-    if (value.btType === 'BTMFeature-134') {
-        return BTMFeature134ToJSON(value);
-    }
-    if (value.btType === 'BTMFolder-3208') {
-        return BTMFolder3208ToJSON(value);
-    }
-    if (value.btType === 'BTMImport-136') {
-        return BTMImport136ToJSON(value);
-    }
-    if (value.btType === 'BTMIndividualQueryBase-139') {
-        return BTMIndividualQueryBase139ToJSON(value);
-    }
-    if (value.btType === 'BTMModel-141') {
-        return BTMModel141ToJSON(value);
-    }
-    if (value.btType === 'BTMNodeInvalid-1772') {
-        return BTMNodeInvalid1772ToJSON(value);
-    }
-    if (value.btType === 'BTMParameter-1') {
-        return BTMParameter1ToJSON(value);
-    }
-    if (value.btType === 'BTMRecordMetrics-1169') {
-        return BTMRecordMetrics1169ToJSON(value);
-    }
-    if (value.btType === 'BTMRollback-150') {
-        return BTMRollback150ToJSON(value);
-    }
-    if (value.btType === 'BTMSketchEntity-3') {
-        return BTMSketchEntity3ToJSON(value);
-    }
-    if (value.btType === 'BTMSuppressionState-1924') {
-        return BTMSuppressionState1924ToJSON(value);
-    }
-    if (value.btType === 'BTMUnitsDefault-160') {
-        return BTMUnitsDefault160ToJSON(value);
-    }
-    if (value.btType === 'BTMUserCode-161') {
-        return BTMUserCode161ToJSON(value);
-    }
-    if (value.btType === 'BTSimulationInstance-3093') {
-        return BTSimulationInstance3093ToJSON(value);
-    }
-    if (value.btType === 'BTToleranceString-3274') {
-        return BTToleranceString3274ToJSON(value);
-    }
-    return BTMNode19SuperToJSON(value);
-}

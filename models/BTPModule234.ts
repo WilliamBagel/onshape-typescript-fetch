@@ -42,7 +42,6 @@ import {
     BTPNode7FromJSON,
     BTPNode7FromJSONTyped,
     BTPNode7ToJSON,
- BTPNode7SuperToJSON,
 } from './BTPNode7';
 import type { BTPSpace10 } from './BTPSpace10';
 import {
@@ -184,7 +183,7 @@ export function BTPModule234ToJSON(value?: BTPModule234 | null): any {
         return null;
     }
     return {
-        ...BTPNode7SuperToJSON(value),
+        ...BTPNode7ToJSON(value),
         'btType': value.btType,
         'deepImports': value.deepImports,
         'imports': value.imports === undefined ? undefined : ((value.imports as Array<any>).map(BTPTopLevelImport285ToJSON)),

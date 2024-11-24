@@ -15,11 +15,8 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTMInContextQuery2254FromJSONTyped,
-    BTMInContextQuery2254ToJSON,
      BTMIndividualQuery138FromJSONTyped,
-    BTMIndividualQuery138ToJSON,
-     BTMIndividualQueryWithOccurrenceBase904FromJSONTyped,
-    BTMIndividualQueryWithOccurrenceBase904ToJSON
+     BTMIndividualQueryWithOccurrenceBase904FromJSONTyped
 } from './';
 
 /**
@@ -126,7 +123,7 @@ export function BTMIndividualQueryBase139FromJSONTyped(json: any, ignoreDiscrimi
     };
 }
 
-export function BTMIndividualQueryBase139SuperToJSON(value?: BTMIndividualQueryBase139 | null): any {
+export function BTMIndividualQueryBase139ToJSON(value?: BTMIndividualQueryBase139 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -147,24 +144,3 @@ export function BTMIndividualQueryBase139SuperToJSON(value?: BTMIndividualQueryB
     };
 }
 
-
-
-export function BTMIndividualQueryBase139ToJSON(value?: BTMIndividualQueryBase139 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMInContextQuery-2254') {
-        return BTMInContextQuery2254ToJSON(value);
-    }
-    if (value.btType === 'BTMIndividualQuery-138') {
-        return BTMIndividualQuery138ToJSON(value);
-    }
-    if (value.btType === 'BTMIndividualQueryWithOccurrenceBase-904') {
-        return BTMIndividualQueryWithOccurrenceBase904ToJSON(value);
-    }
-    return BTMIndividualQueryBase139SuperToJSON(value);
-}

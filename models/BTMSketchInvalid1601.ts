@@ -24,7 +24,6 @@ import {
     BTMSketchEntity3FromJSON,
     BTMSketchEntity3FromJSONTyped,
     BTMSketchEntity3ToJSON,
- BTMSketchEntity3SuperToJSON,
 } from './BTMSketchEntity3';
 
 /**
@@ -72,7 +71,7 @@ export function BTMSketchInvalid1601ToJSON(value?: BTMSketchInvalid1601 | null):
         return null;
     }
     return {
-        ...BTMSketchEntity3SuperToJSON(value),
+        ...BTMSketchEntity3ToJSON(value),
         'btType': value.btType,
     };
 }

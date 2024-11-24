@@ -18,12 +18,10 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 
 import {
-     BTAllowedMateTypeFilter1511FromJSONTyped,
-    BTAllowedMateTypeFilter1511ToJSON
+     BTAllowedMateTypeFilter1511FromJSONTyped
 } from './';
 
 /**
@@ -82,23 +80,6 @@ export function BTMateFilter162FromJSONTyped(json: any, ignoreDiscriminator: boo
     };
 }
 
-export function BTMateFilter162SuperToJSON(value?: BTMateFilter162 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTQueryFilter183SuperToJSON(value),
-        'btType': value.btType,
-        'requireMateQueryData': value.requireMateQueryData,
-        'topLevelMateOnly': value.topLevelMateOnly,
-    };
-}
-
-
-
 export function BTMateFilter162ToJSON(value?: BTMateFilter162 | null): any {
     if (value === undefined) {
         return undefined;
@@ -106,9 +87,11 @@ export function BTMateFilter162ToJSON(value?: BTMateFilter162 | null): any {
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTAllowedMateTypeFilter-1511') {
-        return BTAllowedMateTypeFilter1511ToJSON(value);
-    }
-    return BTMateFilter162SuperToJSON(value);
+    return {
+        ...BTQueryFilter183ToJSON(value),
+        'btType': value.btType,
+        'requireMateQueryData': value.requireMateQueryData,
+        'topLevelMateOnly': value.topLevelMateOnly,
+    };
 }
+

@@ -24,7 +24,6 @@ import {
     BTParameterSpec6FromJSON,
     BTParameterSpec6FromJSONTyped,
     BTParameterSpec6ToJSON,
- BTParameterSpec6SuperToJSON,
 } from './BTParameterSpec6';
 import type { BTParameterVisibilityCondition177 } from './BTParameterVisibilityCondition177';
 import {
@@ -47,9 +46,7 @@ import {
 
 import {
      BTParameterSpecProgress3078FromJSONTyped,
-    BTParameterSpecProgress3078ToJSON,
-     BTParameterSpecStringWithTolerances2535FromJSONTyped,
-    BTParameterSpecStringWithTolerances2535ToJSON
+     BTParameterSpecStringWithTolerances2535FromJSONTyped
 } from './';
 
 /**
@@ -97,21 +94,6 @@ export function BTReadOnlyParameterSpec1889FromJSONTyped(json: any, ignoreDiscri
     };
 }
 
-export function BTReadOnlyParameterSpec1889SuperToJSON(value?: BTReadOnlyParameterSpec1889 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTParameterSpec6SuperToJSON(value),
-        'btType': value.btType,
-    };
-}
-
-
-
 export function BTReadOnlyParameterSpec1889ToJSON(value?: BTReadOnlyParameterSpec1889 | null): any {
     if (value === undefined) {
         return undefined;
@@ -119,12 +101,9 @@ export function BTReadOnlyParameterSpec1889ToJSON(value?: BTReadOnlyParameterSpe
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTParameterSpecProgress-3078') {
-        return BTParameterSpecProgress3078ToJSON(value);
-    }
-    if (value.btType === 'BTParameterSpecStringWithTolerances-2535') {
-        return BTParameterSpecStringWithTolerances2535ToJSON(value);
-    }
-    return BTReadOnlyParameterSpec1889SuperToJSON(value);
+    return {
+        ...BTParameterSpec6ToJSON(value),
+        'btType': value.btType,
+    };
 }
+

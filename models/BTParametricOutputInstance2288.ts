@@ -18,7 +18,6 @@ import {
     BTInstanceBase2263FromJSON,
     BTInstanceBase2263FromJSONTyped,
     BTInstanceBase2263ToJSON,
- BTInstanceBase2263SuperToJSON,
 } from './BTInstanceBase2263';
 import type { BTMSuppressionState1924 } from './BTMSuppressionState1924';
 import {
@@ -41,9 +40,7 @@ import {
 
 import {
      BTClonedInstance2505FromJSONTyped,
-    BTClonedInstance2505ToJSON,
-     BTParametricPartStudioChildInstance3696FromJSONTyped,
-    BTParametricPartStudioChildInstance3696ToJSON
+     BTParametricPartStudioChildInstance3696FromJSONTyped
 } from './';
 
 /**
@@ -91,21 +88,6 @@ export function BTParametricOutputInstance2288FromJSONTyped(json: any, ignoreDis
     };
 }
 
-export function BTParametricOutputInstance2288SuperToJSON(value?: BTParametricOutputInstance2288 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTInstanceBase2263SuperToJSON(value),
-        'btType': value.btType,
-    };
-}
-
-
-
 export function BTParametricOutputInstance2288ToJSON(value?: BTParametricOutputInstance2288 | null): any {
     if (value === undefined) {
         return undefined;
@@ -113,12 +95,9 @@ export function BTParametricOutputInstance2288ToJSON(value?: BTParametricOutputI
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTClonedInstance-2505') {
-        return BTClonedInstance2505ToJSON(value);
-    }
-    if (value.btType === 'BTParametricPartStudioChildInstance-3696') {
-        return BTParametricPartStudioChildInstance3696ToJSON(value);
-    }
-    return BTParametricOutputInstance2288SuperToJSON(value);
+    return {
+        ...BTInstanceBase2263ToJSON(value),
+        'btType': value.btType,
+    };
 }
+

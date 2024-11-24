@@ -18,7 +18,6 @@ import {
     BTTableColumnInfo1222FromJSON,
     BTTableColumnInfo1222FromJSONTyped,
     BTTableColumnInfo1222ToJSON,
- BTTableColumnInfo1222SuperToJSON,
 } from './BTTableColumnInfo1222';
 import type { BTTableColumnSpec1967 } from './BTTableColumnSpec1967';
 import {
@@ -100,7 +99,7 @@ export function BTNamedPositionValuesColumnInfo816ToJSON(value?: BTNamedPosition
         return null;
     }
     return {
-        ...BTTableColumnInfo1222SuperToJSON(value),
+        ...BTTableColumnInfo1222ToJSON(value),
         'btType': value.btType,
         'columnHasError': value.columnHasError,
         'parameterId': value.parameterId,

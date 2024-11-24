@@ -14,8 +14,7 @@
 
 import { exists, mapValues } from '../runtime';
 import {
-     BTOtherDocumentSelectorParametersInfoFromJSONTyped,
-    BTOtherDocumentSelectorParametersInfoToJSON
+     BTOtherDocumentSelectorParametersInfoFromJSONTyped
 } from './';
 
 /**
@@ -61,7 +60,7 @@ export function BTDocumentSelectorParametersInfoFromJSONTyped(json: any, ignoreD
     };
 }
 
-export function BTDocumentSelectorParametersInfoSuperToJSON(value?: BTDocumentSelectorParametersInfo | null): any {
+export function BTDocumentSelectorParametersInfoToJSON(value?: BTDocumentSelectorParametersInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -74,18 +73,3 @@ export function BTDocumentSelectorParametersInfoSuperToJSON(value?: BTDocumentSe
     };
 }
 
-
-
-export function BTDocumentSelectorParametersInfoToJSON(value?: BTDocumentSelectorParametersInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'other-documents') {
-        return BTOtherDocumentSelectorParametersInfoToJSON(value);
-    }
-    return BTDocumentSelectorParametersInfoSuperToJSON(value);
-}

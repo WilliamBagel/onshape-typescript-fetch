@@ -24,7 +24,6 @@ import {
     BTParameterSpecMultiEnum3118FromJSON,
     BTParameterSpecMultiEnum3118FromJSONTyped,
     BTParameterSpecMultiEnum3118ToJSON,
- BTParameterSpecMultiEnum3118SuperToJSON,
 } from './BTParameterSpecMultiEnum3118';
 import type { BTParameterVisibilityCondition177 } from './BTParameterVisibilityCondition177';
 import {
@@ -97,7 +96,7 @@ export function BTParameterSpecCategories4083ToJSON(value?: BTParameterSpecCateg
         return null;
     }
     return {
-        ...BTParameterSpecMultiEnum3118SuperToJSON(value),
+        ...BTParameterSpecMultiEnum3118ToJSON(value),
         'btType': value.btType,
         'categoryIdToMetadataTypes': value.categoryIdToMetadataTypes,
     };

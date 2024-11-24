@@ -24,7 +24,6 @@ import {
     BTMIndividualQueryWithOccurrenceBase904FromJSON,
     BTMIndividualQueryWithOccurrenceBase904FromJSONTyped,
     BTMIndividualQueryWithOccurrenceBase904ToJSON,
- BTMIndividualQueryWithOccurrenceBase904SuperToJSON,
 } from './BTMIndividualQueryWithOccurrenceBase904';
 import type { BTOccurrence74 } from './BTOccurrence74';
 import {
@@ -91,7 +90,7 @@ export function BTMMeshPointQuery1183ToJSON(value?: BTMMeshPointQuery1183 | null
         return null;
     }
     return {
-        ...BTMIndividualQueryWithOccurrenceBase904SuperToJSON(value),
+        ...BTMIndividualQueryWithOccurrenceBase904ToJSON(value),
         'btType': value.btType,
         'origin': BTVector3d389ToJSON(value.origin),
     };

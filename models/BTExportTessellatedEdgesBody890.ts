@@ -18,7 +18,6 @@ import {
     BTExportTessellatedBody3398FromJSON,
     BTExportTessellatedBody3398FromJSONTyped,
     BTExportTessellatedBody3398ToJSON,
- BTExportTessellatedBody3398SuperToJSON,
 } from './BTExportTessellatedBody3398';
 import type { BTExportTessellatedEdgesEdge1364 } from './BTExportTessellatedEdgesEdge1364';
 import {
@@ -79,7 +78,7 @@ export function BTExportTessellatedEdgesBody890ToJSON(value?: BTExportTessellate
         return null;
     }
     return {
-        ...BTExportTessellatedBody3398SuperToJSON(value),
+        ...BTExportTessellatedBody3398ToJSON(value),
         'btType': value.btType,
         'edges': value.edges === undefined ? undefined : ((value.edges as Array<any>).map(BTExportTessellatedEdgesEdge1364ToJSON)),
     };

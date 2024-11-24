@@ -18,7 +18,6 @@ import {
     BTParameterVisibilityOnEqual180FromJSON,
     BTParameterVisibilityOnEqual180FromJSONTyped,
     BTParameterVisibilityOnEqual180ToJSON,
- BTParameterVisibilityOnEqual180SuperToJSON,
 } from './BTParameterVisibilityOnEqual180';
 
 /**
@@ -67,7 +66,7 @@ export function BTParameterVisibilityOnMateDOFType2114ToJSON(value?: BTParameter
         return null;
     }
     return {
-        ...BTParameterVisibilityOnEqual180SuperToJSON(value),
+        ...BTParameterVisibilityOnEqual180ToJSON(value),
         'btType': value.btType,
     };
 }

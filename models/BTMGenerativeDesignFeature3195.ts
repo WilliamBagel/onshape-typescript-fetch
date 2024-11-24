@@ -18,7 +18,6 @@ import {
     BTMAssemblyFeature887FromJSON,
     BTMAssemblyFeature887FromJSONTyped,
     BTMAssemblyFeature887ToJSON,
- BTMAssemblyFeature887SuperToJSON,
 } from './BTMAssemblyFeature887';
 import type { BTMFeature134 } from './BTMFeature134';
 import {
@@ -138,7 +137,7 @@ export function BTMGenerativeDesignFeature3195ToJSON(value?: BTMGenerativeDesign
         return null;
     }
     return {
-        ...BTMAssemblyFeature887SuperToJSON(value),
+        ...BTMAssemblyFeature887ToJSON(value),
         'btType': value.btType,
         'additiveSupportsOccurrences': value.additiveSupportsOccurrences === undefined ? undefined : ((value.additiveSupportsOccurrences as Array<any>).map(BTOccurrence74ToJSON)),
         'draftOccurrences': value.draftOccurrences === undefined ? undefined : ((value.draftOccurrences as Array<any>).map(BTOccurrence74ToJSON)),

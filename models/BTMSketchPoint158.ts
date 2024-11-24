@@ -24,7 +24,6 @@ import {
     BTMSketchGeomEntity5FromJSON,
     BTMSketchGeomEntity5FromJSONTyped,
     BTMSketchGeomEntity5ToJSON,
- BTMSketchGeomEntity5SuperToJSON,
 } from './BTMSketchGeomEntity5';
 
 /**
@@ -93,7 +92,7 @@ export function BTMSketchPoint158ToJSON(value?: BTMSketchPoint158 | null): any {
         return null;
     }
     return {
-        ...BTMSketchGeomEntity5SuperToJSON(value),
+        ...BTMSketchGeomEntity5ToJSON(value),
         'btType': value.btType,
         'isUserPoint': value.isUserPoint,
         'x': value.x,

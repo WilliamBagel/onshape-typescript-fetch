@@ -30,7 +30,6 @@ import {
     BTElementReference725FromJSON,
     BTElementReference725FromJSONTyped,
     BTElementReference725ToJSON,
- BTElementReference725SuperToJSON,
 } from './BTElementReference725';
 import type { BTFullElementId756 } from './BTFullElementId756';
 import {
@@ -97,7 +96,7 @@ export function BTExternalReference1936ToJSON(value?: BTExternalReference1936 | 
         return null;
     }
     return {
-        ...BTElementReference725SuperToJSON(value),
+        ...BTElementReference725ToJSON(value),
         'btType': value.btType,
         'documentVersionId': value.documentVersionId,
     };

@@ -33,8 +33,7 @@ import {
 } from './BTTreeNode20';
 
 import {
-     BTBillOfMaterialsTableRow1425FromJSONTyped,
-    BTBillOfMaterialsTableRow1425ToJSON
+     BTBillOfMaterialsTableRow1425FromJSONTyped
 } from './';
 
 /**
@@ -114,7 +113,7 @@ export function BTTableRow1054FromJSONTyped(json: any, ignoreDiscriminator: bool
     };
 }
 
-export function BTTableRow1054SuperToJSON(value?: BTTableRow1054 | null): any {
+export function BTTableRow1054ToJSON(value?: BTTableRow1054 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -132,18 +131,3 @@ export function BTTableRow1054SuperToJSON(value?: BTTableRow1054 | null): any {
     };
 }
 
-
-
-export function BTTableRow1054ToJSON(value?: BTTableRow1054 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTBillOfMaterialsTableRow-1425') {
-        return BTBillOfMaterialsTableRow1425ToJSON(value);
-    }
-    return BTTableRow1054SuperToJSON(value);
-}

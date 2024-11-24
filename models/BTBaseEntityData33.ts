@@ -22,9 +22,7 @@ import {
 
 import {
      BTEntityDeletion24FromJSONTyped,
-    BTEntityDeletion24ToJSON,
-     BTFeatureEntity34FromJSONTyped,
-    BTFeatureEntity34ToJSON
+     BTFeatureEntity34FromJSONTyped
 } from './';
 
 /**
@@ -114,7 +112,7 @@ export function BTBaseEntityData33FromJSONTyped(json: any, ignoreDiscriminator: 
     };
 }
 
-export function BTBaseEntityData33SuperToJSON(value?: BTBaseEntityData33 | null): any {
+export function BTBaseEntityData33ToJSON(value?: BTBaseEntityData33 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -133,21 +131,3 @@ export function BTBaseEntityData33SuperToJSON(value?: BTBaseEntityData33 | null)
     };
 }
 
-
-
-export function BTBaseEntityData33ToJSON(value?: BTBaseEntityData33 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTEntityDeletion-24') {
-        return BTEntityDeletion24ToJSON(value);
-    }
-    if (value.btType === 'BTFeatureEntity-34') {
-        return BTFeatureEntity34ToJSON(value);
-    }
-    return BTBaseEntityData33SuperToJSON(value);
-}

@@ -18,7 +18,6 @@ import {
     BTEntityGeometry35FromJSON,
     BTEntityGeometry35FromJSONTyped,
     BTEntityGeometry35ToJSON,
- BTEntityGeometry35SuperToJSON,
 } from './BTEntityGeometry35';
 import type { BTGraphicsAppearance1152 } from './BTGraphicsAppearance1152';
 import {
@@ -146,7 +145,7 @@ export function BTDebugGeometry2059ToJSON(value?: BTDebugGeometry2059 | null): a
         return null;
     }
     return {
-        ...BTEntityGeometry35SuperToJSON(value),
+        ...BTEntityGeometry35ToJSON(value),
         'btType': value.btType,
         'appearance': BTGraphicsAppearance1152ToJSON(value.appearance),
         'belongsToFlattenedSheetMetalBody': value.belongsToFlattenedSheetMetalBody,

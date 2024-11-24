@@ -24,7 +24,6 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 
 /**
@@ -100,7 +99,7 @@ export function BTMRecordMetrics1169ToJSON(value?: BTMRecordMetrics1169 | null):
         return null;
     }
     return {
-        ...BTMNode19SuperToJSON(value),
+        ...BTMNode19ToJSON(value),
         'btType': value.btType,
         'doBodyValidation': value.doBodyValidation,
         'previousFeatureId': value.previousFeatureId,

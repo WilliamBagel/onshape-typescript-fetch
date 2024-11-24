@@ -18,7 +18,6 @@ import {
     BTFeatureOccurrenceData775FromJSON,
     BTFeatureOccurrenceData775FromJSONTyped,
     BTFeatureOccurrenceData775ToJSON,
- BTFeatureOccurrenceData775SuperToJSON,
 } from './BTFeatureOccurrenceData775';
 import type { GBTBSFeatureVisibility } from './GBTBSFeatureVisibility';
 import {
@@ -86,7 +85,7 @@ export function BTMateOccurrenceData1671ToJSON(value?: BTMateOccurrenceData1671 
         return null;
     }
     return {
-        ...BTFeatureOccurrenceData775SuperToJSON(value),
+        ...BTFeatureOccurrenceData775ToJSON(value),
         'btType': value.btType,
         'valueMap': value.valueMap,
         'values': value.values,

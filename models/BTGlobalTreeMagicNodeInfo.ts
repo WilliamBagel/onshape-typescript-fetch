@@ -18,7 +18,6 @@ import {
     BTGlobalTreeNodeInfoFromJSON,
     BTGlobalTreeNodeInfoFromJSONTyped,
     BTGlobalTreeNodeInfoToJSON,
- BTGlobalTreeNodeInfoSuperToJSON,
 } from './BTGlobalTreeNodeInfo';
 import type { BTOwnerInfo } from './BTOwnerInfo';
 import {
@@ -91,7 +90,7 @@ export function BTGlobalTreeMagicNodeInfoToJSON(value?: BTGlobalTreeMagicNodeInf
         return null;
     }
     return {
-        ...BTGlobalTreeNodeInfoSuperToJSON(value),
+        ...BTGlobalTreeNodeInfoToJSON(value),
         'subType': value.subType,
         'thumbnail': BTThumbnailInfoToJSON(value.thumbnail),
     };

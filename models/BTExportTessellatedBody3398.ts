@@ -15,9 +15,7 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTExportTessellatedEdgesBody890FromJSONTyped,
-    BTExportTessellatedEdgesBody890ToJSON,
-     BTExportTessellatedFacesBody1321FromJSONTyped,
-    BTExportTessellatedFacesBody1321ToJSON
+     BTExportTessellatedFacesBody1321FromJSONTyped
 } from './';
 
 /**
@@ -86,7 +84,7 @@ export function BTExportTessellatedBody3398FromJSONTyped(json: any, ignoreDiscri
     };
 }
 
-export function BTExportTessellatedBody3398SuperToJSON(value?: BTExportTessellatedBody3398 | null): any {
+export function BTExportTessellatedBody3398ToJSON(value?: BTExportTessellatedBody3398 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -102,21 +100,3 @@ export function BTExportTessellatedBody3398SuperToJSON(value?: BTExportTessellat
     };
 }
 
-
-
-export function BTExportTessellatedBody3398ToJSON(value?: BTExportTessellatedBody3398 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTExportTessellatedEdgesBody-890') {
-        return BTExportTessellatedEdgesBody890ToJSON(value);
-    }
-    if (value.btType === 'BTExportTessellatedFacesBody-1321') {
-        return BTExportTessellatedFacesBody1321ToJSON(value);
-    }
-    return BTExportTessellatedBody3398SuperToJSON(value);
-}

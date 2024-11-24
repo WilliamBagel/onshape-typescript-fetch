@@ -18,7 +18,6 @@ import {
     BTMConfiguredValue1341FromJSON,
     BTMConfiguredValue1341FromJSONTyped,
     BTMConfiguredValue1341ToJSON,
- BTMConfiguredValue1341SuperToJSON,
 } from './BTMConfiguredValue1341';
 import type { BTMParameter1 } from './BTMParameter1';
 import {
@@ -100,7 +99,7 @@ export function BTMConfiguredValueByEnum1923ToJSON(value?: BTMConfiguredValueByE
         return null;
     }
     return {
-        ...BTMConfiguredValue1341SuperToJSON(value),
+        ...BTMConfiguredValue1341ToJSON(value),
         'btType': value.btType,
         'enumName': value.enumName,
         'enumValue': value.enumValue,

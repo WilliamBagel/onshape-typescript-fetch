@@ -36,7 +36,6 @@ import {
     BTFeatureEntity34FromJSON,
     BTFeatureEntity34FromJSONTyped,
     BTFeatureEntity34ToJSON,
- BTFeatureEntity34SuperToJSON,
 } from './BTFeatureEntity34';
 import type { GBTSketchCurveType } from './GBTSketchCurveType';
 import {
@@ -146,7 +145,7 @@ export function BTSketchEntity25ToJSON(value?: BTSketchEntity25 | null): any {
         return null;
     }
     return {
-        ...BTFeatureEntity34SuperToJSON(value),
+        ...BTFeatureEntity34ToJSON(value),
         'btType': value.btType,
         'isConstruction': value.isConstruction,
         'isFromSplineControlPolygon': value.isFromSplineControlPolygon,

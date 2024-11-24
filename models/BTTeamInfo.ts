@@ -24,7 +24,6 @@ import {
     BTTeamSummaryInfoFromJSON,
     BTTeamSummaryInfoFromJSONTyped,
     BTTeamSummaryInfoToJSON,
- BTTeamSummaryInfoSuperToJSON,
 } from './BTTeamSummaryInfo';
 import type { BTUserBasicSummaryInfo } from './BTUserBasicSummaryInfo';
 import {
@@ -92,7 +91,7 @@ export function BTTeamInfoToJSON(value?: BTTeamInfo | null): any {
         return null;
     }
     return {
-        ...BTTeamSummaryInfoSuperToJSON(value),
+        ...BTTeamSummaryInfoToJSON(value),
         'admin': value.admin,
         'member': value.member,
         'size': value.size,

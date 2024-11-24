@@ -42,7 +42,6 @@ import {
     BTPStatement269FromJSON,
     BTPStatement269FromJSONTyped,
     BTPStatement269ToJSON,
- BTPStatement269SuperToJSON,
 } from './BTPStatement269';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -123,7 +122,7 @@ export function BTPStatementAssignment270ToJSON(value?: BTPStatementAssignment27
         return null;
     }
     return {
-        ...BTPStatement269SuperToJSON(value),
+        ...BTPStatement269ToJSON(value),
         'btType': value.btType,
         'lvalue': BTPLValue249ToJSON(value.lvalue),
         'operator': GBTPOperatorToJSON(value.operator),

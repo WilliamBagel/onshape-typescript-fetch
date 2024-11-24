@@ -36,7 +36,6 @@ import {
     BTInstanceBase2263FromJSON,
     BTInstanceBase2263FromJSONTyped,
     BTInstanceBase2263ToJSON,
- BTInstanceBase2263SuperToJSON,
 } from './BTInstanceBase2263';
 import type { BTMParameter1 } from './BTMParameter1';
 import {
@@ -77,9 +76,7 @@ import {
 
 import {
      BTAssemblyInstance947FromJSONTyped,
-    BTAssemblyInstance947ToJSON,
-     BTPartInstance81FromJSONTyped,
-    BTPartInstance81ToJSON
+     BTPartInstance81FromJSONTyped
 } from './';
 
 /**
@@ -225,7 +222,7 @@ export function BTInstance642FromJSONTyped(json: any, ignoreDiscriminator: boole
     };
 }
 
-export function BTInstance642SuperToJSON(value?: BTInstance642 | null): any {
+export function BTInstance642ToJSON(value?: BTInstance642 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -233,7 +230,7 @@ export function BTInstance642SuperToJSON(value?: BTInstance642 | null): any {
         return null;
     }
     return {
-        ...BTInstanceBase2263SuperToJSON(value),
+        ...BTInstanceBase2263ToJSON(value),
         'btType': value.btType,
         'configuration': value._configuration === undefined ? undefined : ((value._configuration as Array<any>).map(BTMParameter1ToJSON)),
         'configured': value.configured,
@@ -252,21 +249,3 @@ export function BTInstance642SuperToJSON(value?: BTInstance642 | null): any {
     };
 }
 
-
-
-export function BTInstance642ToJSON(value?: BTInstance642 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTAssemblyInstance-947') {
-        return BTAssemblyInstance947ToJSON(value);
-    }
-    if (value.btType === 'BTPartInstance-81') {
-        return BTPartInstance81ToJSON(value);
-    }
-    return BTInstance642SuperToJSON(value);
-}

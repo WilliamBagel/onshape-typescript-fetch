@@ -78,7 +78,6 @@ import {
     BTParametricInstance2641FromJSON,
     BTParametricInstance2641FromJSONTyped,
     BTParametricInstance2641ToJSON,
- BTParametricInstance2641SuperToJSON,
 } from './BTParametricInstance2641';
 import type { BTReferenceCustomData1551 } from './BTReferenceCustomData1551';
 import {
@@ -222,7 +221,7 @@ export function BTParametricPartStudioInstance4374ToJSON(value?: BTParametricPar
         return null;
     }
     return {
-        ...BTParametricInstance2641SuperToJSON(value),
+        ...BTParametricInstance2641ToJSON(value),
         'btType': value.btType,
         'configuration': value._configuration === undefined ? undefined : ((value._configuration as Array<any>).map(BTMParameter1ToJSON)),
         'documentId': value.documentId,

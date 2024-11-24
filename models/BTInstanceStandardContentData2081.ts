@@ -18,7 +18,6 @@ import {
     BTReferenceCustomData1551FromJSON,
     BTReferenceCustomData1551FromJSONTyped,
     BTReferenceCustomData1551ToJSON,
- BTReferenceCustomData1551SuperToJSON,
 } from './BTReferenceCustomData1551';
 
 /**
@@ -73,7 +72,7 @@ export function BTInstanceStandardContentData2081ToJSON(value?: BTInstanceStanda
         return null;
     }
     return {
-        ...BTReferenceCustomData1551SuperToJSON(value),
+        ...BTReferenceCustomData1551ToJSON(value),
         'btType': value.btType,
         'parametersId': value.parametersId,
     };

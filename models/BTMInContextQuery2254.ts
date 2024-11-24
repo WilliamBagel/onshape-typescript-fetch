@@ -18,7 +18,6 @@ import {
     BTMIndividualQueryBase139FromJSON,
     BTMIndividualQueryBase139FromJSONTyped,
     BTMIndividualQueryBase139ToJSON,
- BTMIndividualQueryBase139SuperToJSON,
 } from './BTMIndividualQueryBase139';
 
 /**
@@ -73,7 +72,7 @@ export function BTMInContextQuery2254ToJSON(value?: BTMInContextQuery2254 | null
         return null;
     }
     return {
-        ...BTMIndividualQueryBase139SuperToJSON(value),
+        ...BTMIndividualQueryBase139ToJSON(value),
         'btType': value.btType,
         'path': value.path,
     };

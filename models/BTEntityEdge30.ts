@@ -36,7 +36,6 @@ import {
     BTTessellatedGeometry2576FromJSON,
     BTTessellatedGeometry2576FromJSONTyped,
     BTTessellatedGeometry2576ToJSON,
- BTTessellatedGeometry2576SuperToJSON,
 } from './BTTessellatedGeometry2576';
 import type { GBTEdgeType } from './GBTEdgeType';
 import {
@@ -138,7 +137,7 @@ export function BTEntityEdge30ToJSON(value?: BTEntityEdge30 | null): any {
         return null;
     }
     return {
-        ...BTTessellatedGeometry2576SuperToJSON(value),
+        ...BTTessellatedGeometry2576ToJSON(value),
         'btType': value.btType,
         'compressedPoints': BTImmutableByteArrayToJSON(value.compressedPoints),
         'edgeSmoothnessStatus': GBTEntityEdgeSmoothnessStatusToJSON(value.edgeSmoothnessStatus),

@@ -18,7 +18,6 @@ import {
     BTMetadataObjectInfoFromJSON,
     BTMetadataObjectInfoFromJSONTyped,
     BTMetadataObjectInfoToJSON,
- BTMetadataObjectInfoSuperToJSON,
 } from './BTMetadataObjectInfo';
 import type { BTMetadataObjectListInfoBTMetadataPartInfo } from './BTMetadataObjectListInfoBTMetadataPartInfo';
 import {
@@ -105,7 +104,7 @@ export function BTMetadataElementInfoToJSON(value?: BTMetadataElementInfo | null
         return null;
     }
     return {
-        ...BTMetadataObjectInfoSuperToJSON(value),
+        ...BTMetadataObjectInfoToJSON(value),
         'elementId': value.elementId,
         'elementType': value.elementType,
         'mimeType': value.mimeType,

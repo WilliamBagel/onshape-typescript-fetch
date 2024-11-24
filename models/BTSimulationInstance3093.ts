@@ -18,7 +18,6 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 
 /**
@@ -80,7 +79,7 @@ export function BTSimulationInstance3093ToJSON(value?: BTSimulationInstance3093 
         return null;
     }
     return {
-        ...BTMNode19SuperToJSON(value),
+        ...BTMNode19ToJSON(value),
         'btType': value.btType,
         'isModal': value.isModal,
         'simulationId': value.simulationId,

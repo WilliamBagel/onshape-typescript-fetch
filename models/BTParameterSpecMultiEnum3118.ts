@@ -24,7 +24,6 @@ import {
     BTParameterSpec6FromJSON,
     BTParameterSpec6FromJSONTyped,
     BTParameterSpec6ToJSON,
- BTParameterSpec6SuperToJSON,
 } from './BTParameterSpec6';
 import type { BTParameterVisibilityCondition177 } from './BTParameterVisibilityCondition177';
 import {
@@ -46,8 +45,7 @@ import {
 } from './GBTUIHint';
 
 import {
-     BTParameterSpecCategories4083FromJSONTyped,
-    BTParameterSpecCategories4083ToJSON
+     BTParameterSpecCategories4083FromJSONTyped
 } from './';
 
 /**
@@ -134,7 +132,7 @@ export function BTParameterSpecMultiEnum3118FromJSONTyped(json: any, ignoreDiscr
     };
 }
 
-export function BTParameterSpecMultiEnum3118SuperToJSON(value?: BTParameterSpecMultiEnum3118 | null): any {
+export function BTParameterSpecMultiEnum3118ToJSON(value?: BTParameterSpecMultiEnum3118 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -142,7 +140,7 @@ export function BTParameterSpecMultiEnum3118SuperToJSON(value?: BTParameterSpecM
         return null;
     }
     return {
-        ...BTParameterSpec6SuperToJSON(value),
+        ...BTParameterSpec6ToJSON(value),
         'btType': value.btType,
         'enumName': value.enumName,
         'enumValueToVisibilityCondition': value.enumValueToVisibilityCondition === undefined ? undefined : (mapValues(value.enumValueToVisibilityCondition, BTParameterVisibilityCondition177ToJSON)),
@@ -153,18 +151,3 @@ export function BTParameterSpecMultiEnum3118SuperToJSON(value?: BTParameterSpecM
     };
 }
 
-
-
-export function BTParameterSpecMultiEnum3118ToJSON(value?: BTParameterSpecMultiEnum3118 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTParameterSpecCategories-4083') {
-        return BTParameterSpecCategories4083ToJSON(value);
-    }
-    return BTParameterSpecMultiEnum3118SuperToJSON(value);
-}

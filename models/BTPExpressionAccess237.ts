@@ -18,7 +18,6 @@ import {
     BTPExpression9FromJSON,
     BTPExpression9FromJSONTyped,
     BTPExpression9ToJSON,
- BTPExpression9SuperToJSON,
 } from './BTPExpression9';
 import type { BTPPropertyAccessor23 } from './BTPPropertyAccessor23';
 import {
@@ -105,7 +104,7 @@ export function BTPExpressionAccess237ToJSON(value?: BTPExpressionAccess237 | nu
         return null;
     }
     return {
-        ...BTPExpression9SuperToJSON(value),
+        ...BTPExpression9ToJSON(value),
         'btType': value.btType,
         'accessor': BTPPropertyAccessor23ToJSON(value.accessor),
         'base': BTPExpression9ToJSON(value.base),

@@ -18,7 +18,6 @@ import {
     BTFeatureApiBase1430FromJSON,
     BTFeatureApiBase1430FromJSONTyped,
     BTFeatureApiBase1430ToJSON,
- BTFeatureApiBase1430SuperToJSON,
 } from './BTFeatureApiBase1430';
 
 /**
@@ -73,7 +72,7 @@ export function BTFeatureStudioContents2239ToJSON(value?: BTFeatureStudioContent
         return null;
     }
     return {
-        ...BTFeatureApiBase1430SuperToJSON(value),
+        ...BTFeatureApiBase1430ToJSON(value),
         'btType': value.btType,
         'contents': value.contents,
     };

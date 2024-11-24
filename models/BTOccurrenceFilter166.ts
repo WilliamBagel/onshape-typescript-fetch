@@ -18,7 +18,6 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 
 /**
@@ -171,7 +170,7 @@ export function BTOccurrenceFilter166ToJSON(value?: BTOccurrenceFilter166 | null
         return null;
     }
     return {
-        ...BTQueryFilter183SuperToJSON(value),
+        ...BTQueryFilter183ToJSON(value),
         'btType': value.btType,
         'excludeFlattenedParts': value.excludeFlattenedParts,
         'excludeParametricPartStudioChildInstance': value.excludeParametricPartStudioChildInstance,

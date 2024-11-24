@@ -18,7 +18,6 @@ import {
     BTMReadOnlyParameter3800FromJSON,
     BTMReadOnlyParameter3800FromJSONTyped,
     BTMReadOnlyParameter3800ToJSON,
- BTMReadOnlyParameter3800SuperToJSON,
 } from './BTMReadOnlyParameter3800';
 import type { BTToleranceString3274 } from './BTToleranceString3274';
 import {
@@ -79,7 +78,7 @@ export function BTMParameterStringWithTolerances4286ToJSON(value?: BTMParameterS
         return null;
     }
     return {
-        ...BTMReadOnlyParameter3800SuperToJSON(value),
+        ...BTMReadOnlyParameter3800ToJSON(value),
         'btType': value.btType,
         'components': value.components === undefined ? undefined : ((value.components as Array<any>).map(BTToleranceString3274ToJSON)),
     };

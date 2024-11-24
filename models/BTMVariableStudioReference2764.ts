@@ -24,7 +24,6 @@ import {
     BTMFeature134FromJSON,
     BTMFeature134FromJSONTyped,
     BTMFeature134ToJSON,
- BTMFeature134SuperToJSON,
 } from './BTMFeature134';
 import type { BTMParameter1 } from './BTMParameter1';
 import {
@@ -201,7 +200,7 @@ export function BTMVariableStudioReference2764ToJSON(value?: BTMVariableStudioRe
         return null;
     }
     return {
-        ...BTMFeature134SuperToJSON(value),
+        ...BTMFeature134ToJSON(value),
         'btType': value.btType,
         'apiConfiguration': BTApiConfigurationToJSON(value.apiConfiguration),
         'configuration': value._configuration === undefined ? undefined : ((value._configuration as Array<any>).map(BTMParameter1ToJSON)),

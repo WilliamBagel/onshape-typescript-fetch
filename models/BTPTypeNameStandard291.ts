@@ -24,7 +24,6 @@ import {
     BTPTypeName290FromJSON,
     BTPTypeName290FromJSONTyped,
     BTPTypeName290ToJSON,
- BTPTypeName290SuperToJSON,
 } from './BTPTypeName290';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -91,7 +90,7 @@ export function BTPTypeNameStandard291ToJSON(value?: BTPTypeNameStandard291 | nu
         return null;
     }
     return {
-        ...BTPTypeName290SuperToJSON(value),
+        ...BTPTypeName290ToJSON(value),
         'btType': value.btType,
         'type': GBTPTypeToJSON(value.type),
     };

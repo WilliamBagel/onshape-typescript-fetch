@@ -30,7 +30,6 @@ import {
     BTPFunctionOrPredicateDeclaration247FromJSON,
     BTPFunctionOrPredicateDeclaration247FromJSONTyped,
     BTPFunctionOrPredicateDeclaration247ToJSON,
- BTPFunctionOrPredicateDeclaration247SuperToJSON,
 } from './BTPFunctionOrPredicateDeclaration247';
 import type { BTPIdentifier8 } from './BTPIdentifier8';
 import {
@@ -114,7 +113,7 @@ export function BTPPredicateDeclaration265ToJSON(value?: BTPPredicateDeclaration
         return null;
     }
     return {
-        ...BTPFunctionOrPredicateDeclaration247SuperToJSON(value),
+        ...BTPFunctionOrPredicateDeclaration247ToJSON(value),
         'btType': value.btType,
     };
 }

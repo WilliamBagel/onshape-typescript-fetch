@@ -18,18 +18,13 @@ import {
     BTEntityGeometry35FromJSON,
     BTEntityGeometry35FromJSONTyped,
     BTEntityGeometry35ToJSON,
- BTEntityGeometry35SuperToJSON,
 } from './BTEntityGeometry35';
 
 import {
      BTEntityDegenerateEdge1129FromJSONTyped,
-    BTEntityDegenerateEdge1129ToJSON,
      BTEntityEdge30FromJSONTyped,
-    BTEntityEdge30ToJSON,
      BTEntityFace31FromJSONTyped,
-    BTEntityFace31ToJSON,
-     BTEntityPoint29FromJSONTyped,
-    BTEntityPoint29ToJSON
+     BTEntityPoint29FromJSONTyped
 } from './';
 
 /**
@@ -83,21 +78,6 @@ export function BTTessellatedGeometry2576FromJSONTyped(json: any, ignoreDiscrimi
     };
 }
 
-export function BTTessellatedGeometry2576SuperToJSON(value?: BTTessellatedGeometry2576 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTEntityGeometry35SuperToJSON(value),
-        'btType': value.btType,
-    };
-}
-
-
-
 export function BTTessellatedGeometry2576ToJSON(value?: BTTessellatedGeometry2576 | null): any {
     if (value === undefined) {
         return undefined;
@@ -105,18 +85,9 @@ export function BTTessellatedGeometry2576ToJSON(value?: BTTessellatedGeometry257
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTEntityDegenerateEdge-1129') {
-        return BTEntityDegenerateEdge1129ToJSON(value);
-    }
-    if (value.btType === 'BTEntityEdge-30') {
-        return BTEntityEdge30ToJSON(value);
-    }
-    if (value.btType === 'BTEntityFace-31') {
-        return BTEntityFace31ToJSON(value);
-    }
-    if (value.btType === 'BTEntityPoint-29') {
-        return BTEntityPoint29ToJSON(value);
-    }
-    return BTTessellatedGeometry2576SuperToJSON(value);
+    return {
+        ...BTEntityGeometry35ToJSON(value),
+        'btType': value.btType,
+    };
 }
+

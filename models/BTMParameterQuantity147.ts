@@ -18,12 +18,10 @@ import {
     BTMParameter1FromJSON,
     BTMParameter1FromJSONTyped,
     BTMParameter1ToJSON,
- BTMParameter1SuperToJSON,
 } from './BTMParameter1';
 
 import {
-     BTMParameterNullableQuantity807FromJSONTyped,
-    BTMParameterNullableQuantity807ToJSON
+     BTMParameterNullableQuantity807FromJSONTyped
 } from './';
 
 /**
@@ -96,7 +94,7 @@ export function BTMParameterQuantity147FromJSONTyped(json: any, ignoreDiscrimina
     };
 }
 
-export function BTMParameterQuantity147SuperToJSON(value?: BTMParameterQuantity147 | null): any {
+export function BTMParameterQuantity147ToJSON(value?: BTMParameterQuantity147 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -104,7 +102,7 @@ export function BTMParameterQuantity147SuperToJSON(value?: BTMParameterQuantity1
         return null;
     }
     return {
-        ...BTMParameter1SuperToJSON(value),
+        ...BTMParameter1ToJSON(value),
         'btType': value.btType,
         'expression': value.expression,
         'isInteger': value.isInteger,
@@ -113,18 +111,3 @@ export function BTMParameterQuantity147SuperToJSON(value?: BTMParameterQuantity1
     };
 }
 
-
-
-export function BTMParameterQuantity147ToJSON(value?: BTMParameterQuantity147 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMParameterNullableQuantity-807') {
-        return BTMParameterNullableQuantity807ToJSON(value);
-    }
-    return BTMParameterQuantity147SuperToJSON(value);
-}

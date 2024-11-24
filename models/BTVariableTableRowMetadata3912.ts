@@ -24,7 +24,6 @@ import {
     BTTableBaseRowMetadata3181FromJSON,
     BTTableBaseRowMetadata3181FromJSONTyped,
     BTTableBaseRowMetadata3181ToJSON,
- BTTableBaseRowMetadata3181SuperToJSON,
 } from './BTTableBaseRowMetadata3181';
 
 /**
@@ -107,7 +106,7 @@ export function BTVariableTableRowMetadata3912ToJSON(value?: BTVariableTableRowM
         return null;
     }
     return {
-        ...BTTableBaseRowMetadata3181SuperToJSON(value),
+        ...BTTableBaseRowMetadata3181ToJSON(value),
         'btType': value.btType,
         'crossHighlightData': BTTableBaseCrossHighlightData2609ToJSON(value.crossHighlightData),
         'info': value.info,

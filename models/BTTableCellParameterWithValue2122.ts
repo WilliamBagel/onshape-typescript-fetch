@@ -36,7 +36,6 @@ import {
     BTTableCellParameter2399FromJSON,
     BTTableCellParameter2399FromJSONTyped,
     BTTableCellParameter2399ToJSON,
- BTTableCellParameter2399SuperToJSON,
 } from './BTTableCellParameter2399';
 
 /**
@@ -91,7 +90,7 @@ export function BTTableCellParameterWithValue2122ToJSON(value?: BTTableCellParam
         return null;
     }
     return {
-        ...BTTableCellParameter2399SuperToJSON(value),
+        ...BTTableCellParameter2399ToJSON(value),
         'btType': value.btType,
         'value': BTFSValue1888ToJSON(value.value),
     };

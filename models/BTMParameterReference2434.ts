@@ -24,14 +24,11 @@ import {
     BTMParameter1FromJSON,
     BTMParameter1FromJSONTyped,
     BTMParameter1ToJSON,
- BTMParameter1SuperToJSON,
 } from './BTMParameter1';
 
 import {
      BTMParameterReferenceBlob3281FromJSONTyped,
-    BTMParameterReferenceBlob3281ToJSON,
-     BTMParameterReferenceWithConfiguration3028FromJSONTyped,
-    BTMParameterReferenceWithConfiguration3028ToJSON
+     BTMParameterReferenceWithConfiguration3028FromJSONTyped
 } from './';
 
 /**
@@ -142,7 +139,7 @@ export function BTMParameterReference2434FromJSONTyped(json: any, ignoreDiscrimi
     };
 }
 
-export function BTMParameterReference2434SuperToJSON(value?: BTMParameterReference2434 | null): any {
+export function BTMParameterReference2434ToJSON(value?: BTMParameterReference2434 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -150,7 +147,7 @@ export function BTMParameterReference2434SuperToJSON(value?: BTMParameterReferen
         return null;
     }
     return {
-        ...BTMParameter1SuperToJSON(value),
+        ...BTMParameter1ToJSON(value),
         'btType': value.btType,
         'documentId': value.documentId,
         'documentVersionId': value.documentVersionId,
@@ -164,21 +161,3 @@ export function BTMParameterReference2434SuperToJSON(value?: BTMParameterReferen
     };
 }
 
-
-
-export function BTMParameterReference2434ToJSON(value?: BTMParameterReference2434 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMParameterReferenceBlob-3281') {
-        return BTMParameterReferenceBlob3281ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterReferenceWithConfiguration-3028') {
-        return BTMParameterReferenceWithConfiguration3028ToJSON(value);
-    }
-    return BTMParameterReference2434SuperToJSON(value);
-}

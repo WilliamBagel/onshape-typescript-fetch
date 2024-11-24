@@ -18,7 +18,6 @@ import {
     BTDomainSpecificMetadata961FromJSON,
     BTDomainSpecificMetadata961FromJSONTyped,
     BTDomainSpecificMetadata961ToJSON,
- BTDomainSpecificMetadata961SuperToJSON,
 } from './BTDomainSpecificMetadata961';
 import type { GBTEntityType } from './GBTEntityType';
 import {
@@ -79,7 +78,7 @@ export function BTSMSpecificMetadata1315ToJSON(value?: BTSMSpecificMetadata1315 
         return null;
     }
     return {
-        ...BTDomainSpecificMetadata961SuperToJSON(value),
+        ...BTDomainSpecificMetadata961ToJSON(value),
         'btType': value.btType,
         'definitionEntityType': GBTEntityTypeToJSON(value.definitionEntityType),
     };

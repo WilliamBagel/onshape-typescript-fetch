@@ -30,7 +30,6 @@ import {
     BTOccurrence74FromJSON,
     BTOccurrence74FromJSONTyped,
     BTOccurrence74ToJSON,
- BTOccurrence74SuperToJSON,
 } from './BTOccurrence74';
 
 /**
@@ -99,7 +98,7 @@ export function BTOccurrenceWithFullPartIds1464ToJSON(value?: BTOccurrenceWithFu
         return null;
     }
     return {
-        ...BTOccurrence74SuperToJSON(value),
+        ...BTOccurrence74ToJSON(value),
         'btType': value.btType,
         'fullElementId': BTFullElementIdWithDocument1729ToJSON(value.fullElementId),
         'partIds': value.partIds,

@@ -24,7 +24,6 @@ import {
     BTTableBaseRowMetadata3181FromJSON,
     BTTableBaseRowMetadata3181FromJSONTyped,
     BTTableBaseRowMetadata3181ToJSON,
- BTTableBaseRowMetadata3181SuperToJSON,
 } from './BTTableBaseRowMetadata3181';
 
 /**
@@ -86,7 +85,7 @@ export function BTBillOfMaterialsTableRowMetadata1300ToJSON(value?: BTBillOfMate
         return null;
     }
     return {
-        ...BTTableBaseRowMetadata3181SuperToJSON(value),
+        ...BTTableBaseRowMetadata3181ToJSON(value),
         'btType': value.btType,
         'crossHighlightData': BTTableAssemblyCrossHighlightData2675ToJSON(value.crossHighlightData),
         'crossHighlightDataIfAny': BTTableAssemblyCrossHighlightData2675ToJSON(value.crossHighlightDataIfAny),

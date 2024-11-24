@@ -18,7 +18,6 @@ import {
     BTConfiguredValuesColumnInfo1025FromJSON,
     BTConfiguredValuesColumnInfo1025FromJSONTyped,
     BTConfiguredValuesColumnInfo1025ToJSON,
- BTConfiguredValuesColumnInfo1025SuperToJSON,
 } from './BTConfiguredValuesColumnInfo1025';
 import type { BTInnerParameterLocation1715 } from './BTInnerParameterLocation1715';
 import {
@@ -98,7 +97,7 @@ export function BTConfiguredParameterColumnInfo2900ToJSON(value?: BTConfiguredPa
         return null;
     }
     return {
-        ...BTConfiguredValuesColumnInfo1025SuperToJSON(value),
+        ...BTConfiguredValuesColumnInfo1025ToJSON(value),
         'btType': value.btType,
         'innerParameterLocation': BTInnerParameterLocation1715ToJSON(value.innerParameterLocation),
         'parameterId': value.parameterId,

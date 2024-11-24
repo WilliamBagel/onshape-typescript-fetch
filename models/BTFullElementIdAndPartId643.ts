@@ -18,7 +18,6 @@ import {
     BTFullElementIdWithDocument1729FromJSON,
     BTFullElementIdWithDocument1729FromJSONTyped,
     BTFullElementIdWithDocument1729ToJSON,
- BTFullElementIdWithDocument1729SuperToJSON,
 } from './BTFullElementIdWithDocument1729';
 import type { BTMicroversionId366 } from './BTMicroversionId366';
 import {
@@ -85,7 +84,7 @@ export function BTFullElementIdAndPartId643ToJSON(value?: BTFullElementIdAndPart
         return null;
     }
     return {
-        ...BTFullElementIdWithDocument1729SuperToJSON(value),
+        ...BTFullElementIdWithDocument1729ToJSON(value),
         'btType': value.btType,
         'partId': value.partId,
     };

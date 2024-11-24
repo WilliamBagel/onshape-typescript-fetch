@@ -21,8 +21,7 @@ import {
 } from './BTVector3d389';
 
 import {
-     BTNonAlignedBoundingBox4180FromJSONTyped,
-    BTNonAlignedBoundingBox4180ToJSON
+     BTNonAlignedBoundingBox4180FromJSONTyped
 } from './';
 
 /**
@@ -88,7 +87,7 @@ export function BTBoundingBox1052FromJSONTyped(json: any, ignoreDiscriminator: b
     };
 }
 
-export function BTBoundingBox1052SuperToJSON(value?: BTBoundingBox1052 | null): any {
+export function BTBoundingBox1052ToJSON(value?: BTBoundingBox1052 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -104,18 +103,3 @@ export function BTBoundingBox1052SuperToJSON(value?: BTBoundingBox1052 | null): 
     };
 }
 
-
-
-export function BTBoundingBox1052ToJSON(value?: BTBoundingBox1052 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTNonAlignedBoundingBox-4180') {
-        return BTNonAlignedBoundingBox4180ToJSON(value);
-    }
-    return BTBoundingBox1052SuperToJSON(value);
-}

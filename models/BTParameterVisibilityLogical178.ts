@@ -18,7 +18,6 @@ import {
     BTParameterVisibilityCondition177FromJSON,
     BTParameterVisibilityCondition177FromJSONTyped,
     BTParameterVisibilityCondition177ToJSON,
- BTParameterVisibilityCondition177SuperToJSON,
 } from './BTParameterVisibilityCondition177';
 import type { GBTParameterVisibilityLogicalOp } from './GBTParameterVisibilityLogicalOp';
 import {
@@ -87,7 +86,7 @@ export function BTParameterVisibilityLogical178ToJSON(value?: BTParameterVisibil
         return null;
     }
     return {
-        ...BTParameterVisibilityCondition177SuperToJSON(value),
+        ...BTParameterVisibilityCondition177ToJSON(value),
         'btType': value.btType,
         'children': value.children === undefined ? undefined : ((value.children as Array<any>).map(BTParameterVisibilityCondition177ToJSON)),
         'operation': GBTParameterVisibilityLogicalOpToJSON(value.operation),

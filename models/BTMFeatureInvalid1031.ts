@@ -18,7 +18,6 @@ import {
     BTMFeature134FromJSON,
     BTMFeature134FromJSONTyped,
     BTMFeature134ToJSON,
- BTMFeature134SuperToJSON,
 } from './BTMFeature134';
 import type { BTMParameter1 } from './BTMParameter1';
 import {
@@ -72,7 +71,7 @@ export function BTMFeatureInvalid1031ToJSON(value?: BTMFeatureInvalid1031 | null
         return null;
     }
     return {
-        ...BTMFeature134SuperToJSON(value),
+        ...BTMFeature134ToJSON(value),
         'btType': value.btType,
     };
 }

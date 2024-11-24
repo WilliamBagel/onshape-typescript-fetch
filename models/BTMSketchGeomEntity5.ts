@@ -22,13 +22,9 @@ import {
 
 import {
      BTMSketchCurve4FromJSONTyped,
-    BTMSketchCurve4ToJSON,
      BTMSketchImageEntity763FromJSONTyped,
-    BTMSketchImageEntity763ToJSON,
      BTMSketchPoint158FromJSONTyped,
-    BTMSketchPoint158ToJSON,
-     BTMSketchTextEntity1761FromJSONTyped,
-    BTMSketchTextEntity1761ToJSON
+     BTMSketchTextEntity1761FromJSONTyped
 } from './';
 
 /**
@@ -159,7 +155,7 @@ export function BTMSketchGeomEntity5FromJSONTyped(json: any, ignoreDiscriminator
     };
 }
 
-export function BTMSketchGeomEntity5SuperToJSON(value?: BTMSketchGeomEntity5 | null): any {
+export function BTMSketchGeomEntity5ToJSON(value?: BTMSketchGeomEntity5 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -183,27 +179,3 @@ export function BTMSketchGeomEntity5SuperToJSON(value?: BTMSketchGeomEntity5 | n
     };
 }
 
-
-
-export function BTMSketchGeomEntity5ToJSON(value?: BTMSketchGeomEntity5 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMSketchCurve-4') {
-        return BTMSketchCurve4ToJSON(value);
-    }
-    if (value.btType === 'BTMSketchImageEntity-763') {
-        return BTMSketchImageEntity763ToJSON(value);
-    }
-    if (value.btType === 'BTMSketchPoint-158') {
-        return BTMSketchPoint158ToJSON(value);
-    }
-    if (value.btType === 'BTMSketchTextEntity-1761') {
-        return BTMSketchTextEntity1761ToJSON(value);
-    }
-    return BTMSketchGeomEntity5SuperToJSON(value);
-}

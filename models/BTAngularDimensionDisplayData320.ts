@@ -24,7 +24,6 @@ import {
     BTDimensionDisplayData323FromJSON,
     BTDimensionDisplayData323FromJSONTyped,
     BTDimensionDisplayData323ToJSON,
- BTDimensionDisplayData323SuperToJSON,
 } from './BTDimensionDisplayData323';
 import type { BTMatrix3x3340 } from './BTMatrix3x3340';
 import {
@@ -34,8 +33,7 @@ import {
 } from './BTMatrix3x3340';
 
 import {
-     BTArcLengthDimensionDisplayData1018FromJSONTyped,
-    BTArcLengthDimensionDisplayData1018ToJSON
+     BTArcLengthDimensionDisplayData1018FromJSONTyped
 } from './';
 
 /**
@@ -157,7 +155,7 @@ export function BTAngularDimensionDisplayData320FromJSONTyped(json: any, ignoreD
     };
 }
 
-export function BTAngularDimensionDisplayData320SuperToJSON(value?: BTAngularDimensionDisplayData320 | null): any {
+export function BTAngularDimensionDisplayData320ToJSON(value?: BTAngularDimensionDisplayData320 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -165,7 +163,7 @@ export function BTAngularDimensionDisplayData320SuperToJSON(value?: BTAngularDim
         return null;
     }
     return {
-        ...BTDimensionDisplayData323SuperToJSON(value),
+        ...BTDimensionDisplayData323ToJSON(value),
         'btType': value.btType,
         'clockwise': value.clockwise,
         'positionR': value.positionR,
@@ -181,18 +179,3 @@ export function BTAngularDimensionDisplayData320SuperToJSON(value?: BTAngularDim
     };
 }
 
-
-
-export function BTAngularDimensionDisplayData320ToJSON(value?: BTAngularDimensionDisplayData320 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTArcLengthDimensionDisplayData-1018') {
-        return BTArcLengthDimensionDisplayData1018ToJSON(value);
-    }
-    return BTAngularDimensionDisplayData320SuperToJSON(value);
-}

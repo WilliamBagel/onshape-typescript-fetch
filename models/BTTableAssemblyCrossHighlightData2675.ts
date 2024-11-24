@@ -24,7 +24,6 @@ import {
     BTTableBaseCrossHighlightData2609FromJSON,
     BTTableBaseCrossHighlightData2609FromJSONTyped,
     BTTableBaseCrossHighlightData2609ToJSON,
- BTTableBaseCrossHighlightData2609SuperToJSON,
 } from './BTTableBaseCrossHighlightData2609';
 
 /**
@@ -79,7 +78,7 @@ export function BTTableAssemblyCrossHighlightData2675ToJSON(value?: BTTableAssem
         return null;
     }
     return {
-        ...BTTableBaseCrossHighlightData2609SuperToJSON(value),
+        ...BTTableBaseCrossHighlightData2609ToJSON(value),
         'btType': value.btType,
         'assemblyCrossHighlightItems': value.assemblyCrossHighlightItems === undefined ? undefined : ((value.assemblyCrossHighlightItems as Array<any>).map(BTTableAssemblyCrossHighlightDataItem2659ToJSON)),
     };

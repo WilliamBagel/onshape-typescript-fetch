@@ -18,7 +18,6 @@ import {
     BTGlobalTreeNodeInfoFromJSON,
     BTGlobalTreeNodeInfoFromJSONTyped,
     BTGlobalTreeNodeInfoToJSON,
- BTGlobalTreeNodeInfoSuperToJSON,
 } from './BTGlobalTreeNodeInfo';
 import type { BTOwnerInfo } from './BTOwnerInfo';
 import {
@@ -85,7 +84,7 @@ export function BTResourceOwnerInfoToJSON(value?: BTResourceOwnerInfo | null): a
         return null;
     }
     return {
-        ...BTGlobalTreeNodeInfoSuperToJSON(value),
+        ...BTGlobalTreeNodeInfoToJSON(value),
         'isEnterpriseEdu': value.isEnterpriseEdu,
         'state': value.state,
     };

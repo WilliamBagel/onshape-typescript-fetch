@@ -30,7 +30,6 @@ import {
     BTUserSummaryInfoFromJSON,
     BTUserSummaryInfoFromJSONTyped,
     BTUserSummaryInfoToJSON,
- BTUserSummaryInfoSuperToJSON,
 } from './BTUserSummaryInfo';
 import type { GlobalPermissionInfo } from './GlobalPermissionInfo';
 import {
@@ -119,7 +118,7 @@ export function BTUserOAuth2SummaryInfoToJSON(value?: BTUserOAuth2SummaryInfo | 
         return null;
     }
     return {
-        ...BTUserSummaryInfoSuperToJSON(value),
+        ...BTUserSummaryInfoToJSON(value),
         'clientId': value.clientId,
         'companyPlan': value.companyPlan,
         'oauth2Scopes': value.oauth2Scopes,

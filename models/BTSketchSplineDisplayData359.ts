@@ -18,7 +18,6 @@ import {
     BTSketchEntityDisplayData354FromJSON,
     BTSketchEntityDisplayData354FromJSONTyped,
     BTSketchEntityDisplayData354ToJSON,
- BTSketchEntityDisplayData354SuperToJSON,
 } from './BTSketchEntityDisplayData354';
 
 /**
@@ -122,7 +121,7 @@ export function BTSketchSplineDisplayData359ToJSON(value?: BTSketchSplineDisplay
         return null;
     }
     return {
-        ...BTSketchEntityDisplayData354SuperToJSON(value),
+        ...BTSketchEntityDisplayData354ToJSON(value),
         'btType': value.btType,
         'closed': value.closed,
         'controlPointCount': value.controlPointCount,

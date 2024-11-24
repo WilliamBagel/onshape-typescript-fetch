@@ -18,7 +18,6 @@ import {
     BTMParameterQuantity147FromJSON,
     BTMParameterQuantity147FromJSONTyped,
     BTMParameterQuantity147ToJSON,
- BTMParameterQuantity147SuperToJSON,
 } from './BTMParameterQuantity147';
 
 /**
@@ -80,7 +79,7 @@ export function BTMParameterNullableQuantity807ToJSON(value?: BTMParameterNullab
         return null;
     }
     return {
-        ...BTMParameterQuantity147SuperToJSON(value),
+        ...BTMParameterQuantity147ToJSON(value),
         'btType': value.btType,
         'isNull': value.isNull,
         'nullValue': value.nullValue,

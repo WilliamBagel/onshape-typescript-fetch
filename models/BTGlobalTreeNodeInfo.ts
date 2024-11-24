@@ -28,23 +28,14 @@ import {
 
 import {
      BTClassroomInfoFromJSONTyped,
-    BTClassroomInfoToJSON,
      BTCloudStorageAccountInfoFromJSONTyped,
-    BTCloudStorageAccountInfoToJSON,
      BTDocumentSummaryInfoFromJSONTyped,
-    BTDocumentSummaryInfoToJSON,
      BTFolderInfoFromJSONTyped,
-    BTFolderInfoToJSON,
      BTDocumentLabelInfoFromJSONTyped,
-    BTDocumentLabelInfoToJSON,
      BTGlobalTreeMagicNodeInfoFromJSONTyped,
-    BTGlobalTreeMagicNodeInfoToJSON,
      BTProjectInfoFromJSONTyped,
-    BTProjectInfoToJSON,
      BTResourceOwnerInfoFromJSONTyped,
-    BTResourceOwnerInfoToJSON,
-     BTTeamSummaryInfoFromJSONTyped,
-    BTTeamSummaryInfoToJSON
+     BTTeamSummaryInfoFromJSONTyped
 } from './';
 
 /**
@@ -240,7 +231,7 @@ export function BTGlobalTreeNodeInfoFromJSONTyped(json: any, ignoreDiscriminator
     };
 }
 
-export function BTGlobalTreeNodeInfoSuperToJSON(value?: BTGlobalTreeNodeInfo | null): any {
+export function BTGlobalTreeNodeInfoToJSON(value?: BTGlobalTreeNodeInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -271,42 +262,3 @@ export function BTGlobalTreeNodeInfoSuperToJSON(value?: BTGlobalTreeNodeInfo | n
     };
 }
 
-
-
-export function BTGlobalTreeNodeInfoToJSON(value?: BTGlobalTreeNodeInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'classroom') {
-        return BTClassroomInfoToJSON(value);
-    }
-    if (value.jsonType === 'cloudstorageaccount') {
-        return BTCloudStorageAccountInfoToJSON(value);
-    }
-    if (value.jsonType === 'document-summary') {
-        return BTDocumentSummaryInfoToJSON(value);
-    }
-    if (value.jsonType === 'folder') {
-        return BTFolderInfoToJSON(value);
-    }
-    if (value.jsonType === 'label') {
-        return BTDocumentLabelInfoToJSON(value);
-    }
-    if (value.jsonType === 'magic') {
-        return BTGlobalTreeMagicNodeInfoToJSON(value);
-    }
-    if (value.jsonType === 'project') {
-        return BTProjectInfoToJSON(value);
-    }
-    if (value.jsonType === 'resource-owner') {
-        return BTResourceOwnerInfoToJSON(value);
-    }
-    if (value.jsonType === 'team-summary') {
-        return BTTeamSummaryInfoToJSON(value);
-    }
-    return BTGlobalTreeNodeInfoSuperToJSON(value);
-}

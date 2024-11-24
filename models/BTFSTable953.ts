@@ -24,7 +24,6 @@ import {
     BTTable1825FromJSON,
     BTTable1825FromJSONTyped,
     BTTable1825ToJSON,
- BTTable1825SuperToJSON,
 } from './BTTable1825';
 import type { BTTableBaseCrossHighlightData2609 } from './BTTableBaseCrossHighlightData2609';
 import {
@@ -117,7 +116,7 @@ export function BTFSTable953ToJSON(value?: BTFSTable953 | null): any {
         return null;
     }
     return {
-        ...BTTable1825SuperToJSON(value),
+        ...BTTable1825ToJSON(value),
         'btType': value.btType,
         'crossHighlightData': BTTableBaseCrossHighlightData2609ToJSON(value.crossHighlightData),
         'hiddenColumnIdsToNames': value.hiddenColumnIdsToNames,

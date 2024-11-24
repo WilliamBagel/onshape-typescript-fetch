@@ -24,7 +24,6 @@ import {
     BTMParameter1FromJSON,
     BTMParameter1FromJSONTyped,
     BTMParameter1ToJSON,
- BTMParameter1SuperToJSON,
 } from './BTMParameter1';
 import type { BTPModuleId235 } from './BTPModuleId235';
 import {
@@ -113,7 +112,7 @@ export function BTMParameterDerived864ToJSON(value?: BTMParameterDerived864 | nu
         return null;
     }
     return {
-        ...BTMParameter1SuperToJSON(value),
+        ...BTMParameter1ToJSON(value),
         'btType': value.btType,
         'importMicroversion': value.importMicroversion,
         'imports': value.imports === undefined ? undefined : ((value.imports as Array<any>).map(BTMImport136ToJSON)),

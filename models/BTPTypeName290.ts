@@ -28,9 +28,7 @@ import {
 
 import {
      BTPTypeNameStandard291FromJSONTyped,
-    BTPTypeNameStandard291ToJSON,
-     BTPTypeNameUser292FromJSONTyped,
-    BTPTypeNameUser292ToJSON
+     BTPTypeNameUser292FromJSONTyped
 } from './';
 
 /**
@@ -141,7 +139,7 @@ export function BTPTypeName290FromJSONTyped(json: any, ignoreDiscriminator: bool
     };
 }
 
-export function BTPTypeName290SuperToJSON(value?: BTPTypeName290 | null): any {
+export function BTPTypeName290ToJSON(value?: BTPTypeName290 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -163,21 +161,3 @@ export function BTPTypeName290SuperToJSON(value?: BTPTypeName290 | null): any {
     };
 }
 
-
-
-export function BTPTypeName290ToJSON(value?: BTPTypeName290 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTPTypeNameStandard-291') {
-        return BTPTypeNameStandard291ToJSON(value);
-    }
-    if (value.btType === 'BTPTypeNameUser-292') {
-        return BTPTypeNameUser292ToJSON(value);
-    }
-    return BTPTypeName290SuperToJSON(value);
-}

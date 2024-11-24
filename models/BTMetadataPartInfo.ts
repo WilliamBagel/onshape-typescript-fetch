@@ -18,7 +18,6 @@ import {
     BTMetadataObjectInfoFromJSON,
     BTMetadataObjectInfoFromJSONTyped,
     BTMetadataObjectInfoToJSON,
- BTMetadataObjectInfoSuperToJSON,
 } from './BTMetadataObjectInfo';
 import type { BTMetadataPropertyInfo } from './BTMetadataPropertyInfo';
 import {
@@ -106,7 +105,7 @@ export function BTMetadataPartInfoToJSON(value?: BTMetadataPartInfo | null): any
         return null;
     }
     return {
-        ...BTMetadataObjectInfoSuperToJSON(value),
+        ...BTMetadataObjectInfoToJSON(value),
         'isFlattenedBody': value.isFlattenedBody,
         'meshState': value.meshState,
         'partId': value.partId,

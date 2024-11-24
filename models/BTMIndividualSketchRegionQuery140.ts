@@ -18,7 +18,6 @@ import {
     BTMIndividualQuery138FromJSON,
     BTMIndividualQuery138FromJSONTyped,
     BTMIndividualQuery138ToJSON,
- BTMIndividualQuery138SuperToJSON,
 } from './BTMIndividualQuery138';
 import type { BTMIndividualQueryBase139 } from './BTMIndividualQueryBase139';
 import {
@@ -92,7 +91,7 @@ export function BTMIndividualSketchRegionQuery140ToJSON(value?: BTMIndividualSke
         return null;
     }
     return {
-        ...BTMIndividualQuery138SuperToJSON(value),
+        ...BTMIndividualQuery138ToJSON(value),
         'btType': value.btType,
         'featureId': value.featureId,
         'filterInnerLoops': value.filterInnerLoops,

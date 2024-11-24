@@ -18,7 +18,6 @@ import {
     BTMAssemblyFeature887FromJSON,
     BTMAssemblyFeature887FromJSONTyped,
     BTMAssemblyFeature887ToJSON,
- BTMAssemblyFeature887SuperToJSON,
 } from './BTMAssemblyFeature887';
 import type { BTMFeature134 } from './BTMFeature134';
 import {
@@ -123,7 +122,7 @@ export function BTMMate64ToJSON(value?: BTMMate64 | null): any {
         return null;
     }
     return {
-        ...BTMAssemblyFeature887SuperToJSON(value),
+        ...BTMAssemblyFeature887ToJSON(value),
         'btType': value.btType,
         'mateConnectorQueryList': BTMParameterQueryWithOccurrenceList67ToJSON(value.mateConnectorQueryList),
         'mateConnectors': value.mateConnectors === undefined ? undefined : ((value.mateConnectors as Array<any>).map(BTMMateConnector66ToJSON)),

@@ -30,7 +30,6 @@ import {
     BTPStatement269FromJSON,
     BTPStatement269FromJSONTyped,
     BTPStatement269ToJSON,
- BTPStatement269SuperToJSON,
 } from './BTPStatement269';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -91,7 +90,7 @@ export function BTPStatementBreak272ToJSON(value?: BTPStatementBreak272 | null):
         return null;
     }
     return {
-        ...BTPStatement269SuperToJSON(value),
+        ...BTPStatement269ToJSON(value),
         'btType': value.btType,
         'spaceAfterBreak': BTPSpace10ToJSON(value.spaceAfterBreak),
     };

@@ -24,7 +24,6 @@ import {
     BTUserDetailSummaryInfoFromJSON,
     BTUserDetailSummaryInfoFromJSONTyped,
     BTUserDetailSummaryInfoToJSON,
- BTUserDetailSummaryInfoSuperToJSON,
 } from './BTUserDetailSummaryInfo';
 import type { GlobalPermissionInfo } from './GlobalPermissionInfo';
 import {
@@ -35,15 +34,10 @@ import {
 
 import {
      BTUserAdminSummaryInfoFromJSONTyped,
-    BTUserAdminSummaryInfoToJSON,
      BTUserOAuth2SummaryInfoFromJSONTyped,
-    BTUserOAuth2SummaryInfoToJSON,
      BTCompanyUserSummaryInfoFromJSONTyped,
-    BTCompanyUserSummaryInfoToJSON,
      BTUserSummaryInfoFromJSONTyped,
-    BTUserSummaryInfoToJSON,
-     BTUserInfoFromJSONTyped,
-    BTUserInfoToJSON
+     BTUserInfoFromJSONTyped
 } from './';
 
 /**
@@ -156,7 +150,7 @@ export function BTUserSummaryInfoFromJSONTyped(json: any, ignoreDiscriminator: b
     };
 }
 
-export function BTUserSummaryInfoSuperToJSON(value?: BTUserSummaryInfo | null): any {
+export function BTUserSummaryInfoToJSON(value?: BTUserSummaryInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -164,7 +158,7 @@ export function BTUserSummaryInfoSuperToJSON(value?: BTUserSummaryInfo | null): 
         return null;
     }
     return {
-        ...BTUserDetailSummaryInfoSuperToJSON(value),
+        ...BTUserDetailSummaryInfoToJSON(value),
         'company': BTCompanySummaryInfoToJSON(value.company),
         'documentationNameOverride': value.documentationNameOverride,
         'globalPermissions': GlobalPermissionInfoToJSON(value.globalPermissions),
@@ -177,30 +171,3 @@ export function BTUserSummaryInfoSuperToJSON(value?: BTUserSummaryInfo | null): 
     };
 }
 
-
-
-export function BTUserSummaryInfoToJSON(value?: BTUserSummaryInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'BTUserAdminSummaryInfo') {
-        return BTUserAdminSummaryInfoToJSON(value);
-    }
-    if (value.jsonType === 'BTUserOAuth2SummaryInfo') {
-        return BTUserOAuth2SummaryInfoToJSON(value);
-    }
-    if (value.jsonType === 'companyuser') {
-        return BTCompanyUserSummaryInfoToJSON(value);
-    }
-    if (value.jsonType === 'user-summary') {
-        return BTUserSummaryInfoToJSON(value);
-    }
-    if (value.jsonType === 'userinfo') {
-        return BTUserInfoToJSON(value);
-    }
-    return BTUserSummaryInfoSuperToJSON(value);
-}

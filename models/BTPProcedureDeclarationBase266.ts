@@ -54,7 +54,6 @@ import {
     BTPTopLevelNode286FromJSON,
     BTPTopLevelNode286FromJSONTyped,
     BTPTopLevelNode286ToJSON,
- BTPTopLevelNode286SuperToJSON,
 } from './BTPTopLevelNode286';
 import type { BTPTypeName290 } from './BTPTypeName290';
 import {
@@ -71,11 +70,8 @@ import {
 
 import {
      BTPConversionFunction1362FromJSONTyped,
-    BTPConversionFunction1362ToJSON,
      BTPFunctionOrPredicateDeclaration247FromJSONTyped,
-    BTPFunctionOrPredicateDeclaration247ToJSON,
-     BTPOperatorDeclaration264FromJSONTyped,
-    BTPOperatorDeclaration264ToJSON
+     BTPOperatorDeclaration264FromJSONTyped
 } from './';
 
 /**
@@ -168,7 +164,7 @@ export function BTPProcedureDeclarationBase266FromJSONTyped(json: any, ignoreDis
     };
 }
 
-export function BTPProcedureDeclarationBase266SuperToJSON(value?: BTPProcedureDeclarationBase266 | null): any {
+export function BTPProcedureDeclarationBase266ToJSON(value?: BTPProcedureDeclarationBase266 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -176,7 +172,7 @@ export function BTPProcedureDeclarationBase266SuperToJSON(value?: BTPProcedureDe
         return null;
     }
     return {
-        ...BTPTopLevelNode286SuperToJSON(value),
+        ...BTPTopLevelNode286ToJSON(value),
         'btType': value.btType,
         'arguments': value.arguments === undefined ? undefined : ((value.arguments as Array<any>).map(BTPArgumentDeclaration232ToJSON)),
         'body': BTPStatementBlock271ToJSON(value.body),
@@ -187,24 +183,3 @@ export function BTPProcedureDeclarationBase266SuperToJSON(value?: BTPProcedureDe
     };
 }
 
-
-
-export function BTPProcedureDeclarationBase266ToJSON(value?: BTPProcedureDeclarationBase266 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTPConversionFunction-1362') {
-        return BTPConversionFunction1362ToJSON(value);
-    }
-    if (value.btType === 'BTPFunctionOrPredicateDeclaration-247') {
-        return BTPFunctionOrPredicateDeclaration247ToJSON(value);
-    }
-    if (value.btType === 'BTPOperatorDeclaration-264') {
-        return BTPOperatorDeclaration264ToJSON(value);
-    }
-    return BTPProcedureDeclarationBase266SuperToJSON(value);
-}

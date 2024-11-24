@@ -18,7 +18,6 @@ import {
     BTMParameter1FromJSON,
     BTMParameter1FromJSONTyped,
     BTMParameter1ToJSON,
- BTMParameter1SuperToJSON,
 } from './BTMParameter1';
 import type { BTPartMaterial1445 } from './BTPartMaterial1445';
 import {
@@ -79,7 +78,7 @@ export function BTMParameterMaterial1388ToJSON(value?: BTMParameterMaterial1388 
         return null;
     }
     return {
-        ...BTMParameter1SuperToJSON(value),
+        ...BTMParameter1ToJSON(value),
         'btType': value.btType,
         'material': BTPartMaterial1445ToJSON(value.material),
     };

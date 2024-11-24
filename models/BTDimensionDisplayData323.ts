@@ -28,17 +28,11 @@ import {
 
 import {
      BTAngularDimensionDisplayData320FromJSONTyped,
-    BTAngularDimensionDisplayData320ToJSON,
      BTCountDimensionDisplayData1778FromJSONTyped,
-    BTCountDimensionDisplayData1778ToJSON,
      BTCurveLengthDimensionDisplayData322FromJSONTyped,
-    BTCurveLengthDimensionDisplayData322ToJSON,
      BTLinearDimensionDisplayData330FromJSONTyped,
-    BTLinearDimensionDisplayData330ToJSON,
      BTRadialDimensionDisplayData348FromJSONTyped,
-    BTRadialDimensionDisplayData348ToJSON,
-     BTRhoDimensionDisplayData2892FromJSONTyped,
-    BTRhoDimensionDisplayData2892ToJSON
+     BTRhoDimensionDisplayData2892FromJSONTyped
 } from './';
 
 /**
@@ -189,7 +183,7 @@ export function BTDimensionDisplayData323FromJSONTyped(json: any, ignoreDiscrimi
     };
 }
 
-export function BTDimensionDisplayData323SuperToJSON(value?: BTDimensionDisplayData323 | null): any {
+export function BTDimensionDisplayData323ToJSON(value?: BTDimensionDisplayData323 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -215,33 +209,3 @@ export function BTDimensionDisplayData323SuperToJSON(value?: BTDimensionDisplayD
     };
 }
 
-
-
-export function BTDimensionDisplayData323ToJSON(value?: BTDimensionDisplayData323 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTAngularDimensionDisplayData-320') {
-        return BTAngularDimensionDisplayData320ToJSON(value);
-    }
-    if (value.btType === 'BTCountDimensionDisplayData-1778') {
-        return BTCountDimensionDisplayData1778ToJSON(value);
-    }
-    if (value.btType === 'BTCurveLengthDimensionDisplayData-322') {
-        return BTCurveLengthDimensionDisplayData322ToJSON(value);
-    }
-    if (value.btType === 'BTLinearDimensionDisplayData-330') {
-        return BTLinearDimensionDisplayData330ToJSON(value);
-    }
-    if (value.btType === 'BTRadialDimensionDisplayData-348') {
-        return BTRadialDimensionDisplayData348ToJSON(value);
-    }
-    if (value.btType === 'BTRhoDimensionDisplayData-2892') {
-        return BTRhoDimensionDisplayData2892ToJSON(value);
-    }
-    return BTDimensionDisplayData323SuperToJSON(value);
-}

@@ -24,7 +24,6 @@ import {
     BTParameterSpec6FromJSON,
     BTParameterSpec6FromJSONTyped,
     BTParameterSpec6ToJSON,
- BTParameterSpec6SuperToJSON,
 } from './BTParameterSpec6';
 import type { BTParameterVisibilityCondition177 } from './BTParameterVisibilityCondition177';
 import {
@@ -132,7 +131,7 @@ export function BTParameterSpecEnum171ToJSON(value?: BTParameterSpecEnum171 | nu
         return null;
     }
     return {
-        ...BTParameterSpec6SuperToJSON(value),
+        ...BTParameterSpec6ToJSON(value),
         'btType': value.btType,
         'enumName': value.enumName,
         'enumValueToVisibilityCondition': value.enumValueToVisibilityCondition === undefined ? undefined : (mapValues(value.enumValueToVisibilityCondition, BTParameterVisibilityCondition177ToJSON)),

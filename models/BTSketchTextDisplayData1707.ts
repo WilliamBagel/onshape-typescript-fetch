@@ -18,7 +18,6 @@ import {
     BTSketchCompositeEntityDisplayData1093FromJSON,
     BTSketchCompositeEntityDisplayData1093FromJSONTyped,
     BTSketchCompositeEntityDisplayData1093ToJSON,
- BTSketchCompositeEntityDisplayData1093SuperToJSON,
 } from './BTSketchCompositeEntityDisplayData1093';
 
 /**
@@ -66,7 +65,7 @@ export function BTSketchTextDisplayData1707ToJSON(value?: BTSketchTextDisplayDat
         return null;
     }
     return {
-        ...BTSketchCompositeEntityDisplayData1093SuperToJSON(value),
+        ...BTSketchCompositeEntityDisplayData1093ToJSON(value),
         'btType': value.btType,
     };
 }

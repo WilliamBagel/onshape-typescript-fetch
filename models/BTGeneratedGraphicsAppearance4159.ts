@@ -18,7 +18,6 @@ import {
     BTGraphicsAppearance1152FromJSON,
     BTGraphicsAppearance1152FromJSONTyped,
     BTGraphicsAppearance1152ToJSON,
- BTGraphicsAppearance1152SuperToJSON,
 } from './BTGraphicsAppearance1152';
 import type { GBTAppearanceType } from './GBTAppearanceType';
 import {
@@ -72,7 +71,7 @@ export function BTGeneratedGraphicsAppearance4159ToJSON(value?: BTGeneratedGraph
         return null;
     }
     return {
-        ...BTGraphicsAppearance1152SuperToJSON(value),
+        ...BTGraphicsAppearance1152ToJSON(value),
         'btType': value.btType,
     };
 }

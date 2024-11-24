@@ -15,9 +15,7 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTInstanceStandardContentData2081FromJSONTyped,
-    BTInstanceStandardContentData2081ToJSON,
-     BTRevisionCustomData2090FromJSONTyped,
-    BTRevisionCustomData2090ToJSON
+     BTRevisionCustomData2090FromJSONTyped
 } from './';
 
 /**
@@ -65,7 +63,7 @@ export function BTReferenceCustomData1551FromJSONTyped(json: any, ignoreDiscrimi
     };
 }
 
-export function BTReferenceCustomData1551SuperToJSON(value?: BTReferenceCustomData1551 | null): any {
+export function BTReferenceCustomData1551ToJSON(value?: BTReferenceCustomData1551 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -78,21 +76,3 @@ export function BTReferenceCustomData1551SuperToJSON(value?: BTReferenceCustomDa
     };
 }
 
-
-
-export function BTReferenceCustomData1551ToJSON(value?: BTReferenceCustomData1551 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTInstanceStandardContentData-2081') {
-        return BTInstanceStandardContentData2081ToJSON(value);
-    }
-    if (value.btType === 'BTRevisionCustomData-2090') {
-        return BTRevisionCustomData2090ToJSON(value);
-    }
-    return BTReferenceCustomData1551SuperToJSON(value);
-}

@@ -18,14 +18,11 @@ import {
     BTUserBasicSummaryInfoFromJSON,
     BTUserBasicSummaryInfoFromJSONTyped,
     BTUserBasicSummaryInfoToJSON,
- BTUserBasicSummaryInfoSuperToJSON,
 } from './BTUserBasicSummaryInfo';
 
 import {
      BTUserDetailSummaryInfoFromJSONTyped,
-    BTUserDetailSummaryInfoToJSON,
-     BTUserSummaryInfoFromJSONTyped,
-    BTUserSummaryInfoToJSON
+     BTUserSummaryInfoFromJSONTyped
 } from './';
 
 /**
@@ -94,24 +91,6 @@ export function BTUserDetailSummaryInfoFromJSONTyped(json: any, ignoreDiscrimina
     };
 }
 
-export function BTUserDetailSummaryInfoSuperToJSON(value?: BTUserDetailSummaryInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTUserBasicSummaryInfoSuperToJSON(value),
-        'documentationName': value.documentationName,
-        'email': value.email,
-        'firstName': value.firstName,
-        'lastName': value.lastName,
-    };
-}
-
-
-
 export function BTUserDetailSummaryInfoToJSON(value?: BTUserDetailSummaryInfo | null): any {
     if (value === undefined) {
         return undefined;
@@ -119,12 +98,12 @@ export function BTUserDetailSummaryInfoToJSON(value?: BTUserDetailSummaryInfo | 
     if (value === null) {
         return null;
     }
-
-    if (value.jsonType === 'user-detail-summary') {
-        return BTUserDetailSummaryInfoToJSON(value);
-    }
-    if (value.jsonType === 'user-summary') {
-        return BTUserSummaryInfoToJSON(value);
-    }
-    return BTUserDetailSummaryInfoSuperToJSON(value);
+    return {
+        ...BTUserBasicSummaryInfoToJSON(value),
+        'documentationName': value.documentationName,
+        'email': value.email,
+        'firstName': value.firstName,
+        'lastName': value.lastName,
+    };
 }
+

@@ -15,23 +15,14 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTFSValueArray1499FromJSONTyped,
-    BTFSValueArray1499ToJSON,
      BTFSValueBoolean1195FromJSONTyped,
-    BTFSValueBoolean1195ToJSON,
      BTFSValueMap2062FromJSONTyped,
-    BTFSValueMap2062ToJSON,
      BTFSValueNumber772FromJSONTyped,
-    BTFSValueNumber772ToJSON,
      BTFSValueOther1124FromJSONTyped,
-    BTFSValueOther1124ToJSON,
      BTFSValueString1422FromJSONTyped,
-    BTFSValueString1422ToJSON,
      BTFSValueTooBig1247FromJSONTyped,
-    BTFSValueTooBig1247ToJSON,
      BTFSValueUndefined2003FromJSONTyped,
-    BTFSValueUndefined2003ToJSON,
-     BTFSValueWithUnits1817FromJSONTyped,
-    BTFSValueWithUnits1817ToJSON
+     BTFSValueWithUnits1817FromJSONTyped
 } from './';
 
 /**
@@ -108,7 +99,7 @@ export function BTFSValue1888FromJSONTyped(json: any, ignoreDiscriminator: boole
     };
 }
 
-export function BTFSValue1888SuperToJSON(value?: BTFSValue1888 | null): any {
+export function BTFSValue1888ToJSON(value?: BTFSValue1888 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -122,42 +113,3 @@ export function BTFSValue1888SuperToJSON(value?: BTFSValue1888 | null): any {
     };
 }
 
-
-
-export function BTFSValue1888ToJSON(value?: BTFSValue1888 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTFSValueArray-1499') {
-        return BTFSValueArray1499ToJSON(value);
-    }
-    if (value.btType === 'BTFSValueBoolean-1195') {
-        return BTFSValueBoolean1195ToJSON(value);
-    }
-    if (value.btType === 'BTFSValueMap-2062') {
-        return BTFSValueMap2062ToJSON(value);
-    }
-    if (value.btType === 'BTFSValueNumber-772') {
-        return BTFSValueNumber772ToJSON(value);
-    }
-    if (value.btType === 'BTFSValueOther-1124') {
-        return BTFSValueOther1124ToJSON(value);
-    }
-    if (value.btType === 'BTFSValueString-1422') {
-        return BTFSValueString1422ToJSON(value);
-    }
-    if (value.btType === 'BTFSValueTooBig-1247') {
-        return BTFSValueTooBig1247ToJSON(value);
-    }
-    if (value.btType === 'BTFSValueUndefined-2003') {
-        return BTFSValueUndefined2003ToJSON(value);
-    }
-    if (value.btType === 'BTFSValueWithUnits-1817') {
-        return BTFSValueWithUnits1817ToJSON(value);
-    }
-    return BTFSValue1888SuperToJSON(value);
-}

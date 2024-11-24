@@ -24,7 +24,6 @@ import {
     BTFeatureSpec129FromJSON,
     BTFeatureSpec129FromJSONTyped,
     BTFeatureSpec129ToJSON,
- BTFeatureSpec129SuperToJSON,
 } from './BTFeatureSpec129';
 import type { BTLocationInfo226 } from './BTLocationInfo226';
 import {
@@ -103,7 +102,7 @@ export function BTTableSpec915ToJSON(value?: BTTableSpec915 | null): any {
         return null;
     }
     return {
-        ...BTFeatureSpec129SuperToJSON(value),
+        ...BTFeatureSpec129ToJSON(value),
         'btType': value.btType,
         'isComputedPropertyTable': value.isComputedPropertyTable,
     };

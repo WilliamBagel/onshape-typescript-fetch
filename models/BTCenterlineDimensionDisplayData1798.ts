@@ -24,7 +24,6 @@ import {
     BTLinearDimensionDisplayData330FromJSON,
     BTLinearDimensionDisplayData330FromJSONTyped,
     BTLinearDimensionDisplayData330ToJSON,
- BTLinearDimensionDisplayData330SuperToJSON,
 } from './BTLinearDimensionDisplayData330';
 import type { BTMatrix3x3340 } from './BTMatrix3x3340';
 import {
@@ -78,7 +77,7 @@ export function BTCenterlineDimensionDisplayData1798ToJSON(value?: BTCenterlineD
         return null;
     }
     return {
-        ...BTLinearDimensionDisplayData330SuperToJSON(value),
+        ...BTLinearDimensionDisplayData330ToJSON(value),
         'btType': value.btType,
     };
 }

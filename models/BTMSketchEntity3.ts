@@ -18,7 +18,6 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 import type { BTMParameter1 } from './BTMParameter1';
 import {
@@ -29,13 +28,9 @@ import {
 
 import {
      BTMSketchCompositeEntity893FromJSONTyped,
-    BTMSketchCompositeEntity893ToJSON,
      BTMSketchConstraint2FromJSONTyped,
-    BTMSketchConstraint2ToJSON,
      BTMSketchGeomEntity5FromJSONTyped,
-    BTMSketchGeomEntity5ToJSON,
-     BTMSketchInvalid1601FromJSONTyped,
-    BTMSketchInvalid1601ToJSON
+     BTMSketchInvalid1601FromJSONTyped
 } from './';
 
 /**
@@ -124,7 +119,7 @@ export function BTMSketchEntity3FromJSONTyped(json: any, ignoreDiscriminator: bo
     };
 }
 
-export function BTMSketchEntity3SuperToJSON(value?: BTMSketchEntity3 | null): any {
+export function BTMSketchEntity3ToJSON(value?: BTMSketchEntity3 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -132,7 +127,7 @@ export function BTMSketchEntity3SuperToJSON(value?: BTMSketchEntity3 | null): an
         return null;
     }
     return {
-        ...BTMNode19SuperToJSON(value),
+        ...BTMNode19ToJSON(value),
         'btType': value.btType,
         'entityId': value.entityId,
         'entityIdAndReplaceInDependentFields': value.entityIdAndReplaceInDependentFields,
@@ -142,27 +137,3 @@ export function BTMSketchEntity3SuperToJSON(value?: BTMSketchEntity3 | null): an
     };
 }
 
-
-
-export function BTMSketchEntity3ToJSON(value?: BTMSketchEntity3 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMSketchCompositeEntity-893') {
-        return BTMSketchCompositeEntity893ToJSON(value);
-    }
-    if (value.btType === 'BTMSketchConstraint-2') {
-        return BTMSketchConstraint2ToJSON(value);
-    }
-    if (value.btType === 'BTMSketchGeomEntity-5') {
-        return BTMSketchGeomEntity5ToJSON(value);
-    }
-    if (value.btType === 'BTMSketchInvalid-1601') {
-        return BTMSketchInvalid1601ToJSON(value);
-    }
-    return BTMSketchEntity3SuperToJSON(value);
-}

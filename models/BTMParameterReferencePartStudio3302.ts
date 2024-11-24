@@ -36,7 +36,6 @@ import {
     BTMParameterReferenceWithConfiguration3028FromJSON,
     BTMParameterReferenceWithConfiguration3028FromJSONTyped,
     BTMParameterReferenceWithConfiguration3028ToJSON,
- BTMParameterReferenceWithConfiguration3028SuperToJSON,
 } from './BTMParameterReferenceWithConfiguration3028';
 import type { BTPSOIdentity2741 } from './BTPSOIdentity2741';
 import {
@@ -118,7 +117,7 @@ export function BTMParameterReferencePartStudio3302ToJSON(value?: BTMParameterRe
         return null;
     }
     return {
-        ...BTMParameterReferenceWithConfiguration3028SuperToJSON(value),
+        ...BTMParameterReferenceWithConfiguration3028ToJSON(value),
         'btType': value.btType,
         'blockBuildFunctionAccess': value.blockBuildFunctionAccess,
         'partIdentity': BTPSOIdentity2741ToJSON(value.partIdentity),

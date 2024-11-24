@@ -18,7 +18,6 @@ import {
     BTBaseSMJointTableRowMetadata2232FromJSON,
     BTBaseSMJointTableRowMetadata2232FromJSONTyped,
     BTBaseSMJointTableRowMetadata2232ToJSON,
- BTBaseSMJointTableRowMetadata2232SuperToJSON,
 } from './BTBaseSMJointTableRowMetadata2232';
 import type { BTTableCrossHighlightData1753 } from './BTTableCrossHighlightData1753';
 import {
@@ -79,7 +78,7 @@ export function BTSMBendTableRowMetadata1705ToJSON(value?: BTSMBendTableRowMetad
         return null;
     }
     return {
-        ...BTBaseSMJointTableRowMetadata2232SuperToJSON(value),
+        ...BTBaseSMJointTableRowMetadata2232ToJSON(value),
         'btType': value.btType,
         'isJointTypeEditable': value.isJointTypeEditable,
     };

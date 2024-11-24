@@ -14,8 +14,7 @@
 
 import { exists, mapValues } from '../runtime';
 import {
-     BTSMSpecificMetadata1315FromJSONTyped,
-    BTSMSpecificMetadata1315ToJSON
+     BTSMSpecificMetadata1315FromJSONTyped
 } from './';
 
 /**
@@ -60,7 +59,7 @@ export function BTDomainSpecificMetadata961FromJSONTyped(json: any, ignoreDiscri
     };
 }
 
-export function BTDomainSpecificMetadata961SuperToJSON(value?: BTDomainSpecificMetadata961 | null): any {
+export function BTDomainSpecificMetadata961ToJSON(value?: BTDomainSpecificMetadata961 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -73,18 +72,3 @@ export function BTDomainSpecificMetadata961SuperToJSON(value?: BTDomainSpecificM
     };
 }
 
-
-
-export function BTDomainSpecificMetadata961ToJSON(value?: BTDomainSpecificMetadata961 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTSMSpecificMetadata-1315') {
-        return BTSMSpecificMetadata1315ToJSON(value);
-    }
-    return BTDomainSpecificMetadata961SuperToJSON(value);
-}

@@ -30,7 +30,6 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 import type { GBTSimulationContactBehavior } from './GBTSimulationContactBehavior';
 import {
@@ -119,7 +118,7 @@ export function BTAssemblySimulationData978ToJSON(value?: BTAssemblySimulationDa
         return null;
     }
     return {
-        ...BTMNode19SuperToJSON(value),
+        ...BTMNode19ToJSON(value),
         'btType': value.btType,
         'contactBehavior': GBTSimulationContactBehaviorToJSON(value.contactBehavior),
         'loads': value.loads === undefined ? undefined : ((value.loads as Array<any>).map(BTMLoad3538ToJSON)),

@@ -36,7 +36,6 @@ import {
     BTPProcedureDeclarationBase266FromJSON,
     BTPProcedureDeclarationBase266FromJSONTyped,
     BTPProcedureDeclarationBase266ToJSON,
- BTPProcedureDeclarationBase266SuperToJSON,
 } from './BTPProcedureDeclarationBase266';
 import type { BTPSpace10 } from './BTPSpace10';
 import {
@@ -71,9 +70,7 @@ import {
 
 import {
      BTPFunctionDeclaration246FromJSONTyped,
-    BTPFunctionDeclaration246ToJSON,
-     BTPPredicateDeclaration265FromJSONTyped,
-    BTPPredicateDeclaration265ToJSON
+     BTPPredicateDeclaration265FromJSONTyped
 } from './';
 
 /**
@@ -128,22 +125,6 @@ export function BTPFunctionOrPredicateDeclaration247FromJSONTyped(json: any, ign
     };
 }
 
-export function BTPFunctionOrPredicateDeclaration247SuperToJSON(value?: BTPFunctionOrPredicateDeclaration247 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTPProcedureDeclarationBase266SuperToJSON(value),
-        'btType': value.btType,
-        'name': BTPIdentifier8ToJSON(value.name),
-    };
-}
-
-
-
 export function BTPFunctionOrPredicateDeclaration247ToJSON(value?: BTPFunctionOrPredicateDeclaration247 | null): any {
     if (value === undefined) {
         return undefined;
@@ -151,12 +132,10 @@ export function BTPFunctionOrPredicateDeclaration247ToJSON(value?: BTPFunctionOr
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTPFunctionDeclaration-246') {
-        return BTPFunctionDeclaration246ToJSON(value);
-    }
-    if (value.btType === 'BTPPredicateDeclaration-265') {
-        return BTPPredicateDeclaration265ToJSON(value);
-    }
-    return BTPFunctionOrPredicateDeclaration247SuperToJSON(value);
+    return {
+        ...BTPProcedureDeclarationBase266ToJSON(value),
+        'btType': value.btType,
+        'name': BTPIdentifier8ToJSON(value.name),
+    };
 }
+

@@ -24,7 +24,6 @@ import {
     BTMAssemblyFeature887FromJSON,
     BTMAssemblyFeature887FromJSONTyped,
     BTMAssemblyFeature887ToJSON,
- BTMAssemblyFeature887SuperToJSON,
 } from './BTMAssemblyFeature887';
 import type { BTMFeature134 } from './BTMFeature134';
 import {
@@ -110,7 +109,7 @@ export function BTExplosion2754ToJSON(value?: BTExplosion2754 | null): any {
         return null;
     }
     return {
-        ...BTMAssemblyFeature887SuperToJSON(value),
+        ...BTMAssemblyFeature887ToJSON(value),
         'btType': value.btType,
         'explodeSteps': value.explodeSteps === undefined ? undefined : ((value.explodeSteps as Array<any>).map(BTExplosionStepFeature3008ToJSON)),
         'startingPositionId': BTMicroversionIdAndConfiguration2338ToJSON(value.startingPositionId),

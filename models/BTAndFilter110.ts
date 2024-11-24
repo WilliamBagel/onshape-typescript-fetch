@@ -18,7 +18,6 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 
 /**
@@ -80,7 +79,7 @@ export function BTAndFilter110ToJSON(value?: BTAndFilter110 | null): any {
         return null;
     }
     return {
-        ...BTQueryFilter183SuperToJSON(value),
+        ...BTQueryFilter183ToJSON(value),
         'btType': value.btType,
         'operand1': BTQueryFilter183ToJSON(value.operand1),
         'operand2': BTQueryFilter183ToJSON(value.operand2),

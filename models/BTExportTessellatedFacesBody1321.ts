@@ -18,7 +18,6 @@ import {
     BTExportTessellatedBody3398FromJSON,
     BTExportTessellatedBody3398FromJSONTyped,
     BTExportTessellatedBody3398ToJSON,
- BTExportTessellatedBody3398SuperToJSON,
 } from './BTExportTessellatedBody3398';
 import type { BTExportTessellatedFacesFace1192 } from './BTExportTessellatedFacesFace1192';
 import {
@@ -118,7 +117,7 @@ export function BTExportTessellatedFacesBody1321ToJSON(value?: BTExportTessellat
         return null;
     }
     return {
-        ...BTExportTessellatedBody3398SuperToJSON(value),
+        ...BTExportTessellatedBody3398ToJSON(value),
         'btType': value.btType,
         'appearance': BTGraphicsAppearance1152ToJSON(value.appearance),
         'bodyType': GBTBodyTypeToJSON(value.bodyType),

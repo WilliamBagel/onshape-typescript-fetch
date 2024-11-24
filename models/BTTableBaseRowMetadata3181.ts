@@ -22,13 +22,9 @@ import {
 
 import {
      BTBaseSMJointTableRowMetadata2232FromJSONTyped,
-    BTBaseSMJointTableRowMetadata2232ToJSON,
      BTBillOfMaterialsTableRowMetadata1300FromJSONTyped,
-    BTBillOfMaterialsTableRowMetadata1300ToJSON,
      BTFSTableRowMetadata2262FromJSONTyped,
-    BTFSTableRowMetadata2262ToJSON,
-     BTVariableTableRowMetadata3912FromJSONTyped,
-    BTVariableTableRowMetadata3912ToJSON
+     BTVariableTableRowMetadata3912FromJSONTyped
 } from './';
 
 /**
@@ -89,7 +85,7 @@ export function BTTableBaseRowMetadata3181FromJSONTyped(json: any, ignoreDiscrim
     };
 }
 
-export function BTTableBaseRowMetadata3181SuperToJSON(value?: BTTableBaseRowMetadata3181 | null): any {
+export function BTTableBaseRowMetadata3181ToJSON(value?: BTTableBaseRowMetadata3181 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -103,27 +99,3 @@ export function BTTableBaseRowMetadata3181SuperToJSON(value?: BTTableBaseRowMeta
     };
 }
 
-
-
-export function BTTableBaseRowMetadata3181ToJSON(value?: BTTableBaseRowMetadata3181 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTBaseSMJointTableRowMetadata-2232') {
-        return BTBaseSMJointTableRowMetadata2232ToJSON(value);
-    }
-    if (value.btType === 'BTBillOfMaterialsTableRowMetadata-1300') {
-        return BTBillOfMaterialsTableRowMetadata1300ToJSON(value);
-    }
-    if (value.btType === 'BTFSTableRowMetadata-2262') {
-        return BTFSTableRowMetadata2262ToJSON(value);
-    }
-    if (value.btType === 'BTVariableTableRowMetadata-3912') {
-        return BTVariableTableRowMetadata3912ToJSON(value);
-    }
-    return BTTableBaseRowMetadata3181SuperToJSON(value);
-}

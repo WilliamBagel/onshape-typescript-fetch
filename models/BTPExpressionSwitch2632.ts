@@ -18,7 +18,6 @@ import {
     BTPExpression9FromJSON,
     BTPExpression9FromJSONTyped,
     BTPExpression9ToJSON,
- BTPExpression9SuperToJSON,
 } from './BTPExpression9';
 import type { BTPLiteralMap256 } from './BTPLiteralMap256';
 import {
@@ -105,7 +104,7 @@ export function BTPExpressionSwitch2632ToJSON(value?: BTPExpressionSwitch2632 | 
         return null;
     }
     return {
-        ...BTPExpression9SuperToJSON(value),
+        ...BTPExpression9ToJSON(value),
         'btType': value.btType,
         'choices': BTPLiteralMap256ToJSON(value.choices),
         'selector': BTPExpression9ToJSON(value.selector),

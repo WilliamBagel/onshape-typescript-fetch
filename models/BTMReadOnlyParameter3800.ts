@@ -18,14 +18,11 @@ import {
     BTMParameter1FromJSON,
     BTMParameter1FromJSONTyped,
     BTMParameter1ToJSON,
- BTMParameter1SuperToJSON,
 } from './BTMParameter1';
 
 import {
      BTMParameterProgress3232FromJSONTyped,
-    BTMParameterProgress3232ToJSON,
-     BTMParameterStringWithTolerances4286FromJSONTyped,
-    BTMParameterStringWithTolerances4286ToJSON
+     BTMParameterStringWithTolerances4286FromJSONTyped
 } from './';
 
 /**
@@ -73,21 +70,6 @@ export function BTMReadOnlyParameter3800FromJSONTyped(json: any, ignoreDiscrimin
     };
 }
 
-export function BTMReadOnlyParameter3800SuperToJSON(value?: BTMReadOnlyParameter3800 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTMParameter1SuperToJSON(value),
-        'btType': value.btType,
-    };
-}
-
-
-
 export function BTMReadOnlyParameter3800ToJSON(value?: BTMReadOnlyParameter3800 | null): any {
     if (value === undefined) {
         return undefined;
@@ -95,12 +77,9 @@ export function BTMReadOnlyParameter3800ToJSON(value?: BTMReadOnlyParameter3800 
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTMParameterProgress-3232') {
-        return BTMParameterProgress3232ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterStringWithTolerances-4286') {
-        return BTMParameterStringWithTolerances4286ToJSON(value);
-    }
-    return BTMReadOnlyParameter3800SuperToJSON(value);
+    return {
+        ...BTMParameter1ToJSON(value),
+        'btType': value.btType,
+    };
 }
+

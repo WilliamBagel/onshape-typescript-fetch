@@ -24,7 +24,6 @@ import {
     BTDocumentInfoFromJSON,
     BTDocumentInfoFromJSONTyped,
     BTDocumentInfoToJSON,
- BTDocumentInfoSuperToJSON,
 } from './BTDocumentInfo';
 import type { BTDocumentLabelInfo } from './BTDocumentLabelInfo';
 import {
@@ -121,7 +120,7 @@ export function BTDocumentProcessingInfoToJSON(value?: BTDocumentProcessingInfo 
         return null;
     }
     return {
-        ...BTDocumentInfoSuperToJSON(value),
+        ...BTDocumentInfoToJSON(value),
         'translationEventKey': value.translationEventKey,
         'translationId': value.translationId,
     };

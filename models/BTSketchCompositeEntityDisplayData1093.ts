@@ -18,14 +18,11 @@ import {
     BTSketchEntityDisplayData354FromJSON,
     BTSketchEntityDisplayData354FromJSONTyped,
     BTSketchEntityDisplayData354ToJSON,
- BTSketchEntityDisplayData354SuperToJSON,
 } from './BTSketchEntityDisplayData354';
 
 import {
      BTSketchImageDisplayData1379FromJSONTyped,
-    BTSketchImageDisplayData1379ToJSON,
-     BTSketchTextDisplayData1707FromJSONTyped,
-    BTSketchTextDisplayData1707ToJSON
+     BTSketchTextDisplayData1707FromJSONTyped
 } from './';
 
 /**
@@ -73,21 +70,6 @@ export function BTSketchCompositeEntityDisplayData1093FromJSONTyped(json: any, i
     };
 }
 
-export function BTSketchCompositeEntityDisplayData1093SuperToJSON(value?: BTSketchCompositeEntityDisplayData1093 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTSketchEntityDisplayData354SuperToJSON(value),
-        'btType': value.btType,
-    };
-}
-
-
-
 export function BTSketchCompositeEntityDisplayData1093ToJSON(value?: BTSketchCompositeEntityDisplayData1093 | null): any {
     if (value === undefined) {
         return undefined;
@@ -95,12 +77,9 @@ export function BTSketchCompositeEntityDisplayData1093ToJSON(value?: BTSketchCom
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTSketchImageDisplayData-1379') {
-        return BTSketchImageDisplayData1379ToJSON(value);
-    }
-    if (value.btType === 'BTSketchTextDisplayData-1707') {
-        return BTSketchTextDisplayData1707ToJSON(value);
-    }
-    return BTSketchCompositeEntityDisplayData1093SuperToJSON(value);
+    return {
+        ...BTSketchEntityDisplayData354ToJSON(value),
+        'btType': value.btType,
+    };
 }
+

@@ -18,7 +18,6 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 import type { GBTGeometryType } from './GBTGeometryType';
 import {
@@ -79,7 +78,7 @@ export function BTGeometryFilter130ToJSON(value?: BTGeometryFilter130 | null): a
         return null;
     }
     return {
-        ...BTQueryFilter183SuperToJSON(value),
+        ...BTQueryFilter183ToJSON(value),
         'btType': value.btType,
         'geometryType': GBTGeometryTypeToJSON(value.geometryType),
     };

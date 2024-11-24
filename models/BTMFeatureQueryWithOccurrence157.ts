@@ -24,7 +24,6 @@ import {
     BTMIndividualQueryWithOccurrenceBase904FromJSON,
     BTMIndividualQueryWithOccurrenceBase904FromJSONTyped,
     BTMIndividualQueryWithOccurrenceBase904ToJSON,
- BTMIndividualQueryWithOccurrenceBase904SuperToJSON,
 } from './BTMIndividualQueryWithOccurrenceBase904';
 import type { BTOccurrence74 } from './BTOccurrence74';
 import {
@@ -34,8 +33,7 @@ import {
 } from './BTOccurrence74';
 
 import {
-     BTMPartStudioMateConnectorQuery1324FromJSONTyped,
-    BTMPartStudioMateConnectorQuery1324ToJSON
+     BTMPartStudioMateConnectorQuery1324FromJSONTyped
 } from './';
 
 /**
@@ -108,7 +106,7 @@ export function BTMFeatureQueryWithOccurrence157FromJSONTyped(json: any, ignoreD
     };
 }
 
-export function BTMFeatureQueryWithOccurrence157SuperToJSON(value?: BTMFeatureQueryWithOccurrence157 | null): any {
+export function BTMFeatureQueryWithOccurrence157ToJSON(value?: BTMFeatureQueryWithOccurrence157 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -116,7 +114,7 @@ export function BTMFeatureQueryWithOccurrence157SuperToJSON(value?: BTMFeatureQu
         return null;
     }
     return {
-        ...BTMIndividualQueryWithOccurrenceBase904SuperToJSON(value),
+        ...BTMIndividualQueryWithOccurrenceBase904ToJSON(value),
         'btType': value.btType,
         'featureId': value.featureId,
         'featureIdWithOccurrence': value.featureIdWithOccurrence,
@@ -125,18 +123,3 @@ export function BTMFeatureQueryWithOccurrence157SuperToJSON(value?: BTMFeatureQu
     };
 }
 
-
-
-export function BTMFeatureQueryWithOccurrence157ToJSON(value?: BTMFeatureQueryWithOccurrence157 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMPartStudioMateConnectorQuery-1324') {
-        return BTMPartStudioMateConnectorQuery1324ToJSON(value);
-    }
-    return BTMFeatureQueryWithOccurrence157SuperToJSON(value);
-}

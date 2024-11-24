@@ -18,7 +18,6 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 import type { GBTFeatureFilterExclusion } from './GBTFeatureFilterExclusion';
 import {
@@ -86,7 +85,7 @@ export function BTFeatureFilter127ToJSON(value?: BTFeatureFilter127 | null): any
         return null;
     }
     return {
-        ...BTQueryFilter183SuperToJSON(value),
+        ...BTQueryFilter183ToJSON(value),
         'btType': value.btType,
         'exclusion': GBTFeatureFilterExclusionToJSON(value.exclusion),
         'featureId': value.featureId,

@@ -34,31 +34,18 @@ import {
 
 import {
      BTPStatementAssignment270FromJSONTyped,
-    BTPStatementAssignment270ToJSON,
      BTPStatementBlock271FromJSONTyped,
-    BTPStatementBlock271ToJSON,
      BTPStatementBreak272FromJSONTyped,
-    BTPStatementBreak272ToJSON,
      BTPStatementCompressedQuery1237FromJSONTyped,
-    BTPStatementCompressedQuery1237ToJSON,
      BTPStatementConstantDeclaration273FromJSONTyped,
-    BTPStatementConstantDeclaration273ToJSON,
      BTPStatementContinue274FromJSONTyped,
-    BTPStatementContinue274ToJSON,
      BTPStatementExpression275FromJSONTyped,
-    BTPStatementExpression275ToJSON,
      BTPStatementIf276FromJSONTyped,
-    BTPStatementIf276ToJSON,
      BTPStatementLoop277FromJSONTyped,
-    BTPStatementLoop277ToJSON,
      BTPStatementReturn281FromJSONTyped,
-    BTPStatementReturn281ToJSON,
      BTPStatementThrow1080FromJSONTyped,
-    BTPStatementThrow1080ToJSON,
      BTPStatementTry1523FromJSONTyped,
-    BTPStatementTry1523ToJSON,
-     BTPStatementVarDeclaration282FromJSONTyped,
-    BTPStatementVarDeclaration282ToJSON
+     BTPStatementVarDeclaration282FromJSONTyped
 } from './';
 
 /**
@@ -209,7 +196,7 @@ export function BTPStatement269FromJSONTyped(json: any, ignoreDiscriminator: boo
     };
 }
 
-export function BTPStatement269SuperToJSON(value?: BTPStatement269 | null): any {
+export function BTPStatement269ToJSON(value?: BTPStatement269 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -232,54 +219,3 @@ export function BTPStatement269SuperToJSON(value?: BTPStatement269 | null): any 
     };
 }
 
-
-
-export function BTPStatement269ToJSON(value?: BTPStatement269 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTPStatementAssignment-270') {
-        return BTPStatementAssignment270ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementBlock-271') {
-        return BTPStatementBlock271ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementBreak-272') {
-        return BTPStatementBreak272ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementCompressedQuery-1237') {
-        return BTPStatementCompressedQuery1237ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementConstantDeclaration-273') {
-        return BTPStatementConstantDeclaration273ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementContinue-274') {
-        return BTPStatementContinue274ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementExpression-275') {
-        return BTPStatementExpression275ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementIf-276') {
-        return BTPStatementIf276ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementLoop-277') {
-        return BTPStatementLoop277ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementReturn-281') {
-        return BTPStatementReturn281ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementThrow-1080') {
-        return BTPStatementThrow1080ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementTry-1523') {
-        return BTPStatementTry1523ToJSON(value);
-    }
-    if (value.btType === 'BTPStatementVarDeclaration-282') {
-        return BTPStatementVarDeclaration282ToJSON(value);
-    }
-    return BTPStatement269SuperToJSON(value);
-}

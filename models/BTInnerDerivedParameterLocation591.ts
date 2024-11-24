@@ -18,7 +18,6 @@ import {
     BTInnerParameterLocation1715FromJSON,
     BTInnerParameterLocation1715FromJSONTyped,
     BTInnerParameterLocation1715ToJSON,
- BTInnerParameterLocation1715SuperToJSON,
 } from './BTInnerParameterLocation1715';
 
 /**
@@ -73,7 +72,7 @@ export function BTInnerDerivedParameterLocation591ToJSON(value?: BTInnerDerivedP
         return null;
     }
     return {
-        ...BTInnerParameterLocation1715SuperToJSON(value),
+        ...BTInnerParameterLocation1715ToJSON(value),
         'btType': value.btType,
         'outerParameterId': value.outerParameterId,
     };

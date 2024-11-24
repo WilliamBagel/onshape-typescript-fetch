@@ -18,12 +18,10 @@ import {
     BTCurveGeometry114FromJSON,
     BTCurveGeometry114FromJSONTyped,
     BTCurveGeometry114ToJSON,
- BTCurveGeometry114SuperToJSON,
 } from './BTCurveGeometry114';
 
 import {
-     BTCurveGeometryEllipse1189FromJSONTyped,
-    BTCurveGeometryEllipse1189ToJSON
+     BTCurveGeometryEllipse1189FromJSONTyped
 } from './';
 
 /**
@@ -110,7 +108,7 @@ export function BTCurveGeometryCircle115FromJSONTyped(json: any, ignoreDiscrimin
     };
 }
 
-export function BTCurveGeometryCircle115SuperToJSON(value?: BTCurveGeometryCircle115 | null): any {
+export function BTCurveGeometryCircle115ToJSON(value?: BTCurveGeometryCircle115 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -118,7 +116,7 @@ export function BTCurveGeometryCircle115SuperToJSON(value?: BTCurveGeometryCircl
         return null;
     }
     return {
-        ...BTCurveGeometry114SuperToJSON(value),
+        ...BTCurveGeometry114ToJSON(value),
         'btType': value.btType,
         'clockwise': value.clockwise,
         'radius': value.radius,
@@ -129,18 +127,3 @@ export function BTCurveGeometryCircle115SuperToJSON(value?: BTCurveGeometryCircl
     };
 }
 
-
-
-export function BTCurveGeometryCircle115ToJSON(value?: BTCurveGeometryCircle115 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTCurveGeometryEllipse-1189') {
-        return BTCurveGeometryEllipse1189ToJSON(value);
-    }
-    return BTCurveGeometryCircle115SuperToJSON(value);
-}

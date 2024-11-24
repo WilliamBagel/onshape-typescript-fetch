@@ -15,13 +15,9 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTStringFormatBlockPattern1755FromJSONTyped,
-    BTStringFormatBlockPattern1755ToJSON,
      BTStringFormatMatchPattern2446FromJSONTyped,
-    BTStringFormatMatchPattern2446ToJSON,
      BTStringMaximumLengthPattern2593FromJSONTyped,
-    BTStringMaximumLengthPattern2593ToJSON,
-     BTStringMinimumLengthPattern895FromJSONTyped,
-    BTStringMinimumLengthPattern895ToJSON
+     BTStringMinimumLengthPattern895FromJSONTyped
 } from './';
 
 /**
@@ -89,7 +85,7 @@ export function BTStringFormatCondition683FromJSONTyped(json: any, ignoreDiscrim
     };
 }
 
-export function BTStringFormatCondition683SuperToJSON(value?: BTStringFormatCondition683 | null): any {
+export function BTStringFormatCondition683ToJSON(value?: BTStringFormatCondition683 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -104,27 +100,3 @@ export function BTStringFormatCondition683SuperToJSON(value?: BTStringFormatCond
     };
 }
 
-
-
-export function BTStringFormatCondition683ToJSON(value?: BTStringFormatCondition683 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTStringFormatBlockPattern-1755') {
-        return BTStringFormatBlockPattern1755ToJSON(value);
-    }
-    if (value.btType === 'BTStringFormatMatchPattern-2446') {
-        return BTStringFormatMatchPattern2446ToJSON(value);
-    }
-    if (value.btType === 'BTStringMaximumLengthPattern-2593') {
-        return BTStringMaximumLengthPattern2593ToJSON(value);
-    }
-    if (value.btType === 'BTStringMinimumLengthPattern-895') {
-        return BTStringMinimumLengthPattern895ToJSON(value);
-    }
-    return BTStringFormatCondition683SuperToJSON(value);
-}

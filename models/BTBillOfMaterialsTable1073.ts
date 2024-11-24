@@ -18,7 +18,6 @@ import {
     BTTable1825FromJSON,
     BTTable1825FromJSONTyped,
     BTTable1825ToJSON,
- BTTable1825SuperToJSON,
 } from './BTTable1825';
 import type { BTTableColumnInfo1222 } from './BTTableColumnInfo1222';
 import {
@@ -126,7 +125,7 @@ export function BTBillOfMaterialsTable1073ToJSON(value?: BTBillOfMaterialsTable1
         return null;
     }
     return {
-        ...BTTable1825SuperToJSON(value),
+        ...BTTable1825ToJSON(value),
         'btType': value.btType,
         'failedMetadataRepresentativeOccurrences': value.failedMetadataRepresentativeOccurrences,
         'indented': value.indented,

@@ -1187,7 +1187,9 @@ models/BTVariableTableRowMetadata3912.ts
 models/BTVariableTableRowMetadata3912AllOf.ts
 models/BTVector2d1812.ts
 models/BTVector3d389.ts
+models/BTVersionGraphInfo.ts
 models/BTVersionGraphMode.ts
+models/BTVersionGraphRequestInfo.ts
 models/BTVersionInfo.ts
 models/BTVersionOrWorkspaceMergeInfo.ts
 models/BTVersionOrWorkspaceParams.ts

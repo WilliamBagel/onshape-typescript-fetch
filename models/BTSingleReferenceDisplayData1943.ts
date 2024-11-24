@@ -33,8 +33,7 @@ import {
 } from './GBTErrorStringEnum';
 
 import {
-     BTSingleAssemblyReferenceDisplayData1557FromJSONTyped,
-    BTSingleAssemblyReferenceDisplayData1557ToJSON
+     BTSingleAssemblyReferenceDisplayData1557FromJSONTyped
 } from './';
 
 /**
@@ -149,7 +148,7 @@ export function BTSingleReferenceDisplayData1943FromJSONTyped(json: any, ignoreD
     };
 }
 
-export function BTSingleReferenceDisplayData1943SuperToJSON(value?: BTSingleReferenceDisplayData1943 | null): any {
+export function BTSingleReferenceDisplayData1943ToJSON(value?: BTSingleReferenceDisplayData1943 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -172,18 +171,3 @@ export function BTSingleReferenceDisplayData1943SuperToJSON(value?: BTSingleRefe
     };
 }
 
-
-
-export function BTSingleReferenceDisplayData1943ToJSON(value?: BTSingleReferenceDisplayData1943 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTSingleAssemblyReferenceDisplayData-1557') {
-        return BTSingleAssemblyReferenceDisplayData1557ToJSON(value);
-    }
-    return BTSingleReferenceDisplayData1943SuperToJSON(value);
-}

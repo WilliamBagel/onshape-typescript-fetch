@@ -18,7 +18,6 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 import type { BTMSuppressionState1924 } from './BTMSuppressionState1924';
 import {
@@ -100,7 +99,7 @@ export function BTInstanceControlNode750ToJSON(value?: BTInstanceControlNode750 
         return null;
     }
     return {
-        ...BTMNode19SuperToJSON(value),
+        ...BTMNode19ToJSON(value),
         'btType': value.btType,
         'suppressed': value.suppressed,
         'suppressedFieldIndex': value.suppressedFieldIndex,

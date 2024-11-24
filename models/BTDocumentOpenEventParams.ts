@@ -18,7 +18,6 @@ import {
     BTEventParamsFromJSON,
     BTEventParamsFromJSONTyped,
     BTEventParamsToJSON,
- BTEventParamsSuperToJSON,
 } from './BTEventParams';
 
 /**
@@ -66,7 +65,7 @@ export function BTDocumentOpenEventParamsToJSON(value?: BTDocumentOpenEventParam
         return null;
     }
     return {
-        ...BTEventParamsSuperToJSON(value),
+        ...BTEventParamsToJSON(value),
         'documentId': value.documentId,
     };
 }

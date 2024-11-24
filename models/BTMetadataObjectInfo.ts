@@ -28,9 +28,7 @@ import {
 
 import {
      BTMetadataElementInfoFromJSONTyped,
-    BTMetadataElementInfoToJSON,
-     BTMetadataPartInfoFromJSONTyped,
-    BTMetadataPartInfoToJSON
+     BTMetadataPartInfoFromJSONTyped
 } from './';
 
 /**
@@ -100,7 +98,7 @@ export function BTMetadataObjectInfoFromJSONTyped(json: any, ignoreDiscriminator
     };
 }
 
-export function BTMetadataObjectInfoSuperToJSON(value?: BTMetadataObjectInfo | null): any {
+export function BTMetadataObjectInfoToJSON(value?: BTMetadataObjectInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -116,21 +114,3 @@ export function BTMetadataObjectInfoSuperToJSON(value?: BTMetadataObjectInfo | n
     };
 }
 
-
-
-export function BTMetadataObjectInfoToJSON(value?: BTMetadataObjectInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'BTMetadataElementInfo') {
-        return BTMetadataElementInfoToJSON(value);
-    }
-    if (value.jsonType === 'BTMetadataPartInfo') {
-        return BTMetadataPartInfoToJSON(value);
-    }
-    return BTMetadataObjectInfoSuperToJSON(value);
-}

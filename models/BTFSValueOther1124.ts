@@ -18,7 +18,6 @@ import {
     BTFSValue1888FromJSON,
     BTFSValue1888FromJSONTyped,
     BTFSValue1888ToJSON,
- BTFSValue1888SuperToJSON,
 } from './BTFSValue1888';
 import type { GBTPType } from './GBTPType';
 import {
@@ -80,7 +79,7 @@ export function BTFSValueOther1124ToJSON(value?: BTFSValueOther1124 | null): any
         return null;
     }
     return {
-        ...BTFSValue1888SuperToJSON(value),
+        ...BTFSValue1888ToJSON(value),
         'btType': value.btType,
         'type': GBTPTypeToJSON(value.type),
     };

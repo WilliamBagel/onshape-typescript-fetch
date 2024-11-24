@@ -18,7 +18,6 @@ import {
     BTExportModelEdgeGeometry1125FromJSON,
     BTExportModelEdgeGeometry1125FromJSONTyped,
     BTExportModelEdgeGeometry1125ToJSON,
- BTExportModelEdgeGeometry1125SuperToJSON,
 } from './BTExportModelEdgeGeometry1125';
 import type { BTVector3d389 } from './BTVector3d389';
 import {
@@ -86,7 +85,7 @@ export function BTExportModelArcEdgeGeometry1257ToJSON(value?: BTExportModelArcE
         return null;
     }
     return {
-        ...BTExportModelEdgeGeometry1125SuperToJSON(value),
+        ...BTExportModelEdgeGeometry1125ToJSON(value),
         'btType': value.btType,
         'arcIsClockwise': value.arcIsClockwise,
         'arcSweep': value.arcSweep,

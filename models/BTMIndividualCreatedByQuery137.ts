@@ -18,7 +18,6 @@ import {
     BTMIndividualQuery138FromJSON,
     BTMIndividualQuery138FromJSONTyped,
     BTMIndividualQuery138ToJSON,
- BTMIndividualQuery138SuperToJSON,
 } from './BTMIndividualQuery138';
 import type { BTMIndividualQueryBase139 } from './BTMIndividualQueryBase139';
 import {
@@ -118,7 +117,7 @@ export function BTMIndividualCreatedByQuery137ToJSON(value?: BTMIndividualCreate
         return null;
     }
     return {
-        ...BTMIndividualQuery138SuperToJSON(value),
+        ...BTMIndividualQuery138ToJSON(value),
         'btType': value.btType,
         'bodyType': GBTBodyTypeToJSON(value.bodyType),
         'entityType': GBTEntityTypeToJSON(value.entityType),

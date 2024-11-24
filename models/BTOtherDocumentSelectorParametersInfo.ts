@@ -18,7 +18,6 @@ import {
     BTDocumentSelectorParametersInfoFromJSON,
     BTDocumentSelectorParametersInfoFromJSONTyped,
     BTDocumentSelectorParametersInfoToJSON,
- BTDocumentSelectorParametersInfoSuperToJSON,
 } from './BTDocumentSelectorParametersInfo';
 import type { BTFolderStateInfo } from './BTFolderStateInfo';
 import {
@@ -86,7 +85,7 @@ export function BTOtherDocumentSelectorParametersInfoToJSON(value?: BTOtherDocum
         return null;
     }
     return {
-        ...BTDocumentSelectorParametersInfoSuperToJSON(value),
+        ...BTDocumentSelectorParametersInfoToJSON(value),
         'folderStatePath': value.folderStatePath === undefined ? undefined : ((value.folderStatePath as Array<any>).map(BTFolderStateInfoToJSON)),
         'selectedDocumentId': value.selectedDocumentId,
         'selectedVersionId': value.selectedVersionId,

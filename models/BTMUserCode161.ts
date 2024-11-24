@@ -18,7 +18,6 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 import type { BTPStatement269 } from './BTPStatement269';
 import {
@@ -86,7 +85,7 @@ export function BTMUserCode161ToJSON(value?: BTMUserCode161 | null): any {
         return null;
     }
     return {
-        ...BTMNode19SuperToJSON(value),
+        ...BTMNode19ToJSON(value),
         'btType': value.btType,
         'parsed': BTPStatement269ToJSON(value.parsed),
         'statement': value.statement,

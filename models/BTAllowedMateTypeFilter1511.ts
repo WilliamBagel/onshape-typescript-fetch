@@ -18,7 +18,6 @@ import {
     BTMateFilter162FromJSON,
     BTMateFilter162FromJSONTyped,
     BTMateFilter162ToJSON,
- BTMateFilter162SuperToJSON,
 } from './BTMateFilter162';
 import type { GBTMateType } from './GBTMateType';
 import {
@@ -79,7 +78,7 @@ export function BTAllowedMateTypeFilter1511ToJSON(value?: BTAllowedMateTypeFilte
         return null;
     }
     return {
-        ...BTMateFilter162SuperToJSON(value),
+        ...BTMateFilter162ToJSON(value),
         'btType': value.btType,
         'allowedMateTypes': value.allowedMateTypes === undefined ? undefined : ((value.allowedMateTypes as Array<any>).map(GBTMateTypeToJSON)),
     };

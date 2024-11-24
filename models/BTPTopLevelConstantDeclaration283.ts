@@ -48,7 +48,6 @@ import {
     BTPTopLevelNode286FromJSON,
     BTPTopLevelNode286FromJSONTyped,
     BTPTopLevelNode286ToJSON,
- BTPTopLevelNode286SuperToJSON,
 } from './BTPTopLevelNode286';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -109,7 +108,7 @@ export function BTPTopLevelConstantDeclaration283ToJSON(value?: BTPTopLevelConst
         return null;
     }
     return {
-        ...BTPTopLevelNode286SuperToJSON(value),
+        ...BTPTopLevelNode286ToJSON(value),
         'btType': value.btType,
         'declaration': BTPStatementConstantDeclaration273ToJSON(value.declaration),
     };

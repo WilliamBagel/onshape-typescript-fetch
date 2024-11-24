@@ -18,7 +18,6 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 import type { GBTSketchObjectType } from './GBTSketchObjectType';
 import {
@@ -86,7 +85,7 @@ export function BTSketchObjectFilter184ToJSON(value?: BTSketchObjectFilter184 | 
         return null;
     }
     return {
-        ...BTQueryFilter183SuperToJSON(value),
+        ...BTQueryFilter183ToJSON(value),
         'btType': value.btType,
         'isSketchObject': value.isSketchObject,
         'objectType': GBTSketchObjectTypeToJSON(value.objectType),

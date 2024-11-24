@@ -30,7 +30,6 @@ import {
     BTParameterSpecReferenceBlob1367FromJSON,
     BTParameterSpecReferenceBlob1367FromJSONTyped,
     BTParameterSpecReferenceBlob1367ToJSON,
- BTParameterSpecReferenceBlob1367SuperToJSON,
 } from './BTParameterSpecReferenceBlob1367';
 import type { BTParameterVisibilityCondition177 } from './BTParameterVisibilityCondition177';
 import {
@@ -96,7 +95,7 @@ export function BTParameterSpecReferenceCADImport1792ToJSON(value?: BTParameterS
         return null;
     }
     return {
-        ...BTParameterSpecReferenceBlob1367SuperToJSON(value),
+        ...BTParameterSpecReferenceBlob1367ToJSON(value),
         'btType': value.btType,
     };
 }

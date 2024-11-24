@@ -18,7 +18,6 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 import type { BTVector3d389 } from './BTVector3d389';
 import {
@@ -79,7 +78,7 @@ export function BTPlaneOrientationFilter1700ToJSON(value?: BTPlaneOrientationFil
         return null;
     }
     return {
-        ...BTQueryFilter183SuperToJSON(value),
+        ...BTQueryFilter183ToJSON(value),
         'btType': value.btType,
         'normal': BTVector3d389ToJSON(value.normal),
     };

@@ -18,7 +18,6 @@ import {
     BTQueryFilter183FromJSON,
     BTQueryFilter183FromJSONTyped,
     BTQueryFilter183ToJSON,
- BTQueryFilter183SuperToJSON,
 } from './BTQueryFilter183';
 import type { GBTMGeomStatus } from './GBTMGeomStatus';
 import {
@@ -79,7 +78,7 @@ export function BTSketchSolveStatusFilter3657ToJSON(value?: BTSketchSolveStatusF
         return null;
     }
     return {
-        ...BTQueryFilter183SuperToJSON(value),
+        ...BTQueryFilter183ToJSON(value),
         'btType': value.btType,
         'solveStatus': GBTMGeomStatusToJSON(value.solveStatus),
     };

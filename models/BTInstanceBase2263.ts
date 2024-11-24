@@ -18,7 +18,6 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 import type { BTMSuppressionState1924 } from './BTMSuppressionState1924';
 import {
@@ -41,13 +40,9 @@ import {
 
 import {
      BTInstance642FromJSONTyped,
-    BTInstance642ToJSON,
      BTInstanceFolder3627FromJSONTyped,
-    BTInstanceFolder3627ToJSON,
      BTParametricInstance2641FromJSONTyped,
-    BTParametricInstance2641ToJSON,
-     BTParametricOutputInstance2288FromJSONTyped,
-    BTParametricOutputInstance2288ToJSON
+     BTParametricOutputInstance2288FromJSONTyped
 } from './';
 
 /**
@@ -276,7 +271,7 @@ export function BTInstanceBase2263FromJSONTyped(json: any, ignoreDiscriminator: 
     };
 }
 
-export function BTInstanceBase2263SuperToJSON(value?: BTInstanceBase2263 | null): any {
+export function BTInstanceBase2263ToJSON(value?: BTInstanceBase2263 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -284,7 +279,7 @@ export function BTInstanceBase2263SuperToJSON(value?: BTInstanceBase2263 | null)
         return null;
     }
     return {
-        ...BTMNode19SuperToJSON(value),
+        ...BTMNode19ToJSON(value),
         'btType': value.btType,
         'assemblyInstance': value.assemblyInstance,
         'assemblyMirror': value.assemblyMirror,
@@ -314,27 +309,3 @@ export function BTInstanceBase2263SuperToJSON(value?: BTInstanceBase2263 | null)
     };
 }
 
-
-
-export function BTInstanceBase2263ToJSON(value?: BTInstanceBase2263 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTInstance-642') {
-        return BTInstance642ToJSON(value);
-    }
-    if (value.btType === 'BTInstanceFolder-3627') {
-        return BTInstanceFolder3627ToJSON(value);
-    }
-    if (value.btType === 'BTParametricInstance-2641') {
-        return BTParametricInstance2641ToJSON(value);
-    }
-    if (value.btType === 'BTParametricOutputInstance-2288') {
-        return BTParametricOutputInstance2288ToJSON(value);
-    }
-    return BTInstanceBase2263SuperToJSON(value);
-}

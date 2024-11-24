@@ -27,8 +27,7 @@ import {
 } from './GBTElementType';
 
 import {
-     BlobItemFromJSONTyped,
-    BlobItemToJSON
+     BlobItemFromJSONTyped
 } from './';
 
 /**
@@ -179,7 +178,7 @@ export function ItemFromJSONTyped(json: any, ignoreDiscriminator: boolean): Item
     };
 }
 
-export function ItemSuperToJSON(value?: Item | null): any {
+export function ItemToJSON(value?: Item | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -207,18 +206,3 @@ export function ItemSuperToJSON(value?: Item | null): any {
     };
 }
 
-
-
-export function ItemToJSON(value?: Item | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'publication-blob-item') {
-        return BlobItemToJSON(value);
-    }
-    return ItemSuperToJSON(value);
-}

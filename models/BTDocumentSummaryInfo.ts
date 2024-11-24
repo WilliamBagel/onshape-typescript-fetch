@@ -30,7 +30,6 @@ import {
     BTGlobalTreeNodeInfoFromJSON,
     BTGlobalTreeNodeInfoFromJSONTyped,
     BTGlobalTreeNodeInfoToJSON,
- BTGlobalTreeNodeInfoSuperToJSON,
 } from './BTGlobalTreeNodeInfo';
 import type { BTOldPermission } from './BTOldPermission';
 import {
@@ -71,11 +70,8 @@ import {
 
 import {
      BTDocumentInfoFromJSONTyped,
-    BTDocumentInfoToJSON,
      BTDocumentSummaryInfoFromJSONTyped,
-    BTDocumentSummaryInfoToJSON,
-     BTDocumentSummarySearchInfoFromJSONTyped,
-    BTDocumentSummarySearchInfoToJSON
+     BTDocumentSummarySearchInfoFromJSONTyped
 } from './';
 
 /**
@@ -364,7 +360,7 @@ export function BTDocumentSummaryInfoFromJSONTyped(json: any, ignoreDiscriminato
     };
 }
 
-export function BTDocumentSummaryInfoSuperToJSON(value?: BTDocumentSummaryInfo | null): any {
+export function BTDocumentSummaryInfoToJSON(value?: BTDocumentSummaryInfo | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -372,7 +368,7 @@ export function BTDocumentSummaryInfoSuperToJSON(value?: BTDocumentSummaryInfo |
         return null;
     }
     return {
-        ...BTGlobalTreeNodeInfoSuperToJSON(value),
+        ...BTGlobalTreeNodeInfoToJSON(value),
         'anonymousAccessAllowed': value.anonymousAccessAllowed,
         'anonymousAllowsExport': value.anonymousAllowsExport,
         'canUnshare': value.canUnshare,
@@ -411,24 +407,3 @@ export function BTDocumentSummaryInfoSuperToJSON(value?: BTDocumentSummaryInfo |
     };
 }
 
-
-
-export function BTDocumentSummaryInfoToJSON(value?: BTDocumentSummaryInfo | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.jsonType === 'document') {
-        return BTDocumentInfoToJSON(value);
-    }
-    if (value.jsonType === 'document-summary') {
-        return BTDocumentSummaryInfoToJSON(value);
-    }
-    if (value.jsonType === 'document-summary-search') {
-        return BTDocumentSummarySearchInfoToJSON(value);
-    }
-    return BTDocumentSummaryInfoSuperToJSON(value);
-}

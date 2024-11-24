@@ -42,7 +42,6 @@ import {
     BTParametricInstance2641FromJSON,
     BTParametricInstance2641FromJSONTyped,
     BTParametricInstance2641ToJSON,
- BTParametricInstance2641SuperToJSON,
 } from './BTParametricInstance2641';
 import type { BTReferenceCustomData1551 } from './BTReferenceCustomData1551';
 import {
@@ -109,7 +108,7 @@ export function BTAssemblyReplicate2774ToJSON(value?: BTAssemblyReplicate2774 | 
         return null;
     }
     return {
-        ...BTParametricInstance2641SuperToJSON(value),
+        ...BTParametricInstance2641ToJSON(value),
         'btType': value.btType,
         'replicateFeature': BTMAssemblyReplicateFeature1351ToJSON(value.replicateFeature),
     };

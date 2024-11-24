@@ -21,8 +21,7 @@ import {
 } from './GBTBSFeatureVisibility';
 
 import {
-     BTMateOccurrenceData1671FromJSONTyped,
-    BTMateOccurrenceData1671ToJSON
+     BTMateOccurrenceData1671FromJSONTyped
 } from './';
 
 /**
@@ -74,7 +73,7 @@ export function BTFeatureOccurrenceData775FromJSONTyped(json: any, ignoreDiscrim
     };
 }
 
-export function BTFeatureOccurrenceData775SuperToJSON(value?: BTFeatureOccurrenceData775 | null): any {
+export function BTFeatureOccurrenceData775ToJSON(value?: BTFeatureOccurrenceData775 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -88,18 +87,3 @@ export function BTFeatureOccurrenceData775SuperToJSON(value?: BTFeatureOccurrenc
     };
 }
 
-
-
-export function BTFeatureOccurrenceData775ToJSON(value?: BTFeatureOccurrenceData775 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMateOccurrenceData-1671') {
-        return BTMateOccurrenceData1671ToJSON(value);
-    }
-    return BTFeatureOccurrenceData775SuperToJSON(value);
-}

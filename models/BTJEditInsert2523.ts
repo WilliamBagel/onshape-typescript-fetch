@@ -24,7 +24,6 @@ import {
     BTJEdit3734FromJSON,
     BTJEdit3734FromJSONTyped,
     BTJEdit3734ToJSON,
- BTJEdit3734SuperToJSON,
 } from './BTJEdit3734';
 import type { BTJPath3073 } from './BTJPath3073';
 import {
@@ -93,7 +92,7 @@ export function BTJEditInsert2523ToJSON(value?: BTJEditInsert2523 | null): any {
         return null;
     }
     return {
-        ...BTJEdit3734SuperToJSON(value),
+        ...BTJEdit3734ToJSON(value),
         'btType': value.btType,
         'path': BTJPath3073ToJSON(value.path),
         'value': BTArcLengthDimensionDisplayData1018AllOfToJSON(value.value),

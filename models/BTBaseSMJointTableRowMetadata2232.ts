@@ -18,7 +18,6 @@ import {
     BTTableBaseRowMetadata3181FromJSON,
     BTTableBaseRowMetadata3181FromJSONTyped,
     BTTableBaseRowMetadata3181ToJSON,
- BTTableBaseRowMetadata3181SuperToJSON,
 } from './BTTableBaseRowMetadata3181';
 import type { BTTableCrossHighlightData1753 } from './BTTableCrossHighlightData1753';
 import {
@@ -29,9 +28,7 @@ import {
 
 import {
      BTSMBendTableRowMetadata1705FromJSONTyped,
-    BTSMBendTableRowMetadata1705ToJSON,
-     BTSMOtherJointTableRowMetadata2640FromJSONTyped,
-    BTSMOtherJointTableRowMetadata2640ToJSON
+     BTSMOtherJointTableRowMetadata2640FromJSONTyped
 } from './';
 
 /**
@@ -93,23 +90,6 @@ export function BTBaseSMJointTableRowMetadata2232FromJSONTyped(json: any, ignore
     };
 }
 
-export function BTBaseSMJointTableRowMetadata2232SuperToJSON(value?: BTBaseSMJointTableRowMetadata2232 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTTableBaseRowMetadata3181SuperToJSON(value),
-        'btType': value.btType,
-        'crossHighlightData': BTTableCrossHighlightData1753ToJSON(value.crossHighlightData),
-        'crossHighlightDataIfAny': BTTableCrossHighlightData1753ToJSON(value.crossHighlightDataIfAny),
-    };
-}
-
-
-
 export function BTBaseSMJointTableRowMetadata2232ToJSON(value?: BTBaseSMJointTableRowMetadata2232 | null): any {
     if (value === undefined) {
         return undefined;
@@ -117,12 +97,11 @@ export function BTBaseSMJointTableRowMetadata2232ToJSON(value?: BTBaseSMJointTab
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTSMBendTableRowMetadata-1705') {
-        return BTSMBendTableRowMetadata1705ToJSON(value);
-    }
-    if (value.btType === 'BTSMOtherJointTableRowMetadata-2640') {
-        return BTSMOtherJointTableRowMetadata2640ToJSON(value);
-    }
-    return BTBaseSMJointTableRowMetadata2232SuperToJSON(value);
+    return {
+        ...BTTableBaseRowMetadata3181ToJSON(value),
+        'btType': value.btType,
+        'crossHighlightData': BTTableCrossHighlightData1753ToJSON(value.crossHighlightData),
+        'crossHighlightDataIfAny': BTTableCrossHighlightData1753ToJSON(value.crossHighlightDataIfAny),
+    };
 }
+

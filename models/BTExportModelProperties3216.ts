@@ -21,8 +21,7 @@ import {
 } from './BTGraphicsAppearance1152';
 
 import {
-     BTExportBodyProperties3559FromJSONTyped,
-    BTExportBodyProperties3559ToJSON
+     BTExportBodyProperties3559FromJSONTyped
 } from './';
 
 /**
@@ -81,7 +80,7 @@ export function BTExportModelProperties3216FromJSONTyped(json: any, ignoreDiscri
     };
 }
 
-export function BTExportModelProperties3216SuperToJSON(value?: BTExportModelProperties3216 | null): any {
+export function BTExportModelProperties3216ToJSON(value?: BTExportModelProperties3216 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -96,18 +95,3 @@ export function BTExportModelProperties3216SuperToJSON(value?: BTExportModelProp
     };
 }
 
-
-
-export function BTExportModelProperties3216ToJSON(value?: BTExportModelProperties3216 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTExportBodyProperties-3559') {
-        return BTExportBodyProperties3559ToJSON(value);
-    }
-    return BTExportModelProperties3216SuperToJSON(value);
-}

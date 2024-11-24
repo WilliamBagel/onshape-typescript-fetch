@@ -30,7 +30,6 @@ import {
     BTParametricOutputInstance2288FromJSON,
     BTParametricOutputInstance2288FromJSONTyped,
     BTParametricOutputInstance2288ToJSON,
- BTParametricOutputInstance2288SuperToJSON,
 } from './BTParametricOutputInstance2288';
 import type { BTReferenceCustomData1551 } from './BTReferenceCustomData1551';
 import {
@@ -97,7 +96,7 @@ export function BTClonedInstance2505ToJSON(value?: BTClonedInstance2505 | null):
         return null;
     }
     return {
-        ...BTParametricOutputInstance2288SuperToJSON(value),
+        ...BTParametricOutputInstance2288ToJSON(value),
         'btType': value.btType,
         'seedOccurrence': BTOccurrence74ToJSON(value.seedOccurrence),
     };

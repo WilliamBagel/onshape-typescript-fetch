@@ -18,7 +18,6 @@ import {
     BTMParameter1FromJSON,
     BTMParameter1FromJSONTyped,
     BTMParameter1ToJSON,
- BTMParameter1SuperToJSON,
 } from './BTMParameter1';
 
 /**
@@ -73,7 +72,7 @@ export function BTMParameterFeatureList1749ToJSON(value?: BTMParameterFeatureLis
         return null;
     }
     return {
-        ...BTMParameter1SuperToJSON(value),
+        ...BTMParameter1ToJSON(value),
         'btType': value.btType,
         'featureIds': value.featureIds,
     };

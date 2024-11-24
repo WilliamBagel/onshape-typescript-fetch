@@ -18,7 +18,6 @@ import {
     BTGlobalTreeNodeInfoFromJSON,
     BTGlobalTreeNodeInfoFromJSONTyped,
     BTGlobalTreeNodeInfoToJSON,
- BTGlobalTreeNodeInfoSuperToJSON,
 } from './BTGlobalTreeNodeInfo';
 import type { BTOwnerInfo } from './BTOwnerInfo';
 import {
@@ -111,7 +110,7 @@ export function BTProjectInfoToJSON(value?: BTProjectInfo | null): any {
         return null;
     }
     return {
-        ...BTGlobalTreeNodeInfoSuperToJSON(value),
+        ...BTGlobalTreeNodeInfoToJSON(value),
         'permissionScheme': BTRbacPermissionSchemeInfoToJSON(value.permissionScheme),
         'permissionSet': value.permissionSet,
         'roleMapEntries': value.roleMapEntries === undefined ? undefined : ((value.roleMapEntries as Array<any>).map(RoleMapEntryToJSON)),

@@ -18,7 +18,6 @@ import {
     BTMConfigurationParameter819FromJSON,
     BTMConfigurationParameter819FromJSONTyped,
     BTMConfigurationParameter819ToJSON,
- BTMConfigurationParameter819SuperToJSON,
 } from './BTMConfigurationParameter819';
 import type { BTQuantityRange181 } from './BTQuantityRange181';
 import {
@@ -104,7 +103,7 @@ export function BTMConfigurationParameterQuantity1826ToJSON(value?: BTMConfigura
         return null;
     }
     return {
-        ...BTMConfigurationParameter819SuperToJSON(value),
+        ...BTMConfigurationParameter819ToJSON(value),
         'btType': value.btType,
         'quantityType': GBTQuantityTypeToJSON(value.quantityType),
         'rangeAndDefault': BTQuantityRange181ToJSON(value.rangeAndDefault),

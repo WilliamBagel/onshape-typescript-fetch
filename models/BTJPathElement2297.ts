@@ -15,9 +15,7 @@
 import { exists, mapValues } from '../runtime';
 import {
      BTJPathIndex1871FromJSONTyped,
-    BTJPathIndex1871ToJSON,
-     BTJPathKey3221FromJSONTyped,
-    BTJPathKey3221ToJSON
+     BTJPathKey3221FromJSONTyped
 } from './';
 
 /**
@@ -65,7 +63,7 @@ export function BTJPathElement2297FromJSONTyped(json: any, ignoreDiscriminator: 
     };
 }
 
-export function BTJPathElement2297SuperToJSON(value?: BTJPathElement2297 | null): any {
+export function BTJPathElement2297ToJSON(value?: BTJPathElement2297 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -78,21 +76,3 @@ export function BTJPathElement2297SuperToJSON(value?: BTJPathElement2297 | null)
     };
 }
 
-
-
-export function BTJPathElement2297ToJSON(value?: BTJPathElement2297 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTJPathIndex-1871') {
-        return BTJPathIndex1871ToJSON(value);
-    }
-    if (value.btType === 'BTJPathKey-3221') {
-        return BTJPathKey3221ToJSON(value);
-    }
-    return BTJPathElement2297SuperToJSON(value);
-}

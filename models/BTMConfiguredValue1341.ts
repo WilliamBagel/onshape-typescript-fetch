@@ -22,9 +22,7 @@ import {
 
 import {
      BTMConfiguredValueByBoolean1501FromJSONTyped,
-    BTMConfiguredValueByBoolean1501ToJSON,
-     BTMConfiguredValueByEnum1923FromJSONTyped,
-    BTMConfiguredValueByEnum1923ToJSON
+     BTMConfiguredValueByEnum1923FromJSONTyped
 } from './';
 
 /**
@@ -100,7 +98,7 @@ export function BTMConfiguredValue1341FromJSONTyped(json: any, ignoreDiscriminat
     };
 }
 
-export function BTMConfiguredValue1341SuperToJSON(value?: BTMConfiguredValue1341 | null): any {
+export function BTMConfiguredValue1341ToJSON(value?: BTMConfiguredValue1341 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -117,21 +115,3 @@ export function BTMConfiguredValue1341SuperToJSON(value?: BTMConfiguredValue1341
     };
 }
 
-
-
-export function BTMConfiguredValue1341ToJSON(value?: BTMConfiguredValue1341 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMConfiguredValueByBoolean-1501') {
-        return BTMConfiguredValueByBoolean1501ToJSON(value);
-    }
-    if (value.btType === 'BTMConfiguredValueByEnum-1923') {
-        return BTMConfiguredValueByEnum1923ToJSON(value);
-    }
-    return BTMConfiguredValue1341SuperToJSON(value);
-}

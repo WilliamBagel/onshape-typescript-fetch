@@ -18,7 +18,6 @@ import {
     BTFeatureApiBase1430FromJSON,
     BTFeatureApiBase1430FromJSONTyped,
     BTFeatureApiBase1430ToJSON,
- BTFeatureApiBase1430SuperToJSON,
 } from './BTFeatureApiBase1430';
 
 /**
@@ -73,7 +72,7 @@ export function BTSetFeatureRollbackCall1899ToJSON(value?: BTSetFeatureRollbackC
         return null;
     }
     return {
-        ...BTFeatureApiBase1430SuperToJSON(value),
+        ...BTFeatureApiBase1430ToJSON(value),
         'btType': value.btType,
         'rollbackIndex': value.rollbackIndex,
     };

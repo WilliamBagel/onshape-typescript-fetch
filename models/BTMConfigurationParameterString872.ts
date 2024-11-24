@@ -18,7 +18,6 @@ import {
     BTMConfigurationParameter819FromJSON,
     BTMConfigurationParameter819FromJSONTyped,
     BTMConfigurationParameter819ToJSON,
- BTMConfigurationParameter819SuperToJSON,
 } from './BTMConfigurationParameter819';
 import type { BTTreeNode20 } from './BTTreeNode20';
 import {
@@ -85,7 +84,7 @@ export function BTMConfigurationParameterString872ToJSON(value?: BTMConfiguratio
         return null;
     }
     return {
-        ...BTMConfigurationParameter819SuperToJSON(value),
+        ...BTMConfigurationParameter819ToJSON(value),
         'btType': value.btType,
         'defaultValue': value.defaultValue,
     };

@@ -28,11 +28,8 @@ import {
 
 import {
      BTMParameterReferenceAssembly938FromJSONTyped,
-    BTMParameterReferenceAssembly938ToJSON,
      BTMParameterReferencePartStudio3302FromJSONTyped,
-    BTMParameterReferencePartStudio3302ToJSON,
-     BTMParameterReferenceVariableStudio3550FromJSONTyped,
-    BTMParameterReferenceVariableStudio3550ToJSON
+     BTMParameterReferenceVariableStudio3550FromJSONTyped
 } from './';
 
 /**
@@ -167,7 +164,7 @@ export function BTMParameterReferenceWithConfiguration3028FromJSONTyped(json: an
     };
 }
 
-export function BTMParameterReferenceWithConfiguration3028SuperToJSON(value?: BTMParameterReferenceWithConfiguration3028 | null): any {
+export function BTMParameterReferenceWithConfiguration3028ToJSON(value?: BTMParameterReferenceWithConfiguration3028 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -192,24 +189,3 @@ export function BTMParameterReferenceWithConfiguration3028SuperToJSON(value?: BT
     };
 }
 
-
-
-export function BTMParameterReferenceWithConfiguration3028ToJSON(value?: BTMParameterReferenceWithConfiguration3028 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMParameterReferenceAssembly-938') {
-        return BTMParameterReferenceAssembly938ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterReferencePartStudio-3302') {
-        return BTMParameterReferencePartStudio3302ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterReferenceVariableStudio-3550') {
-        return BTMParameterReferenceVariableStudio3550ToJSON(value);
-    }
-    return BTMParameterReferenceWithConfiguration3028SuperToJSON(value);
-}

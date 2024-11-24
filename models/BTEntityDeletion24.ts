@@ -18,7 +18,6 @@ import {
     BTBaseEntityData33FromJSON,
     BTBaseEntityData33FromJSONTyped,
     BTBaseEntityData33ToJSON,
- BTBaseEntityData33SuperToJSON,
 } from './BTBaseEntityData33';
 import type { BTEntityGeometry35 } from './BTEntityGeometry35';
 import {
@@ -72,7 +71,7 @@ export function BTEntityDeletion24ToJSON(value?: BTEntityDeletion24 | null): any
         return null;
     }
     return {
-        ...BTBaseEntityData33SuperToJSON(value),
+        ...BTBaseEntityData33ToJSON(value),
         'btType': value.btType,
     };
 }

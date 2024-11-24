@@ -22,13 +22,9 @@ import {
 
 import {
      BTMAssemblyFeature887FromJSONTyped,
-    BTMAssemblyFeature887ToJSON,
      BTMFeatureInvalid1031FromJSONTyped,
-    BTMFeatureInvalid1031ToJSON,
      BTMSketch151FromJSONTyped,
-    BTMSketch151ToJSON,
-     BTMVariableStudioReference2764FromJSONTyped,
-    BTMVariableStudioReference2764ToJSON
+     BTMVariableStudioReference2764FromJSONTyped
 } from './';
 
 /**
@@ -166,7 +162,7 @@ export function BTMFeature134FromJSONTyped(json: any, ignoreDiscriminator: boole
     };
 }
 
-export function BTMFeature134SuperToJSON(value?: BTMFeature134 | null): any {
+export function BTMFeature134ToJSON(value?: BTMFeature134 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -191,27 +187,3 @@ export function BTMFeature134SuperToJSON(value?: BTMFeature134 | null): any {
     };
 }
 
-
-
-export function BTMFeature134ToJSON(value?: BTMFeature134 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTMAssemblyFeature-887') {
-        return BTMAssemblyFeature887ToJSON(value);
-    }
-    if (value.btType === 'BTMFeatureInvalid-1031') {
-        return BTMFeatureInvalid1031ToJSON(value);
-    }
-    if (value.btType === 'BTMSketch-151') {
-        return BTMSketch151ToJSON(value);
-    }
-    if (value.btType === 'BTMVariableStudioReference-2764') {
-        return BTMVariableStudioReference2764ToJSON(value);
-    }
-    return BTMFeature134SuperToJSON(value);
-}

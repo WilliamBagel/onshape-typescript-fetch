@@ -30,7 +30,6 @@ import {
     ItemFromJSON,
     ItemFromJSONTyped,
     ItemToJSON,
- ItemSuperToJSON,
 } from './Item';
 
 /**
@@ -127,7 +126,7 @@ export function BlobItemToJSON(value?: BlobItem | null): any {
         return null;
     }
     return {
-        ...ItemSuperToJSON(value),
+        ...ItemToJSON(value),
         'dataTypeForResponse': value.dataTypeForResponse,
         'filename': value.filename,
         'foreignDataId': value.foreignDataId,

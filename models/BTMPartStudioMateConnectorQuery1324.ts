@@ -18,7 +18,6 @@ import {
     BTMFeatureQueryWithOccurrence157FromJSON,
     BTMFeatureQueryWithOccurrence157FromJSONTyped,
     BTMFeatureQueryWithOccurrence157ToJSON,
- BTMFeatureQueryWithOccurrence157SuperToJSON,
 } from './BTMFeatureQueryWithOccurrence157';
 import type { BTMIndividualQueryBase139 } from './BTMIndividualQueryBase139';
 import {
@@ -78,7 +77,7 @@ export function BTMPartStudioMateConnectorQuery1324ToJSON(value?: BTMPartStudioM
         return null;
     }
     return {
-        ...BTMFeatureQueryWithOccurrence157SuperToJSON(value),
+        ...BTMFeatureQueryWithOccurrence157ToJSON(value),
         'btType': value.btType,
     };
 }

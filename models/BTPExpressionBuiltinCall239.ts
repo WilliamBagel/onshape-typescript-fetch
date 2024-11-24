@@ -24,7 +24,6 @@ import {
     BTPExpression9FromJSON,
     BTPExpression9FromJSONTyped,
     BTPExpression9ToJSON,
- BTPExpression9SuperToJSON,
 } from './BTPExpression9';
 import type { BTPSpace10 } from './BTPSpace10';
 import {
@@ -105,7 +104,7 @@ export function BTPExpressionBuiltinCall239ToJSON(value?: BTPExpressionBuiltinCa
         return null;
     }
     return {
-        ...BTPExpression9SuperToJSON(value),
+        ...BTPExpression9ToJSON(value),
         'btType': value.btType,
         'arguments': value.arguments === undefined ? undefined : ((value.arguments as Array<any>).map(BTPExpression9ToJSON)),
         'name': BTPBuiltinIdentifier233ToJSON(value.name),

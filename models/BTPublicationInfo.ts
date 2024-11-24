@@ -18,7 +18,6 @@ import {
     BTGlobalTreeNodeInfoFromJSON,
     BTGlobalTreeNodeInfoFromJSONTyped,
     BTGlobalTreeNodeInfoToJSON,
- BTGlobalTreeNodeInfoSuperToJSON,
 } from './BTGlobalTreeNodeInfo';
 import type { BTOwnerInfo } from './BTOwnerInfo';
 import {
@@ -105,7 +104,7 @@ export function BTPublicationInfoToJSON(value?: BTPublicationInfo | null): any {
         return null;
     }
     return {
-        ...BTGlobalTreeNodeInfoSuperToJSON(value),
+        ...BTGlobalTreeNodeInfoToJSON(value),
         'defaultWorkspaceId': value.defaultWorkspaceId,
         'items': value.items === undefined ? undefined : ((value.items as Array<any>).map(ItemToJSON)),
         'notes': value.notes,

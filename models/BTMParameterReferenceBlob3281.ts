@@ -24,18 +24,13 @@ import {
     BTMParameterReference2434FromJSON,
     BTMParameterReference2434FromJSONTyped,
     BTMParameterReference2434ToJSON,
- BTMParameterReference2434SuperToJSON,
 } from './BTMParameterReference2434';
 
 import {
      BTMParameterReferenceCADImport2016FromJSONTyped,
-    BTMParameterReferenceCADImport2016ToJSON,
      BTMParameterReferenceImage2014FromJSONTyped,
-    BTMParameterReferenceImage2014ToJSON,
      BTMParameterReferenceJSON790FromJSONTyped,
-    BTMParameterReferenceJSON790ToJSON,
-     BTMParameterReferenceTable917FromJSONTyped,
-    BTMParameterReferenceTable917ToJSON
+     BTMParameterReferenceTable917FromJSONTyped
 } from './';
 
 /**
@@ -89,21 +84,6 @@ export function BTMParameterReferenceBlob3281FromJSONTyped(json: any, ignoreDisc
     };
 }
 
-export function BTMParameterReferenceBlob3281SuperToJSON(value?: BTMParameterReferenceBlob3281 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTMParameterReference2434SuperToJSON(value),
-        'btType': value.btType,
-    };
-}
-
-
-
 export function BTMParameterReferenceBlob3281ToJSON(value?: BTMParameterReferenceBlob3281 | null): any {
     if (value === undefined) {
         return undefined;
@@ -111,18 +91,9 @@ export function BTMParameterReferenceBlob3281ToJSON(value?: BTMParameterReferenc
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTMParameterReferenceCADImport-2016') {
-        return BTMParameterReferenceCADImport2016ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterReferenceImage-2014') {
-        return BTMParameterReferenceImage2014ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterReferenceJSON-790') {
-        return BTMParameterReferenceJSON790ToJSON(value);
-    }
-    if (value.btType === 'BTMParameterReferenceTable-917') {
-        return BTMParameterReferenceTable917ToJSON(value);
-    }
-    return BTMParameterReferenceBlob3281SuperToJSON(value);
+    return {
+        ...BTMParameterReference2434ToJSON(value),
+        'btType': value.btType,
+    };
 }
+

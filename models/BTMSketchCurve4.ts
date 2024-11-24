@@ -30,12 +30,10 @@ import {
     BTMSketchGeomEntity5FromJSON,
     BTMSketchGeomEntity5FromJSONTyped,
     BTMSketchGeomEntity5ToJSON,
- BTMSketchGeomEntity5SuperToJSON,
 } from './BTMSketchGeomEntity5';
 
 import {
-     BTMSketchCurveSegment155FromJSONTyped,
-    BTMSketchCurveSegment155ToJSON
+     BTMSketchCurveSegment155FromJSONTyped
 } from './';
 
 /**
@@ -101,24 +99,6 @@ export function BTMSketchCurve4FromJSONTyped(json: any, ignoreDiscriminator: boo
     };
 }
 
-export function BTMSketchCurve4SuperToJSON(value?: BTMSketchCurve4 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-    return {
-        ...BTMSketchGeomEntity5SuperToJSON(value),
-        'btType': value.btType,
-        'centerId': value.centerId,
-        'geometry': BTCurveGeometry114ToJSON(value.geometry),
-        'internalIds': value.internalIds,
-    };
-}
-
-
-
 export function BTMSketchCurve4ToJSON(value?: BTMSketchCurve4 | null): any {
     if (value === undefined) {
         return undefined;
@@ -126,9 +106,12 @@ export function BTMSketchCurve4ToJSON(value?: BTMSketchCurve4 | null): any {
     if (value === null) {
         return null;
     }
-
-    if (value.btType === 'BTMSketchCurveSegment-155') {
-        return BTMSketchCurveSegment155ToJSON(value);
-    }
-    return BTMSketchCurve4SuperToJSON(value);
+    return {
+        ...BTMSketchGeomEntity5ToJSON(value),
+        'btType': value.btType,
+        'centerId': value.centerId,
+        'geometry': BTCurveGeometry114ToJSON(value.geometry),
+        'internalIds': value.internalIds,
+    };
 }
+

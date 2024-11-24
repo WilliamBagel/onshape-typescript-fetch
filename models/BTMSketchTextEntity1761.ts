@@ -24,7 +24,6 @@ import {
     BTMSketchGeomEntity5FromJSON,
     BTMSketchGeomEntity5FromJSONTyped,
     BTMSketchGeomEntity5ToJSON,
- BTMSketchGeomEntity5SuperToJSON,
 } from './BTMSketchGeomEntity5';
 
 /**
@@ -121,7 +120,7 @@ export function BTMSketchTextEntity1761ToJSON(value?: BTMSketchTextEntity1761 | 
         return null;
     }
     return {
-        ...BTMSketchGeomEntity5SuperToJSON(value),
+        ...BTMSketchGeomEntity5ToJSON(value),
         'btType': value.btType,
         'ascent': value.ascent,
         'baselineDirectionX': value.baselineDirectionX,

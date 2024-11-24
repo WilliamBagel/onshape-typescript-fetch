@@ -42,7 +42,6 @@ import {
     BTSingleReferenceDisplayData1943FromJSON,
     BTSingleReferenceDisplayData1943FromJSONTyped,
     BTSingleReferenceDisplayData1943ToJSON,
- BTSingleReferenceDisplayData1943SuperToJSON,
 } from './BTSingleReferenceDisplayData1943';
 import type { GBTBSFeatureVisibility } from './GBTBSFeatureVisibility';
 import {
@@ -130,7 +129,7 @@ export function BTSingleAssemblyReferenceDisplayData1557ToJSON(value?: BTSingleA
         return null;
     }
     return {
-        ...BTSingleReferenceDisplayData1943SuperToJSON(value),
+        ...BTSingleReferenceDisplayData1943ToJSON(value),
         'btType': value.btType,
         'assemblyDisplayData': BTRootAssemblyDisplayData96ToJSON(value.assemblyDisplayData),
         'hasConfiguration': value.hasConfiguration,

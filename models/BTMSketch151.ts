@@ -18,7 +18,6 @@ import {
     BTMFeature134FromJSON,
     BTMFeature134FromJSONTyped,
     BTMFeature134ToJSON,
- BTMFeature134SuperToJSON,
 } from './BTMFeature134';
 import type { BTMParameter1 } from './BTMParameter1';
 import {
@@ -98,7 +97,7 @@ export function BTMSketch151ToJSON(value?: BTMSketch151 | null): any {
         return null;
     }
     return {
-        ...BTMFeature134SuperToJSON(value),
+        ...BTMFeature134ToJSON(value),
         'btType': value.btType,
         'constraints': value.constraints === undefined ? undefined : ((value.constraints as Array<any>).map(BTMSketchConstraint2ToJSON)),
         'entities': value.entities === undefined ? undefined : ((value.entities as Array<any>).map(BTMSketchGeomEntity5ToJSON)),

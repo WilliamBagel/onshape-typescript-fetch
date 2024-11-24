@@ -18,7 +18,6 @@ import {
     BTFSValue1888FromJSON,
     BTFSValue1888FromJSONTyped,
     BTFSValue1888ToJSON,
- BTFSValue1888SuperToJSON,
 } from './BTFSValue1888';
 
 /**
@@ -74,7 +73,7 @@ export function BTFSValueString1422ToJSON(value?: BTFSValueString1422 | null): a
         return null;
     }
     return {
-        ...BTFSValue1888SuperToJSON(value),
+        ...BTFSValue1888ToJSON(value),
         'btType': value.btType,
         'value': value.value,
     };

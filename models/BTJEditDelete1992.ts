@@ -18,7 +18,6 @@ import {
     BTJEdit3734FromJSON,
     BTJEdit3734FromJSONTyped,
     BTJEdit3734ToJSON,
- BTJEdit3734SuperToJSON,
 } from './BTJEdit3734';
 import type { BTJPath3073 } from './BTJPath3073';
 import {
@@ -80,7 +79,7 @@ export function BTJEditDelete1992ToJSON(value?: BTJEditDelete1992 | null): any {
         return null;
     }
     return {
-        ...BTJEdit3734SuperToJSON(value),
+        ...BTJEdit3734ToJSON(value),
         'btType': value.btType,
         'path': BTJPath3073ToJSON(value.path),
     };

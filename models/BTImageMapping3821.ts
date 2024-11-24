@@ -22,9 +22,7 @@ import {
 
 import {
      BTCylindricalImageMapping1640FromJSONTyped,
-    BTCylindricalImageMapping1640ToJSON,
-     BTPlanarImageMapping4398FromJSONTyped,
-    BTPlanarImageMapping4398ToJSON
+     BTPlanarImageMapping4398FromJSONTyped
 } from './';
 
 /**
@@ -86,7 +84,7 @@ export function BTImageMapping3821FromJSONTyped(json: any, ignoreDiscriminator: 
     };
 }
 
-export function BTImageMapping3821SuperToJSON(value?: BTImageMapping3821 | null): any {
+export function BTImageMapping3821ToJSON(value?: BTImageMapping3821 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -101,21 +99,3 @@ export function BTImageMapping3821SuperToJSON(value?: BTImageMapping3821 | null)
     };
 }
 
-
-
-export function BTImageMapping3821ToJSON(value?: BTImageMapping3821 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTCylindricalImageMapping-1640') {
-        return BTCylindricalImageMapping1640ToJSON(value);
-    }
-    if (value.btType === 'BTPlanarImageMapping-4398') {
-        return BTPlanarImageMapping4398ToJSON(value);
-    }
-    return BTImageMapping3821SuperToJSON(value);
-}

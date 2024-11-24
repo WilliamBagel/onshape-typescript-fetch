@@ -18,7 +18,6 @@ import {
     BTSketchEntityDisplayData354FromJSON,
     BTSketchEntityDisplayData354FromJSONTyped,
     BTSketchEntityDisplayData354ToJSON,
- BTSketchEntityDisplayData354SuperToJSON,
 } from './BTSketchEntityDisplayData354';
 
 /**
@@ -101,7 +100,7 @@ export function BTSketchEllipticalArcDisplayData892ToJSON(value?: BTSketchEllipt
         return null;
     }
     return {
-        ...BTSketchEntityDisplayData354SuperToJSON(value),
+        ...BTSketchEntityDisplayData354ToJSON(value),
         'btType': value.btType,
         'endParam': value.endParam,
         'minorRadius': value.minorRadius,

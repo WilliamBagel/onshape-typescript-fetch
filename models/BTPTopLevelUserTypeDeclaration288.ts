@@ -54,7 +54,6 @@ import {
     BTPTopLevelTypeDeclaration287FromJSON,
     BTPTopLevelTypeDeclaration287FromJSONTyped,
     BTPTopLevelTypeDeclaration287ToJSON,
- BTPTopLevelTypeDeclaration287SuperToJSON,
 } from './BTPTopLevelTypeDeclaration287';
 import type { GBTPDefinitionType } from './GBTPDefinitionType';
 import {
@@ -115,7 +114,7 @@ export function BTPTopLevelUserTypeDeclaration288ToJSON(value?: BTPTopLevelUserT
         return null;
     }
     return {
-        ...BTPTopLevelTypeDeclaration287SuperToJSON(value),
+        ...BTPTopLevelTypeDeclaration287ToJSON(value),
         'btType': value.btType,
         'typecheck': BTPName261ToJSON(value.typecheck),
     };

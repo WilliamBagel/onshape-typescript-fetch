@@ -14,8 +14,7 @@
 
 import { exists, mapValues } from '../runtime';
 import {
-     BTSystemPartColorCycle1580FromJSONTyped,
-    BTSystemPartColorCycle1580ToJSON
+     BTSystemPartColorCycle1580FromJSONTyped
 } from './';
 
 /**
@@ -60,7 +59,7 @@ export function BTBasePartColorCycle2614FromJSONTyped(json: any, ignoreDiscrimin
     };
 }
 
-export function BTBasePartColorCycle2614SuperToJSON(value?: BTBasePartColorCycle2614 | null): any {
+export function BTBasePartColorCycle2614ToJSON(value?: BTBasePartColorCycle2614 | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -73,18 +72,3 @@ export function BTBasePartColorCycle2614SuperToJSON(value?: BTBasePartColorCycle
     };
 }
 
-
-
-export function BTBasePartColorCycle2614ToJSON(value?: BTBasePartColorCycle2614 | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
-    }
-
-    if (value.btType === 'BTSystemPartColorCycle-1580') {
-        return BTSystemPartColorCycle1580ToJSON(value);
-    }
-    return BTBasePartColorCycle2614SuperToJSON(value);
-}

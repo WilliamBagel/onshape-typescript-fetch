@@ -24,7 +24,6 @@ import {
     BTMNode19FromJSON,
     BTMNode19FromJSONTyped,
     BTMNode19ToJSON,
- BTMNode19SuperToJSON,
 } from './BTMNode19';
 import type { BTMParameter1 } from './BTMParameter1';
 import {
@@ -99,7 +98,7 @@ export function BTMConfigurationData1560ToJSON(value?: BTMConfigurationData1560 
         return null;
     }
     return {
-        ...BTMNode19SuperToJSON(value),
+        ...BTMNode19ToJSON(value),
         'btType': value.btType,
         'currentConfiguration': value.currentConfiguration === undefined ? undefined : ((value.currentConfiguration as Array<any>).map(BTMParameter1ToJSON)),
         'currentFSValues': value.currentFSValues === undefined ? undefined : (mapValues(value.currentFSValues, BTFSValue1888ToJSON)),

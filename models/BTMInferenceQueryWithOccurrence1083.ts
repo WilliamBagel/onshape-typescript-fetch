@@ -24,7 +24,6 @@ import {
     BTMIndividualQueryWithOccurrence811FromJSON,
     BTMIndividualQueryWithOccurrence811FromJSONTyped,
     BTMIndividualQueryWithOccurrence811ToJSON,
- BTMIndividualQueryWithOccurrence811SuperToJSON,
 } from './BTMIndividualQueryWithOccurrence811';
 import type { BTOccurrence74 } from './BTOccurrence74';
 import {
@@ -105,7 +104,7 @@ export function BTMInferenceQueryWithOccurrence1083ToJSON(value?: BTMInferenceQu
         return null;
     }
     return {
-        ...BTMIndividualQueryWithOccurrence811SuperToJSON(value),
+        ...BTMIndividualQueryWithOccurrence811ToJSON(value),
         'btType': value.btType,
         'inferenceType': GBTEntityInferenceTypeToJSON(value.inferenceType),
         'secondDeterministicId': value.secondDeterministicId,

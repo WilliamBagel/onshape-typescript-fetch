@@ -18,7 +18,6 @@ import {
     BTAngularDimensionDisplayData320FromJSON,
     BTAngularDimensionDisplayData320FromJSONTyped,
     BTAngularDimensionDisplayData320ToJSON,
- BTAngularDimensionDisplayData320SuperToJSON,
 } from './BTAngularDimensionDisplayData320';
 import type { BTBSMatrix386 } from './BTBSMatrix386';
 import {
@@ -78,7 +77,7 @@ export function BTArcLengthDimensionDisplayData1018ToJSON(value?: BTArcLengthDim
         return null;
     }
     return {
-        ...BTAngularDimensionDisplayData320SuperToJSON(value),
+        ...BTAngularDimensionDisplayData320ToJSON(value),
         'btType': value.btType,
     };
 }

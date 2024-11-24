@@ -24,7 +24,6 @@ import {
     BTPLValue249FromJSON,
     BTPLValue249FromJSONTyped,
     BTPLValue249ToJSON,
- BTPLValue249SuperToJSON,
 } from './BTPLValue249';
 import type { BTPSpace10 } from './BTPSpace10';
 import {
@@ -98,7 +97,7 @@ export function BTPLValueBoxDereference251ToJSON(value?: BTPLValueBoxDereference
         return null;
     }
     return {
-        ...BTPLValue249SuperToJSON(value),
+        ...BTPLValue249ToJSON(value),
         'btType': value.btType,
         'box': BTPExpression9ToJSON(value.box),
         'spaceInside': BTPSpace10ToJSON(value.spaceInside),

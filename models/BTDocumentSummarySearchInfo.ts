@@ -36,7 +36,6 @@ import {
     BTDocumentSummaryInfoFromJSON,
     BTDocumentSummaryInfoFromJSONTyped,
     BTDocumentSummaryInfoToJSON,
- BTDocumentSummaryInfoSuperToJSON,
 } from './BTDocumentSummaryInfo';
 import type { BTOldPermission } from './BTOldPermission';
 import {
@@ -120,7 +119,7 @@ export function BTDocumentSummarySearchInfoToJSON(value?: BTDocumentSummarySearc
         return null;
     }
     return {
-        ...BTDocumentSummaryInfoSuperToJSON(value),
+        ...BTDocumentSummaryInfoToJSON(value),
         'searchHits': value.searchHits === undefined ? undefined : ((value.searchHits as Array<any>).map(BTDocumentSearchHitInfoToJSON)),
     };
 }

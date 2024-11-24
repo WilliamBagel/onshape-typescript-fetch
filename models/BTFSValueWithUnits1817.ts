@@ -18,7 +18,6 @@ import {
     BTFSValue1888FromJSON,
     BTFSValue1888FromJSONTyped,
     BTFSValue1888ToJSON,
- BTFSValue1888SuperToJSON,
 } from './BTFSValue1888';
 
 /**
@@ -81,7 +80,7 @@ export function BTFSValueWithUnits1817ToJSON(value?: BTFSValueWithUnits1817 | nu
         return null;
     }
     return {
-        ...BTFSValue1888SuperToJSON(value),
+        ...BTFSValue1888ToJSON(value),
         'btType': value.btType,
         'unitToPower': value.unitToPower,
         'value': value.value,
