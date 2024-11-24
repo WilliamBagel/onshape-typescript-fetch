@@ -8416,7 +8416,7 @@
         "x-BTVisibility": "PRODUCTION"
       }
     },
-    "/documents/d/{did}/{wm}/{wmid}/documenthistory": {
+    "/documents/d/{did}/w/{wm}/{wmid}/documenthistory": {
       "get": {
         "tags": [
           "Document"
@@ -8449,6 +8449,15 @@
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json;charset=UTF-8; qs=0.09": {
+              "schema": {
+                "$ref": "#/components/schemas/BTDocumentHistoryRequestInfo"
+              }
+            }
+          }
+        },
         "responses": {
           "default": {
             "description": "default response",
@@ -24108,59 +24117,6 @@
               "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "type": "object"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": false,
-        "security": [
-          {
-            "OAuth2": [
-              "OAuth2Read"
-            ],
-            "BasicAuth": [
-              "OAuth2Read"
-            ]
-          }
-        ],
-        "x-BTVisibility": "PRODUCTION"
-      }
-    },
-    "/documents/d/{did}/versiongraph": {
-      "post": {
-        "tags": [
-          "Document"
-        ],
-        "summary": "Get VersionGraph of document",
-        "operationId": "getVersionGraph",
-        "parameters": [
-          {
-            "name": "did",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json;charset=UTF-8; qs=0.09": {
-              "schema": {
-                "$ref": "#/components/schemas/BTVersionGraphRequestInfo"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json;charset=UTF-8; qs=0.09": {
-                "schema": {
-                  "$ref": "#/components/schemas/BTVersionGraphInfo"
                 }
               }
             }
@@ -60055,51 +60011,13 @@
           }
         }
       },
-      "BTVersionGraphRequestInfo": {
+      "BTDocumentHistoryRequestInfo": {
         "type": "object",
         "properties": {
-          "includeAutoVersions":{
-            "type": "boolean"
-          },
-          "includeMerges":{
-            "type": "boolean"
-          },
-          "includeNonWorkspaceBranches":{
-            "type": "boolean"
-          },
-          "includeParentBranches":{
-            "type": "boolean"
-          },
           "limit":{
             "type": "number"
           }
-        }
-      },
-      "BTVersionGraphInfo": {
-        "type": "object",
-        "properties": {
-          "mergeLines": {
-            "type": "string",
-            "items":{
-              "type":"object"
-            }
-          },
-          "nodes":{
-            "type":"array",
-            "items": {
-              "$ref": "#/components/schemas/BTVersionInfo"
-            }
-          },
-          "userIdToUserId":{
-            "type":"object",
-            "additionalProperties":{
-              "$ref":"#/components/schemas/BTCompanyUserInfo"
-            }
-          },
-          "versionGraphVersion": {
-            "type": "number"
-          }
-        }
+        }  
       }
     },
     "securitySchemes": {
