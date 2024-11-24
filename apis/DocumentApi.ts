@@ -22,7 +22,6 @@ import type {
   BTCopyDocumentParams,
   BTDocumentElementInfo,
   BTDocumentHistoryInfo,
-  BTDocumentHistoryRequestInfo,
   BTDocumentInfo,
   BTDocumentMergeInfo,
   BTDocumentParams,
@@ -61,8 +60,6 @@ import {
     BTDocumentElementInfoToJSON,
     BTDocumentHistoryInfoFromJSON,
     BTDocumentHistoryInfoToJSON,
-    BTDocumentHistoryRequestInfoFromJSON,
-    BTDocumentHistoryRequestInfoToJSON,
     BTDocumentInfoFromJSON,
     BTDocumentInfoToJSON,
     BTDocumentMergeInfoFromJSON,
@@ -171,7 +168,6 @@ export interface GetDocumentAclRequest {
 export interface GetDocumentHistoryRequest {
     did: string;
     wid: string;
-    bTDocumentHistoryRequestInfo?: BTDocumentHistoryRequestInfo;
 }
 
 export interface GetDocumentPermissionSetRequest {
@@ -875,8 +871,6 @@ export class DocumentApi extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
-        headerParameters['Content-Type'] = 'application/json;charset=UTF-8; qs=0.09';
-
         if (this.configuration && this.configuration.accessToken) {
             // oauth required
             headerParameters["Authorization"] = await this.configuration.accessToken("OAuth2", ["OAuth2Read"]);
@@ -890,7 +884,6 @@ export class DocumentApi extends runtime.BaseAPI {
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
-            body: BTDocumentHistoryRequestInfoToJSON(requestParameters.bTDocumentHistoryRequestInfo),
         }, initOverrides);
 
         return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(BTDocumentHistoryInfoFromJSON));

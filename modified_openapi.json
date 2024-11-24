@@ -8441,15 +8441,6 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/json;charset=UTF-8; qs=0.09": {
-              "schema": {
-                "$ref": "#/components/schemas/BTDocumentHistoryRequestInfo"
-              }
-            }
-          }
-        },
         "responses": {
           "default": {
             "description": "default response",
@@ -60002,14 +59993,6 @@
             "type": "boolean"
           }
         }
-      },
-      "BTDocumentHistoryRequestInfo": {
-        "type": "object",
-        "properties": {
-          "limit":{
-            "type": "number"
-          }
-        }  
       }
     },
     "securitySchemes": {

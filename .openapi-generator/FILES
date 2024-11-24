@@ -294,7 +294,6 @@ models/BTDocumentElementCreationDescriptor.ts
 models/BTDocumentElementInfo.ts
 models/BTDocumentElementProcessingInfo.ts
 models/BTDocumentHistoryInfo.ts
-models/BTDocumentHistoryRequestInfo.ts
 models/BTDocumentInfo.ts
 models/BTDocumentInfoAllOf.ts
 models/BTDocumentLabelInfo.ts

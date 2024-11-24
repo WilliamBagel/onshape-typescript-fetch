@@ -254,7 +254,6 @@ export * from './BTDocumentElementCreationDescriptor';
 export * from './BTDocumentElementInfo';
 export * from './BTDocumentElementProcessingInfo';
 export * from './BTDocumentHistoryInfo';
-export * from './BTDocumentHistoryRequestInfo';
 export * from './BTDocumentInfo';
 export * from './BTDocumentInfoAllOf';
 export * from './BTDocumentLabelInfo';
