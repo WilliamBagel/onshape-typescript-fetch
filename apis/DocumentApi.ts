@@ -170,8 +170,7 @@ export interface GetDocumentAclRequest {
 
 export interface GetDocumentHistoryRequest {
     did: string;
-    wm: string;
-    wmid: string;
+    wid: string;
     bTDocumentHistoryRequestInfo?: BTDocumentHistoryRequestInfo;
 }
 
@@ -868,12 +867,8 @@ export class DocumentApi extends runtime.BaseAPI {
             throw new runtime.RequiredError('did','Required parameter requestParameters.did was null or undefined when calling getDocumentHistory.');
         }
 
-        if (requestParameters.wm === null || requestParameters.wm === undefined) {
-            throw new runtime.RequiredError('wm','Required parameter requestParameters.wm was null or undefined when calling getDocumentHistory.');
-        }
-
-        if (requestParameters.wmid === null || requestParameters.wmid === undefined) {
-            throw new runtime.RequiredError('wmid','Required parameter requestParameters.wmid was null or undefined when calling getDocumentHistory.');
+        if (requestParameters.wid === null || requestParameters.wid === undefined) {
+            throw new runtime.RequiredError('wid','Required parameter requestParameters.wid was null or undefined when calling getDocumentHistory.');
         }
 
         const queryParameters: any = {};
@@ -891,7 +886,7 @@ export class DocumentApi extends runtime.BaseAPI {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
         }
         const response = await this.request({
-            path: `/documents/d/{did}/w/{wm}/{wmid}/documenthistory`.replace(`{${"did"}}`, encodeURIComponent(String(requestParameters.did))).replace(`{${"wm"}}`, encodeURIComponent(String(requestParameters.wm))).replace(`{${"wmid"}}`, encodeURIComponent(String(requestParameters.wmid))),
+            path: `/documents/d/{did}/w/{wid}/documenthistory`.replace(`{${"did"}}`, encodeURIComponent(String(requestParameters.did))).replace(`{${"wid"}}`, encodeURIComponent(String(requestParameters.wid))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,

@@ -8416,7 +8416,7 @@
         "x-BTVisibility": "PRODUCTION"
       }
     },
-    "/documents/d/{did}/w/{wm}/{wmid}/documenthistory": {
+    "/documents/d/{did}/w/{wid}/documenthistory": {
       "get": {
         "tags": [
           "Document"
@@ -8433,15 +8433,7 @@
             }
           },
           {
-            "name": "wm",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "wmid",
+            "name": "wid",
             "in": "path",
             "required": true,
             "schema": {
